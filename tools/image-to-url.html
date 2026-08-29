@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebApplication">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Image to URL Converter – No Signup | 2026</title>
+  <meta name="description" content="100% free image hosting with no signup required. Convert JPG, PNG, GIF, WebP into shareable URLs instantly. Supports bulk upload. Get direct links.">
+  <meta name="keywords" content="image to url, image to url converter, image to url online, image to url generator, image to link, free image to url, image link generator, free image hosting, no login image hosting, bulk image upload">
+  <meta name="owner-aa0105" content="@aarifalam0105" id="owner-aa0105">
+  <meta name="author" content="Aarif Alam">
+  <meta property="og:title" content="Free Image to URL Converter – No Signup, Bulk Upload">
+  <meta property="og:description" content="Upload multiple images instantly. Get direct sharable URLs. Links remain valid for a long time, No account. Perfect for social media, forums, and e‑commerce.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gunatools.dev/tools/image-to-url">
+  <meta property="og:image" content="https://gunatools.dev/images/image-to-url.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="gunatools.dev">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Image to URL Converter – No Signup">
+  <meta name="twitter:description" content="Bulk upload images, get shareable URLs. No registration, no tracking. Best free image hosting with long retention.">
+  <meta name="twitter:image" content="https://gunatools.dev/images/image-to-url.png">
+  <meta name="twitter:site" content="@gunatools0105">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Free Image to URL Converter",
+    "url": "https://gunatools.dev/tools/image-to-url",
+    "applicationCategory": "ImageHostingApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+
+    "image": "https://gunatools.dev/images/image-to-url.png",
+    "description": "Convert images to shareable URLs instantly. Supports bulk upload (JPG, PNG, GIF, WebP) up to 20MB per file. No login or registration required.",
+    "featureList": [
+      "Bulk image upload (multiple files at once)",
+      "20 MB maximum per image",
+      "Instant URL generation",
+      "No registration or login",
+      "Direct sharing to WhatsApp, Facebook, email, forums",
+      "Privacy‑first: you control deletion"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://gunatools.dev/tools/image-to-url"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://gunatools.dev/tools/image-to-url?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+  }
+  </script>
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/img-url.css">
+  <link rel="stylesheet" href="css/img-url-faq.css">
+  <link rel="stylesheet" href="css/simple-footer.css">
+  <link rel="stylesheet" href="/blog/css/video-frame.css">
+  <link rel="stylesheet" href="/main/css/main-header.css">
+
+  <!-- Canonical & Robots -->
+  <link rel="canonical" href="https://gunatools.dev/tools/image-to-url">
+  <meta name="robots" content="index, follow">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/logo/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/logo/favicon-16x16.png">
+  <link rel="manifest" href="../images/logo/site.webmanifest">
+  <link rel="shortcut icon" href="../images/logo/favicon.ico" type="image/x-icon">
+
+  <!-- Google AdSense -->
+    
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV220VSL5G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZV220VSL5G');
+  </script>
+
+    <script>
+  (function() {
+    'use strict';
+
+    /**
+     * DETERRENCE LAYER - CLIENT-SIDE ONLY
+     * 
+     * Purpose: To discourage non-technical users from casual copying,
+     * source inspection, or content extraction.
+     * 
+     * IMPORTANT: This is DETERRENCE only, NOT security.
+     * Determined users can bypass all client-side restrictions.
+     * This must not be relied upon for actual content protection.
+     */
+
+    // Configuration - adjust these as needed
+    const CONFIG = {
+        // Log attempts in console (visible to users who inspect)
+        logAttempts: true,
+        // Message to display in console
+        consoleMessage: 'Content interaction is restricted for casual copying.',
+        // Allow text selection for accessibility tools
+        allowAccessibilitySelection: true,
+        // Time threshold for mobile long-press (milliseconds)
+        longPressThreshold: 800
+    };
+
+    // State management
+    let lastTouchStart = 0;
+    let longPressTimer = null;
+    let isAccessibilityMode = false;
+
+    /**
+     * Safe event listener wrapper
+     * Ensures we don't interfere with existing handlers
+     */
+    function safeAddEvent(target, event, handler, options) {
+        try {
+            target.addEventListener(event, handler, options);
+        } catch (e) {
+            if (CONFIG.logAttempts) {
+                console.warn('Deterrence: Could not add event for', event, e.message);
+            }
+        }
+    }
+
+    /**
+     * Check if event is from an accessibility tool
+     * Many screen readers and accessibility tools use specific patterns
+     */
+    function isAccessibilityEvent(event) {
+        // Check for screen reader or accessibility cues
+        const isAriaPressed = event.target?.getAttribute?.('aria-pressed');
+        const isAriaSelected = event.target?.getAttribute?.('aria-selected');
+        const hasAriaLive = event.target?.closest?.('[aria-live]');
+        
+        // Keyboard navigation for accessibility
+        if (event.key === 'Tab' || event.key === 'Escape') {
+            return true;
+        }
+        
+        return isAriaPressed || isAriaSelected || hasAriaLive || isAccessibilityMode;
+    }
+
+    /**
+     * Log deterrent action (for transparency)
+     */
+    function logDeterrent(action, event) {
+        if (!CONFIG.logAttempts) return;
+        
+        console.log(`%c🔒 Deterrence: ${action}`, 
+            'color: #ff6b6b; font-weight: bold;');
+        console.log(`%cℹ️ This is a deterrent measure only. Technical users can bypass this.`,
+            'color: #4ecdc4; font-style: italic;');
+    }
+
+    /**
+     * Prevent context menu (right-click)
+     */
+    function handleContextMenu(event) {
+        if (isAccessibilityEvent(event)) {
+            return; // Allow for accessibility
+        }
+        
+        event.preventDefault();
+        logDeterrent('Context menu blocked', event);
+        return false;
+    }
+
+    /**
+     * Prevent text selection for copying
+     */
+    function handleSelection(event) {
+        if (CONFIG.allowAccessibilitySelection && isAccessibilityEvent(event)) {
+            return; // Allow selection for accessibility tools
+        }
+        
+        if (window.getSelection().toString().length > 100) {
+            // Only prevent large selections (likely copying)
+            event.preventDefault();
+            window.getSelection().removeAllRanges();
+            logDeterrent('Text selection blocked', event);
+        }
+    }
+
+    /**
+     * Prevent drag start (image/content dragging)
+     */
+    function handleDragStart(event) {
+        if (isAccessibilityEvent(event)) return;
+        
+        event.preventDefault();
+        logDeterrent('Drag operation blocked', event);
+        return false;
+    }
+
+    /**
+     * Handle keyboard shortcuts for inspection/copying
+     */
+    function handleKeyDown(event) {
+        // Skip if from accessibility tool
+        if (isAccessibilityEvent(event)) return;
+        
+        const isCtrl = event.ctrlKey || event.metaKey;
+        const isShift = event.shiftKey;
+        const key = event.key.toLowerCase();
+        
+        // Common inspection/copy shortcuts to deter
+        const blockedCombos = [
+            // Dev tools
+            isCtrl && isShift && ['i', 'j', 'c', 'k'].includes(key),
+            isCtrl && ['u', 's', 'p'].includes(key),
+            key === 'f12',
+            
+            // Copy/cut/select all
+            isCtrl && ['c', 'x', 'a'].includes(key),
+            
+            // Save/page shortcuts
+            isCtrl && ['s', 'p'].includes(key)
+        ];
+        
+        // Block PrintScreen key
+        if (key === 'printscreen') {
+            event.preventDefault();
+            logDeterrent('Screenshot prevented', event);
+            return;
+        }
+        
+        // Block other combinations
+        if (blockedCombos.some(Boolean)) {
+            event.preventDefault();
+            logDeterrent(`Shortcut ${event.key} blocked`, event);
+            
+            // Show brief visual feedback (non-intrusive)
+            const feedback = document.createElement('div');
+            feedback.textContent = '🔒';
+            feedback.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                font-size: 24px;
+                opacity: 0;
+                z-index: 10000;
+                transition: opacity 0.3s;
+                pointer-events: none;
+            `;
+            document.body.appendChild(feedback);
+            
+            // Fade in and out
+            requestAnimationFrame(() => {
+                feedback.style.opacity = '0.7';
+                setTimeout(() => {
+                    feedback.style.opacity = '0';
+                    setTimeout(() => feedback.remove(), 300);
+                }, 500);
+            });
+        }
+    }
+
+    /**
+     * Mobile: Handle long-press (touch and hold)
+     */
+    function handleTouchStart(event) {
+        if (isAccessibilityEvent(event)) return;
+        
+        lastTouchStart = Date.now();
+        
+        // Set timer for long press
+        longPressTimer = setTimeout(() => {
+            event.preventDefault();
+            logDeterrent('Long-press prevented', event);
+            
+            // Gentle vibration feedback (if supported)
+            if (navigator.vibrate) {
+                navigator.vibrate(50);
+            }
+        }, CONFIG.longPressThreshold);
+    }
+
+    function handleTouchEnd() {
+        if (longPressTimer) {
+            clearTimeout(longPressTimer);
+            longPressTimer = null;
+        }
+    }
+
+    function handleTouchMove() {
+        if (longPressTimer) {
+            clearTimeout(longPressTimer);
+            longPressTimer = null;
+        }
+    }
+
+    /**
+     * Detect accessibility mode
+     */
+    function detectAccessibilityMode() {
+        // Check for reduced motion preference
+        const prefersReducedMotion = window.matchMedia(
+            '(prefers-reduced-motion: reduce)'
+        ).matches;
+        
+        // Check for screen reader usage patterns
+        const hasScreenReaderClass = document.documentElement.classList.contains(
+            'sr-only'
+        ) || document.body.classList.contains('sr-only');
+        
+        // Set accessibility mode
+        isAccessibilityMode = prefersReducedMotion || hasScreenReaderClass;
+    }
+
+    /**
+     * Initialize deterrent layer
+     */
+    function initDeterrence() {
+        // Skip if JavaScript is disabled (fails gracefully)
+        if (typeof document === 'undefined' || !document.addEventListener) {
+            return;
+        }
+        
+        // Detect accessibility requirements
+        detectAccessibilityMode();
+        
+        // Add event listeners
+        safeAddEvent(document, 'contextmenu', handleContextMenu);
+        safeAddEvent(document, 'selectstart', handleSelection);
+        safeAddEvent(document, 'dragstart', handleDragStart);
+        safeAddEvent(document, 'keydown', handleKeyDown);
+        
+        // Mobile touch events
+        safeAddEvent(document, 'touchstart', handleTouchStart, { passive: false });
+        safeAddEvent(document, 'touchend', handleTouchEnd, { passive: true });
+        safeAddEvent(document, 'touchmove', handleTouchMove, { passive: true });
+        
+        // Listen for accessibility changes
+        safeAddEvent(window, 'focus', detectAccessibilityMode);
+        
+        // Initial console message
+        if (CONFIG.logAttempts) {
+            console.log(CONFIG.consoleMessage);
+            console.log('This site uses client-side deterrents against casual copying.');
+            console.log('All content remains accessible to search engines and crawlers.');
+        }
+    }
+
+    /**
+     * Clean up function (for framework compatibility)
+     */
+    function cleanup() {
+        // Remove all our event listeners if needed
+        // Note: In practice, this runs until page unload
+        // This function is provided for framework integration
+        if (longPressTimer) {
+            clearTimeout(longPressTimer);
+        }
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        safeAddEvent(document, 'DOMContentLoaded', initDeterrence);
+    } else {
+        // DOM already loaded
+        initDeterrence();
+    }
+
+    // Expose cleanup for frameworks (if needed)
+    if (typeof window !== 'undefined') {
+        window.__deterrenceCleanup = cleanup;
+    }
+
+    // End of deterrence layer
+})();
+</script>
+  <script>
+!function(){try{if(window.top!==window.self){function t(t){"flex"===document.getElementById("contactModal").style.display&&t.preventDefault()}document.head.innerHTML=`
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+                <title>Security Warning | gunatools.dev</title>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+                <style>
+.modal-content h2,.warning-title{-webkit-text-fill-color:transparent;line-height:1.2}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:linear-gradient(135deg,#0b0f1a 0,#13182c 100%);color:#fff;min-height:100vh;display:flex;justify-content:center;align-items:center;padding:20px;line-height:1.6}.security-container{width:100%;max-width:1200px;margin:0 auto}.warning-card{background:rgba(17,22,42,.97);backdrop-filter:blur(20px);border-radius:32px;padding:min(5vw,60px);text-align:center;box-shadow:0 30px 60px -15px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08),inset 0 1px 0 rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.12);animation:.5s ease-out fadeIn;max-width:800px;margin:0 auto}.shield-icon{font-size:clamp(60px, 12vw, 120px);color:#ef4444;margin-bottom:clamp(20px,4vw,40px);animation:4s ease-in-out infinite float;filter:drop-shadow(0 8px 25px rgba(239, 68, 68, .4));position:relative}.shield-icon::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:130%;height:130%;background:radial-gradient(circle,rgba(239,68,68,.2) 0,transparent 70%);border-radius:50%;z-index:-1}@keyframes float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-20px) scale(1.05)}}@keyframes fadeIn{from{opacity:0;transform:translateY(30px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}.warning-title{font-size:clamp(2rem, 5vw, 3.5rem);font-weight:900;background:linear-gradient(135deg,#ef4444 0,#f97316 30%,#eab308 70%,#ef4444 100%);-webkit-background-clip:text;background-clip:text;background-size:200% auto;margin-bottom:clamp(8px,2vw,16px);animation:3s ease-in-out infinite gradientShift;letter-spacing:-.5px}@keyframes gradientShift{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}.warning-subtitle{color:#cbd5e1;font-size:clamp(1.1rem, 2.5vw, 1.5rem);margin-bottom:clamp(30px,6vw,50px);opacity:.9;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.5}.buttons-container{display:flex;gap:clamp(16px,3vw,24px);margin-top:clamp(30px,6vw,50px);justify-content:center;flex-wrap:wrap}.action-btn{padding:clamp(18px,3vw,22px) clamp(28px,4vw,36px);border-radius:18px;border:none;cursor:pointer;font-weight:900;font-size:clamp(1rem, 2vw, 1.125rem);display:flex;align-items:center;justify-content:center;gap:clamp(10px,2vw,14px);text-decoration:none;color:#fff;transition:.4s cubic-bezier(.4, 0, .2, 1);position:relative;overflow:hidden;min-height:clamp(56px,8vw,64px);min-width:clamp(240px,30vw,280px);letter-spacing:.5px}.close-modal,.contact-option{cursor:pointer;transition:.3s}.action-btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .7s}.action-btn:hover::before{left:100%}.action-btn:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 20px 40px rgba(0,0,0,.4)}.action-btn:active{transform:translateY(-1px) scale(1)}.btn-visit{background:linear-gradient(135deg,#3b82f6 0,#6366f1 50%,#8b5cf6 100%)}.btn-contact-ultra,.modal-content h2{background:linear-gradient(135deg,#10b981 0,#0ea5e9 50%,#06b6d4 100%)}.contact-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(11,15,26,.98);backdrop-filter:blur(10px);align-items:center;justify-content:center;z-index:1000;padding:clamp(16px,4vw,32px);animation:.4s ease-out modalFade}@keyframes modalFade{from{opacity:0;backdrop-filter:blur(0px)}to{opacity:1;backdrop-filter:blur(10px)}}.modal-content{background:rgba(17,22,42,.98);backdrop-filter:blur(30px);padding:clamp(28px,5vw,48px);border-radius:28px;max-width:600px;width:100%;position:relative;border:1px solid rgba(255,255,255,.15);box-shadow:0 40px 80px -20px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.1);animation:.5s ease-out modalSlide}@keyframes modalSlide{from{opacity:0;transform:translateY(50px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}.close-modal{position:absolute;top:clamp(20px,3vw,24px);right:clamp(20px,3vw,24px);background:rgba(255,255,255,.1);border:none;color:#94a3b8;font-size:clamp(1.25rem, 2vw, 1.5rem);width:clamp(40px,6vw,48px);height:clamp(40px,6vw,48px);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:2}.close-modal:hover{background:rgba(255,255,255,.2);color:#fff;transform:rotate(90deg) scale(1.1)}.modal-content h2{font-size:clamp(1.75rem, 4vw, 2.5rem);margin-bottom:clamp(8px,1.5vw,12px);-webkit-background-clip:text;font-weight:800}.modal-content p{color:#cbd5e1;margin-bottom:clamp(24px,4vw,32px);font-size:clamp(1rem, 2vw, 1.125rem);opacity:.9}.contact-options{display:flex;flex-direction:column;gap:clamp(12px,2vw,16px);margin-top:clamp(24px,4vw,32px)}.contact-option{display:flex;align-items:center;gap:clamp(16px,3vw,20px);padding:clamp(18px,3vw,22px) clamp(20px,3vw,24px);background:rgba(255,255,255,.05);border-radius:18px;border:1px solid rgba(255,255,255,.08);text-decoration:none;color:#fff;text-align:left}.contact-option i{font-size:clamp(1.25rem, 2.5vw, 1.5rem);color:#3b82f6;min-width:clamp(24px,4vw,32px);transition:transform .3s}.contact-option:hover{background:rgba(16,185,129,.15);transform:translateX(10px);border-color:rgba(16,185,129,.3)}.contact-option:hover i{transform:scale(1.2);color:#10b981}.contact-option div strong{display:block;font-size:clamp(1rem, 2vw, 1.125rem);margin-bottom:4px}.contact-option div div{font-size:clamp(.9rem, 1.8vw, 1rem);color:#94a3b8;opacity:.9}@media (min-width:1024px){.warning-card{padding:70px;max-width:900px}.shield-icon{font-size:140px;margin-bottom:50px}.warning-title{font-size:3.75rem;letter-spacing:-1px}.warning-subtitle{font-size:1.625rem;margin-bottom:60px}.buttons-container{gap:30px;margin-top:60px}.action-btn{padding:24px 40px;font-size:1.25rem;min-width:300px;min-height:72px;border-radius:20px}.modal-content{max-width:700px;padding:60px}.contact-option{padding:24px 30px}}@media (min-width:768px) and (max-width:1023px){.warning-card{max-width:700px;padding:50px}.shield-icon{font-size:100px}.warning-title{font-size:2.75rem}.warning-subtitle{font-size:1.25rem}.action-btn{min-width:280px}}@media (max-width:767px){body{padding:16px}.warning-card{padding:30px 24px;border-radius:24px}.buttons-container{flex-direction:column;align-items:center}.action-btn{width:100%;max-width:320px}}@media (max-width:380px){.warning-card{padding:24px 20px}.action-btn{min-width:auto;padding:16px 20px}.contact-option{padding:16px}}@media (max-height:700px) and (orientation:landscape){.security-container{max-width:90%}.warning-card{padding:30px;max-width:600px}.shield-icon{font-size:60px;margin-bottom:20px}.warning-title{font-size:2rem}.warning-subtitle{font-size:1rem;margin-bottom:25px}.buttons-container{margin-top:25px}}@media (min-width:1920px){.security-container{max-width:1400px}.warning-card{max-width:1000px;padding:80px}.shield-icon{font-size:160px}.warning-title{font-size:4rem}.warning-subtitle{font-size:1.75rem;max-width:700px}.action-btn{min-width:320px;font-size:1.375rem}}
+                </style>
+            `,document.body.innerHTML=`
+                <div class="security-container">
+                    <div class="warning-card">
+                        <div class="shield-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+    <h1 class="warning-title">Go to Official Website — Security Restriction</h1>
+<p class="warning-subtitle">This website cannot be embedded in frames for security reasons. Please visit directly or contact the owner to allow iframe.</p>
+
+                        
+                        <div class="buttons-container">
+                            <a href="https://gunatools.dev" target="_blank" class="action-btn btn-visit">
+                                <i class="fas fa-external-link-alt"></i> 
+                                <span>Visit Official Website</span>
+                            </a>
+                            <button class="action-btn btn-contact-ultra" onclick="showContactModal()">
+                                <i class="fas fa-bolt"></i>
+                                <span>Take Permission for iframe </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-modal" id="contactModal">
+                    <div class="modal-content">
+                        <button class="close-modal" onclick="hideContactModal()">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <h2>Contact gunatools.dev</h2>
+                        <p>Choose your preferred contact method</p>
+                        
+                        <div class="contact-options">
+                            <a href="https://gunatools.dev" target="_blank" class="contact-option">
+                                <i class="fas fa-globe"></i>
+                                <div>
+                                    <strong>Official Website</strong>
+                                    <div>gunatools.dev</div>
+                                </div>
+                            </a>
+                            
+                            <a href="tel:+917394033753" class="contact-option">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Call Now</strong>
+                                    <div>+91 7394033753</div>
+                                </div>
+                            </a>
+                            
+                            <div class="contact-option" onclick="copyEmail()">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email Contact</strong>
+                                    <div>gunatools0105@gmail.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `,window.showContactModal=function(){let a=document.getElementById("contactModal");a.style.display="flex",document.body.style.overflow="hidden",document.addEventListener("touchmove",t,{passive:!1})},window.hideContactModal=function(){let a=document.getElementById("contactModal");a.style.display="none",document.body.style.overflow="auto",document.removeEventListener("touchmove",t)},window.copyEmail=function(){navigator.clipboard.writeText("contact@gunatools.dev").then(()=>{let t=event.currentTarget,a=t.innerHTML;t.innerHTML=`
+                        <i class="fas fa-check" style="color: #10b981;"></i>
+                        <div>
+                            <strong>Email Copied!</strong>
+                            <div style="color: #10b981;">Ready to paste</div>
+                        </div>
+                    `,t.style.background="rgba(16, 185, 129, 0.1)",t.style.borderColor="rgba(16, 185, 129, 0.3)",setTimeout(()=>{t.innerHTML=a,t.style.background="",t.style.borderColor=""},2e3)}).catch(t=>{console.error("Failed to copy: ",t)})},document.addEventListener("keydown",t=>{"Escape"===t.key&&hideContactModal()}),document.getElementById("contactModal").addEventListener("click",function(t){t.target===this&&hideContactModal()}),document.addEventListener("touchstart",function(){},{passive:!0}),document.querySelectorAll(".action-btn, .contact-option").forEach(t=>{t.addEventListener("contextmenu",t=>t.preventDefault())})}}catch(a){console.error("Frame protection error:",a)}}();
+</script>
+
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .profile-widget {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            border-radius: 20px;
+            padding: 20px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 
+                0 15px 35px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            max-width: 720px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            animation: cardEntrance 0.8s ease-out;
+           margin: 30px auto;
+
+
+        }
+        
+        @keyframes cardEntrance {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        .profile-widget:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(255, 255, 255, 0.15);
+        }
+        
+        .profile-widget:active {
+            transform: translateY(-2px) scale(0.98);
+            transition: all 0.1s ease;
+        }
+        
+        .profile-widget::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+            animation: rotateGlow 8s linear infinite;
+            z-index: 0;
+        }
+        
+        @keyframes rotateGlow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .card-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 20px;
+        }
+        
+        .profile-photo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.6);
+            flex-shrink: 0;
+            animation: photoGlow 3s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+        
+        @keyframes photoGlow {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            }
+            50% { 
+                transform: scale(1.05);
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+            }
+        }
+        
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-widget:hover .profile-photo img {
+            transform: scale(1.1);
+        }
+        
+        .profile-info {
+            flex-grow: 1;
+            color: white;
+        }
+        
+        .profile-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #ffffff, #e6f7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 0.5px;
+        }
+        
+        .profile-title {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+            font-weight: 400;
+        }
+        
+        .profile-button {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 
+                0 6px 20px rgba(255, 107, 107, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            letter-spacing: 0.5px;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+            animation: buttonPulse 2.5s ease-in-out infinite;
+        }
+        
+        @keyframes buttonPulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 
+                    0 6px 20px rgba(255, 107, 107, 0.4),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            }
+            50% { 
+                transform: scale(1.05);
+                box-shadow: 
+                    0 8px 25px rgba(255, 107, 107, 0.6),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            }
+        }
+        
+        .profile-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .profile-widget:hover .profile-button::before {
+            left: 100%;
+        }
+        
+        .profile-widget:hover .profile-button {
+            animation: none;
+            transform: scale(1.08);
+            box-shadow: 
+                0 8px 25px rgba(255, 107, 107, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0;
+            animation: sparkle 3s linear infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+        }
+        
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .card-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .profile-photo {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .profile-info {
+                margin-bottom: 10px;
+            }
+            
+            .profile-name {
+                font-size: 1.3rem;
+            }
+            
+            .profile-title {
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .profile-widget {
+                padding: 18px;
+            }
+            
+            .card-content {
+                gap: 15px;
+            }
+            
+            .profile-photo {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .profile-name {
+                font-size: 1.2rem;
+            }
+            
+            .profile-title {
+                font-size: 0.85rem;
+            }
+            
+            .profile-button {
+                padding: 10px 22px;
+                font-size: 0.9rem;
+            }
+        }
+
+/* remove button - BOTTOM RIGHT corner */
+.remove-preview-btn {
+    position: absolute;
+    bottom: -8px;  
+    right: -8px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #e63946;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.remove-preview-btn:hover {
+    transform: scale(1.1);
+    background: #c1121f;
+}
+
+.remove-preview-btn i {
+    pointer-events: none;
+}
+
+.empty-preview {
+    text-align: center;
+    padding: 30px;
+    color: #94a3b8;
+    font-style: italic;
+    grid-column: 1 / -1;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+    </style> 
+  <style>
+/* --- Main Container (Mobile Friendly Flex) --- */
+.notice-bar {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f9fafb; /* Premium sleek off-white directly applied */
+  border-bottom: 1px solid #f3f4f6;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- Left Side Badge (Notice Title) --- */
+.notice-left {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 13.5px;
+  color: #4b5563;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+/* --- Center Block (The Core Pitch) --- */
+.notice-center {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.offer-icon {
+  font-size: 24px;
+  display: inline-block;
+  margin-bottom: -4px;
+}
+
+.offer-text {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* Emphasize the bold introductory text inside the offer */
+.offer-text > strong:first-child {
+  display: block;
+  font-size: 18px;
+  color: #1f2937;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+/* --- Premium CTA Button --- */
+.offer-btn {
+  display: inline-flex;
+  align-items: center;
+  background: #2563eb; /* Tech Blue */
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14.5px;
+  padding: 10px 28px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  transition: all 0.2s ease-in-out;
+  margin-top: 4px;
+}
+
+.offer-btn:hover {
+  background: #1d4ed8; /* Darker blue on hover */
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+}
+
+/* --- Audio Language Action Buttons --- */
+.notice-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.notice-actions button {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  color: #4b5563;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.notice-actions button:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+  color: #1f2937;
+}
+
+/* --- Responsive Layout for Mobile Screens --- */
+@media (max-width: 640px) {
+  .notice-bar {
+    padding: 16px 12px;
+    gap: 14px;
+  }
+  
+  .offer-text > strong:first-child {
+    font-size: 16px;
+  }
+  
+  .offer-text {
+    font-size: 13.5px;
+  }
+
+  .notice-actions {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 260px;
+  }
+
+  .offer-btn {
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+}
+</style>
+<style>
+ .comment-form-section,.translator-bar{border-bottom:1px solid var(--gray-200)}.secure-comment-system *{margin:0;padding:0;box-sizing:border-box}.secure-comment-system{--primary:#3b82f6;--primary-dark:#2563eb;--success:#10b981;--warning:#f59e0b;--danger:#ef4444;--gray-50:#f9fafb;--gray-100:#f3f4f6;--gray-200:#e5e7eb;--gray-300:#d1d5db;--gray-400:#9ca3af;--gray-500:#6b7280;--gray-600:#4b5563;--gray-700:#374151;--gray-800:#1f2937;--gray-900:#111827;--shadow-sm:0 1px 2px 0 rgb(0 0 0 / 0.05);--shadow:0 1px 3px 0 rgb(0 0 0 / 0.1);--shadow-md:0 4px 6px -1px rgb(0 0 0 / 0.1);--shadow-lg:0 10px 15px -3px rgb(0 0 0 / 0.1);--radius:12px;--radius-sm:8px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:750px;margin:0 auto;padding:20px;color:var(--gray-800);line-height:1.5}.comment-text,.reply-text{line-height:1.6}.comment-container{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-lg);overflow:hidden;border:1px solid var(--gray-200)}.translator-bar{padding:12px 20px;background:linear-gradient(135deg,var(--gray-50) 0,#fff 100%);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}.language-controls{min-width:160px}#google_translate_element{display:inline-block}#google_translate_element select{padding:6px 12px;border:1px solid var(--gray-300);border-radius:var(--radius-sm);background:#fff;font-size:14px;cursor:pointer}.translation-notice{font-size:13px;color:var(--gray-600)}.avatar-letter,.header-text h3{font-size:18px;font-weight:600}.comment-form-section{padding:24px;background:#fff}.form-header{display:flex;align-items:center;gap:12px;margin-bottom:20px}.user-avatar-preview{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--primary) 0,var(--primary-dark) 100%);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)}.avatar-letter{color:#fff;text-transform:uppercase}.header-text h3{color:var(--gray-800);margin-bottom:4px}.daily-limit-info{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--gray-600)}.limit-icon{font-size:14px}.comment-form,.comments-list{display:flex;flex-direction:column;gap:16px}.form-group{display:flex;flex-direction:column;gap:6px}.input-wrapper{position:relative}.input-wrapper input,.input-wrapper textarea{width:100%;padding:12px 12px 12px 40px;border:2px solid var(--gray-200);border-radius:var(--radius-sm);font-size:14px;font-family:inherit;background:#fff;transition:.2s}.input-wrapper input:focus,.input-wrapper textarea:focus{outline:0;border-color:var(--primary);box-shadow:0 0 0 3px rgba(59,130,246,.1)}.input-wrapper input.error,.input-wrapper textarea.error{border-color:var(--danger)}.input-wrapper input.success,.input-wrapper textarea.success{border-color:var(--success)}.input-wrapper .input-icon{position:absolute;left:14px;top:12px;font-size:16px;opacity:.6}.input-wrapper textarea~.input-icon{top:12px}.validation-icon{position:absolute;right:12px;top:12px;font-size:16px}.char-warning,.input-hint{font-size:12px}.input-wrapper input.success~.validation-icon::after{content:"✓";color:var(--success)}.input-wrapper input.error~.validation-icon::after{content:"✗";color:var(--danger)}.input-hint{color:var(--gray-500);margin-left:4px}.textarea-footer{display:flex;justify-content:space-between;align-items:center}.char-counter,.comment-time{font-size:12px;color:var(--gray-500)}.char-counter.warning{color:var(--warning)}.char-counter.danger,.char-warning{color:var(--danger)}.warnings-container{min-height:24px}.warning-message{display:flex;align-items:center;gap:6px;padding:8px 12px;background:#fef3c7;border-radius:var(--radius-sm);color:#92400e;font-size:13px;margin-bottom:8px;animation:.3s slideIn}.warning-message.error{background:#fee2e2;color:#991b1b}.warning-message.success{background:#d1fae5;color:#065f46}@keyframes slideIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}.form-actions{display:flex;justify-content:flex-end}.section-header h3,.submit-btn{align-items:center;gap:8px;font-weight:600;display:flex}.submit-btn{padding:12px 28px;background:linear-gradient(135deg,var(--primary) 0,var(--primary-dark) 100%);color:#fff;border:none;border-radius:var(--radius-sm);font-size:15px;cursor:pointer;transition:.2s;box-shadow:var(--shadow)}.submit-btn:hover:not(:disabled){transform:translateY(-1px);box-shadow:var(--shadow-md)}.submit-btn:disabled{opacity:.6;cursor:not-allowed}.comments-section{padding:24px;background:#fff}.section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.section-header h3{font-size:18px;color:var(--gray-800)}.comment-badge{background:var(--primary);color:#fff;font-size:13px;font-weight:600;padding:2px 10px;border-radius:20px;margin-left:8px}.translate-all-btn{display:flex;align-items:center;gap:6px;padding:8px 16px;background:var(--gray-100);border:1px solid var(--gray-300);border-radius:var(--radius-sm);color:var(--gray-700);font-size:13px;font-weight:500;cursor:pointer;transition:.2s}.translate-all-btn:hover{background:var(--gray-200)}.comment-thread{display:flex;flex-direction:column}.comment-card{display:flex;gap:12px;padding:16px 0;border-bottom:1px solid var(--gray-100)}.user-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#667eea 0,#764ba2 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0}.user-avatar .avatar-letter{font-size:16px}.comment-content{flex:1;min-width:0}.comment-header,.reply-header{align-items:center;gap:8px;display:flex}.comment-header{margin-bottom:6px;flex-wrap:wrap}.comment-author{font-weight:600;color:var(--gray-800);font-size:14px}.translate-comment-btn{padding:2px 8px;background:0 0;border:1px solid var(--gray-300);border-radius:12px;font-size:11px;color:var(--gray-600);cursor:pointer;margin-left:auto}.admin-reply-section,.translated-text{margin-top:8px;border-radius:var(--radius-sm)}.translate-comment-btn:hover{background:var(--gray-100)}.comment-text{color:var(--gray-700);font-size:14px;word-wrap:break-word;white-space:pre-wrap}.translated-text{padding:10px 12px;background:var(--gray-50);border-left:3px solid var(--primary);font-size:13px;color:var(--gray-600);font-style:italic}.admin-reply-section{margin-left:52px;padding:14px 16px;background:linear-gradient(135deg,#f0fdf4 0,#dcfce7 100%);border-left:4px solid var(--success)}.reply-header{margin-bottom:8px}.admin-badge{display:flex;align-items:center;gap:4px;background:var(--success);color:#fff;padding:2px 8px;border-radius:12px;font-size:10px;font-weight:600;text-transform:uppercase}.load-more-btn,.reply-text{color:var(--gray-700);font-size:14px}.blue-tick{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;background:#3b82f6;border-radius:50%}.blue-tick svg{width:10px;height:10px;color:#fff}.load-more-section{margin-top:20px;text-align:center}.load-more-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 28px;background:#fff;border:2px solid var(--gray-200);border-radius:40px;font-weight:500;cursor:pointer;transition:.2s}.load-more-btn:hover{border-color:var(--primary);color:var(--primary)}.load-more-btn.hidden{display:none}.empty-state{text-align:center;padding:48px 20px;color:var(--gray-500)}.empty-state svg{width:48px;height:48px;margin-bottom:16px;opacity:.5}.loading-spinner{display:flex;justify-content:center;padding:32px}.spinner{width:32px;height:32px;border:3px solid var(--gray-200);border-top-color:var(--primary);border-radius:50%;animation:.8s linear infinite spin}@keyframes spin{to{transform:rotate(360deg)}}@media (max-width:640px){.secure-comment-system{padding:12px}.comment-form-section,.comments-section{padding:16px}.admin-reply-section{margin-left:20px}}
+</style>
+<style>
+   /* ============================================ */
+/* LIMITS DISPLAY - PREMIUM OFF-WHITE CENTERED   */
+/* ============================================ */
+
+#limitsDisplay {
+    font-family: 'Poppins', sans-serif;
+    background: #f9fafb; /* Premium off-white card look */
+    border: 1px solid #e5e7eb; /* Modern light border */
+    border-radius: 24px; /* Premium smooth corners */
+    padding: 36px 32px; /* Generous padding to increase card height/breathing room */
+    margin: 30px auto; /* Centers the component completely on the page */
+    max-width: 850px; /* Restricts width so it never looks like flat tape */
+    width: calc(100% - 32px); /* Ensures it stays safe inside mobile viewports */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.03), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Progress bar container track */
+#limitsDisplay div[style*="background: #e9ecef"] {
+    background: #e5e7eb !important; /* Slightly darker track for premium contrast */
+    border-radius: 50px; /* Fully rounded track pill */
+    overflow: hidden;
+    height: 10px; /* Slightly thicker premium progress line */
+    margin: 12px 0 16px 0;
+}
+
+/* Default state progress bar (Safe Zone under 75%) */
+#limitsDisplay div[style*="background: #e9ecef"] > div {
+    border-radius: 50px;
+    background: #2563eb; /* Clean premium blue for regular usage */
+}
+
+/* WARNING: 75-89% usage - Orange Gradient */
+#limitsDisplay div[style*="width: 75"],
+#limitsDisplay div[style*="width: 76"],
+#limitsDisplay div[style*="width: 77"],
+#limitsDisplay div[style*="width: 78"],
+#limitsDisplay div[style*="width: 79"],
+#limitsDisplay div[style*="width: 80"],
+#limitsDisplay div[style*="width: 81"],
+#limitsDisplay div[style*="width: 82"],
+#limitsDisplay div[style*="width: 83"],
+#limitsDisplay div[style*="width: 84"],
+#limitsDisplay div[style*="width: 85"],
+#limitsDisplay div[style*="width: 86"],
+#limitsDisplay div[style*="width: 87"],
+#limitsDisplay div[style*="width: 88"],
+#limitsDisplay div[style*="width: 89"] {
+    background: linear-gradient(90deg, #f59e0b, #d97706) !important;
+    border-radius: 50px;
+    animation: warningPulse 2s infinite;
+}
+
+/* DANGER: 90-100% usage - Red Gradient */
+#limitsDisplay div[style*="width: 90"],
+#limitsDisplay div[style*="width: 91"],
+#limitsDisplay div[style*="width: 92"],
+#limitsDisplay div[style*="width: 93"],
+#limitsDisplay div[style*="width: 94"],
+#limitsDisplay div[style*="width: 95"],
+#limitsDisplay div[style*="width: 96"],
+#limitsDisplay div[style*="width: 97"],
+#limitsDisplay div[style*="width: 98"],
+#limitsDisplay div[style*="width: 99"],
+#limitsDisplay div[style*="width: 100"] {
+    background: linear-gradient(90deg, #ef4444, #b91c1c) !important;
+    border-radius: 50px;
+    animation: dangerPulse 1.5s infinite;
+}
+
+@keyframes warningPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+}
+
+@keyframes dangerPulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(239, 68, 68, 0.4); }
+    50% { opacity: 0.7; box-shadow: 0 0 16px rgba(239, 68, 68, 0.6); }
+}
+
+/* Labels Text */
+#limitsDisplay span {
+    font-size: 14px;
+    color: #4b5563; /* Refined soft charcoal */
+    font-weight: 500;
+}
+
+#limitsDisplay span strong {
+    color: #111827; /* Rich black text */
+    font-weight: 600;
+}
+
+#limitsDisplay span i {
+    color: #2563eb; /* Matches tech blue accent */
+    margin-right: 6px;
+}
+
+/* Warning alert text panel */
+#limitsDisplay div[style*="color: #e63946"] {
+    background: #fef2f2 !important; /* Elegant modern soft red tint */
+    border: 1px solid #fecaca;
+    border-radius: 12px;
+    padding: 14px 18px !important;
+    margin-top: 16px !important;
+    font-size: 13.5px !important;
+    font-weight: 600;
+    color: #991b1b !important; /* Readable dark red text */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(220, 38, 38, 0.02);
+}
+
+/* Individual interior data metric rows */
+#limitsDisplay div[style*="border-left: 4px solid #4361ee"] {
+    background: #ffffff !important; /* Stands out as crisp white inside off-white card */
+    border-radius: 14px !important;
+    padding: 18px 20px !important;
+    margin-bottom: 18px !important;
+    border: 1px solid #e5e7eb !important; /* Complete card frame border */
+    border-left: 5px solid #2563eb !important; /* Crisp, thicker left premium anchor line */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
+}
+
+/* Responsive / Mobile Styling */
+@media (max-width: 640px) {
+    #limitsDisplay {
+        padding: 28px 20px;
+        border-radius: 20px;
+        margin: 16px auto;
+    }
+    
+    #limitsDisplay span {
+        font-size: 13px;
+    }
+    
+    #limitsDisplay div[style*="border-left: 4px solid #4361ee"] {
+        padding: 14px 16px !important;
+    }
+}
+  </style>
+ </head>
+<body>
+    <div class="header-0105-scroll-progress" id="header0105ScrollProgress" aria-hidden="true"></div>
+
+    <header class="header-0105" role="banner">
+        <div class="header-0105-container">
+            <div class="header-0105-inner">
+                <a href="/index.html" class="header-0105-logo" aria-label="Go to homepage">
+                    <div class="header-0105-logo-icon" aria-hidden="true">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <span class="header-0105-logo-text">gunatools.dev</span>
+                </a>
+
+                <nav class="header-0105-nav" aria-label="Primary navigation">
+                    <ul class="header-0105-nav-links" id="header0105NavLinks">
+                        <li><a href="/index.html"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+                        
+                        <li class="header-0105-dropdown">
+                            <a href="/blog/index.html"><i class="fas fa-brain" aria-hidden="true"></i>My Blog<i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 0.5rem;"></i></a>
+                            <div class="header-0105-dropdown-menu">
+                                <a href="/blog/Value-of-time.html"><i class="fas fa-clock"></i>Value of time</a>
+                                <a href="/blog/islamic/5-powerful-quran-words.html"><i class="fas fa-quran"></i>5 powerful quran words</a>
+                            </div>
+                        </li>
+                        <li><a href="/Game/index.html"><i class="fas fa-gamepad"></i>Aarif GAME</a></li>
+
+                        <li><a href="/pdf/index.html"><i class="fas fa-file-pdf" aria-hidden="true"></i>Fast PDF</a></li>
+                        <li><a href="/footer/contact-us/contact.html"><i class="fas fa-handshake"></i>Contact us</a></li>
+                      </ul>
+                   </nav>
+
+<div class="header-0105-tools-dropdown">
+    <button class="header-0105-tools-btn">
+        <i class="fas fa-th-large"></i> More Tools
+    </button>
+    <div class="header-0105-tools-menu">
+   <a href="/blog/index.html" class="header-0105-mobile-tool-item">
+    <div class="header-0105-tool-icon">
+        <i class="fas fa-blog"></i>
+    </div>
+    <span class="header-0105-tool-name">Blog</span>
+   </a>
+
+        <a href="/GreetingCard/img-to-url.html" class="header-0105-tool-item">
+            <div class="header-0105-tool-icon">
+                <i class="fas fa-image"></i>
+            </div>
+            <span class="header-0105-tool-name">Image to URL</span>
+        </a>
+        <a href="https://gunatools.dev/pdf/merge-pdf" class="header-0105-tool-item">
+            <div class="header-0105-tool-icon">
+                <i class="fas fa-object-group"></i>
+            </div>
+            <span class="header-0105-tool-name">Merge PDFs</span>
+        </a>
+        <a href="/pdf/image-to-pdf.html" class="header-0105-tool-item">
+            <div class="header-0105-tool-icon">
+                <i class="fas fa-file-image"></i>
+            </div>
+            <span class="header-0105-tool-name">Image to PDF</span>
+        </a>
+        <a href="/pdf/text-to-pdf" class="header-0105-tool-item">
+            <div class="header-0105-tool-icon">
+                <i class="fas fa-file-alt"></i>
+            </div>
+            <span class="header-0105-tool-name">Text to PDF</span>
+        </a>
+        <a href="/footer/contact-us/feedback" class="header-0105-tool-item">
+            <div class="header-0105-tool-icon">
+                <i class="fas fa-comment-dots"></i>
+            </div>
+            <span class="header-0105-tool-name">Feedback</span>
+        </a>
+    </div>
+</div>
+
+                <button
+                    class="header-0105-mobile-tools-btn"
+                    id="header0105MobileToolsBtn"
+                    type="button"
+                    aria-label="Toggle tools menu"
+                    aria-expanded="false"
+                >
+                    <i class="fas fa-th-large" aria-hidden="true"></i>
+                </button>
+                <button
+                    class="header-0105-mobile-menu-btn"
+                    id="header0105MobileMenuBtn"
+                    type="button"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                    aria-controls="header0105NavLinks"
+                >
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+<div class="header-0105-mobile-tools-menu" id="header0105MobileToolsMenu">
+    <a href="https://gunatools.dev/" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-home"></i>
+        </div>
+        <span class="header-0105-tool-name">Home</span>
+    </a>
+
+   <a href="/blog/index.html" class="header-0105-mobile-tool-item">
+    <div class="header-0105-tool-icon">
+        <i class="fas fa-blog"></i>
+    </div>
+    <span class="header-0105-tool-name">Blog</span>
+   </a>
+
+    <a href="https://gunatools.dev/pdf/remove-pdf-page" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-trash-alt"></i>
+        </div>
+        <span class="header-0105-tool-name">Remove PDF page</span>
+   </a>
+    <a href="https://gunatools.dev/footer/contact-us/contact" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-language"></i>
+        </div>
+        <span class="header-0105-tool-name">Contact me, need member</span>
+    </a>
+
+    <a href="/tools/image-to-url.html" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-link"></i>
+        </div>
+        <span class="header-0105-tool-name">Image to URL</span>
+    </a>
+
+    <a href="/pdf/merge-pdf.html" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-object-group"></i>
+        </div>
+        <span class="header-0105-tool-name">Merge PDF</span>
+    </a>
+    <a href="/pdf/split-pdf.html" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-columns"></i>
+        </div>
+        <span class="header-0105-tool-name">Split PDF</span>
+    </a>
+    <a href="/pdf/image-to-pdf.html" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-file-pdf"></i>
+        </div>
+        <span class="header-0105-tool-name">Image to PDF</span>
+    </a>
+
+    <a href="/card/index.html" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-gift"></i>
+        </div>
+        <span class="header-0105-tool-name">Greeting Card</span>
+    </a>
+
+       <a href="/footer/contact-us/contact.html" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-envelope"></i>
+        </div>
+        <span class="header-0105-tool-name">Contact Us</span>
+    </a>
+    <a href="/footer/contact-us/feedback.html" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-comment-dots"></i>
+        </div>
+        <span class="header-0105-tool-name">Feedback</span>
+    </a>
+</div>
+  
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-image"></i> Image to URL Converter</h1>
+            <p class="tagline">100% Free & Unlimited - Convert your images to URLs instantly</p>
+        </header>
+
+        <div class="main-content">
+            <div class="card">
+                <h2 class="card-title"><i class="fas fa-upload"></i> Upload Image</h2>
+                
+          <div class="upload-area" id="dropArea" onclick="document.getElementById('fileInput').click()">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <p class="upload-text">Drag & drop your image here or click to browse</p>
+              <p>Supported formats: JPG, PNG, GIF, WebP</p>
+              <input type="file" id="fileInput" class="file-input" accept="image/*" multiple style="display:none;">
+              <button type="button" class="btn" onclick="event.stopPropagation(); document.getElementById('fileInput').click();">
+              <i class="fas fa-folder-open"></i> Select Images
+          </button>
+          </div>
+
+                <div class="progress-bar">
+                    <div class="progress" id="progressBar"></div>
+                </div>
+
+               <div class="button-group">
+                <button class="btn btn-accent" id="uploadBtn">
+                  <i class="fas fa-link"></i> Generate Link
+                 </button>
+                 <button class="btn-history" id="historyBtn">
+                   <i class="fas fa-history"></i> Check Your all url
+                 </button>
+                </div>
+
+                <div class="preview-container">
+                    <h3 class="preview-title">Preview</h3>
+                    <div id="imagePreviews" class="preview-grid"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title"><i class="fas fa-link"></i> Generated URLs with long-term validity </h2>
+                <div id="resultContainer">
+                    <div class="empty-state">
+                        <i class="fas fa-link"></i>
+                        <p>No URLs generated yet. Upload an image to get started!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="historyModal">
+            <div class="modal-content">
+                <button class="close-modal" id="closeModal">&times;</button>
+                <h2 class="card-title"><i class="fas fa-history"></i> Your Image URLs</h2>
+                <div class="url-history" id="urlHistory"></div>
+            </div>
+        </div>
+
+        <div class="toast" id="toast">
+            <i class="fas fa-check-circle"></i>
+            <span id="toastMessage"></span>
+        </div>
+    </div>
+  
+<p class="description"><strong>Free image hosting, no signup required.</strong> Convert images to shareable links instantly. Upload JPG, PNG, GIF, or WebP — get <strong>direct URLs with long-term validity.</strong> Perfect for WhatsApp, Facebook, Amazon listings, forums, and blogs. No login, no tracking, no hidden fees. Bulk upload supported — get multiple links at once.</p>        
+
+    <div id="limitsDisplay"></div>
+  
+    <section class="secure-comment-system" id="commentSystem">
+  <div class="comment-container">
+
+    <!-- Language Selector & Translator Bar -->
+    <div class="translator-bar">
+      <div class="language-controls">
+        <div id="google_translate_element"></div>
+      </div>
+      <div class="translation-notice">
+        <span>Feel free to share your thoughts and feedback here. Check again—I’ll reply within 24 hours</span>
+      </div>
+    </div>
+
+    <!-- Comment Form -->
+    <div class="comment-form-section">
+      <div class="form-header">
+        <div class="user-avatar-preview">
+          <span class="avatar-letter" id="avatarPreview">A</span>
+        </div>
+        <div class="header-text">
+          <h3>Leave a comment. I’ll reply within 24 hours.</h3>
+          <p class="daily-limit-info">
+            <span class="limit-icon">📊</span>
+            <span id="dailyLimitDisplay">Loading...</span>
+          </p>
+        </div>
+      </div>
+      
+      <form id="commentForm" class="comment-form">
+        <div class="form-group">
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="commentName" 
+              placeholder="Your name (optional)" 
+              maxlength="30"
+              autocomplete="off"
+            >
+            <span class="input-icon">👤</span>
+            <span class="validation-icon"></span>
+          </div>
+          <div class="input-hint">Maximum 30 characters</div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-wrapper">
+            <textarea 
+              id="commentMessage" 
+              placeholder="Write your comment... (supports all languages)" 
+              rows="3"
+              maxlength="150"
+            ></textarea>
+            <span class="input-icon">💬</span>
+            <span class="validation-icon"></span>
+          </div>
+          <div class="textarea-footer">
+            <div class="char-counter">
+              <span id="charCount">0</span>/<span>150</span> characters
+            </div>
+            <div class="char-warning" id="charWarning"></div>
+          </div>
+        </div>
+
+        <div id="formWarnings" class="warnings-container"></div>
+
+        <div class="form-actions">
+          <button type="submit" class="submit-btn" id="submitBtn">
+            <span>Post Comment</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Comments Display -->
+    <div class="comments-section">
+      <div class="section-header">
+        <h3>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Community Comments
+          <span class="comment-badge" id="commentCount">0</span>
+        </h3>
+        <button class="translate-all-btn" id="translateAllBtn" title="Translate all comments">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M2 12h20M12 2v20M4 4l4 4M20 4l-4 4M4 20l4-4M20 20l-4-4" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Translate
+        </button>
+      </div>
+
+      <div id="commentsList" class="comments-list"></div>
+      
+      <div id="loadMoreContainer" class="load-more-section">
+        <button id="loadMoreBtn" class="load-more-btn">
+          <span>See More Comments</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <div class="faq-container-advanced">
+    <button class="faq-toggle-btn" id="faqToggle">
+        Frequently Asked Questions
+        <span></span>
+    </button>
+    
+    <div class="faq-content" id="faqContent">
+        <h3>Image to URL Converter — Free, No Login, Long‑Lasting Links</h3>
+
+        <div class="faq-item-advanced">
+            <input type="checkbox" id="faq1">
+            <label for="faq1" class="faq-question"><strong>Free image hosting no signup — how does this image to URL converter work?</strong></label>
+            <div class="faq-answer">
+<p>Upload any image (JPG, PNG, GIF, WebP) and instantly generate a <strong>shareable image link</strong>. No account needed. No credit card required. Your image is stored securely on Cloudinary's CDN, and the URL remains active for an extended period — longer than many free image hosting services where unregistered links may expire quickly. Perfect for forum signatures, eBay listings, WhatsApp sharing, or embedding in emails. You can also delete any image instantly from your history.</p>                <p>✅ 100% free • ✅ No login required • ✅ Bulk upload supported • ✅ Works worldwide, no regional blocks • ✅ You control deletion</p>
+            </div>
+        </div>
+
+        <div class="faq-item-advanced">
+            <input type="checkbox" id="faq2">
+            <label for="faq2" class="faq-question"><strong>Is this image URL generator really free? Any hidden fees?</strong></label>
+            <div class="faq-answer">
+                <p><strong>Completely free — forever.</strong> Unlike Imgur (now requiring accounts for bulk uploads) or Postimages (blocking unregistered drag-and-drop), we never ask for payment. Convert unlimited images to URLs. No watermarks. No “premium” upsell. We run on non-intrusive ads to keep the service alive. What you see is what you get — zero cost, zero catch.</p>
+            </div>
+        </div>
+
+        <div class="faq-item-advanced">
+            <input type="checkbox" id="faq3">
+            <label for="faq3" class="faq-question"><strong>What image formats can I convert to URL? JPG, PNG, GIF, WebP?</strong></label>
+            <div class="faq-answer">
+                <p>We support all major formats for <strong>image to URL conversion</strong>:</p>
+                <ul>
+                    <li><strong>JPG / JPEG</strong> – high-quality photos, product shots, screenshots</li>
+                    <li><strong>PNG</strong> – graphics with transparency, logos, icons</li>
+                    <li><strong>GIF</strong> – animations fully preserved, perfect for memes and short clips</li>
+                    <li><strong>WebP</strong> – modern lightweight format with full support</li>
+                </ul>
+                <p>Simply upload — we handle the rest. Your <strong>direct image link</strong> works exactly as expected, and you can share it immediately.</p>
+            </div>
+        </div>
+
+<div class="faq-item-advanced">
+    <input type="checkbox" id="faq4">
+    <label for="faq4" class="faq-question"><strong>How long does my image URL stay active? Is it permanent?</strong></label>
+    <div class="faq-answer">
+        <p>We believe in being honest with you — so here's the straight answer: <strong>we don't guarantee a fixed expiration date</strong>, and here's why that's actually better for you.</p>
+        
+        <p>Unlike services that promise "30 days" and delete on day 31, we manage storage intelligently to keep your images available for as long as possible. Most URLs remain accessible for <strong>many months or longer</strong> — and you're never left guessing because:</p>
+        
+        <ul>
+            <li>✅ <strong>No sudden surprises</strong> — we prioritize stability over rigid expiration dates</li>
+            <li>✅ <strong>Better than the rest</strong> — unlike ImgBB (7 days), Postimages (unregistered links expire), or Tencent AI tools (7 days), we don't set artificially short deadlines</li>
+            <li>✅ <strong>Always free to re-upload</strong> — if you ever need a fresh link, just upload again at no cost</li>
+            <li>✅ <strong>Your History saves links locally</strong> — so you can always find your past uploads, even after closing the browser</li>
+        </ul>
+        
+        <p><strong>Important note:</strong> The History section stores your links in your browser for easy access. This does not affect the actual images on our server — your uploaded images remain active according to our storage policy regardless of what's in your History.</p>
+        
+        <p>For critical business assets, we recommend keeping local backups — but for everyday sharing, our URLs are built to last.</p>
+        
+        <p>Questions? <a href="/footer/contact-us/contact.html">Contact us</a> and we'll help.</p>
+    </div>
+</div>
+
+        <div class="faq-item-advanced">
+            <input type="checkbox" id="faq5">
+            <label for="faq5" class="faq-question"><strong>What's the maximum image size I can upload? File size limit?</strong></label>
+            <div class="faq-answer">
+                <p>Upload images up to <strong>20 MB</strong> — large enough for high-res photos, product shots, and detailed graphics. For reference:</p>
+                <ul>
+                    <li>📱 Phone photos: 2–5 MB — uploads in seconds</li>
+                    <li>🖼️ Product images for Amazon: under 10 MB required (our tool handles it easily)</li>
+                    <li>📸 DSLR photos: compress first if over 20 MB (try our free image compressor)</li>
+                </ul>
+                <p>Need to reduce file size? Use our free image compressor tool before uploading to stay within the limit while preserving quality.</p>
+            </div>
+        </div>
+
+        <div class="faq-item-advanced">
+            <input type="checkbox" id="faq6">
+            <label for="faq6" class="faq-question"><strong>How to share image link on WhatsApp, Facebook, or email?</strong></label>
+            <div class="faq-answer">
+                <p><strong>Share image link on WhatsApp</strong> or any platform in 3 steps:</p>
+                <ol>
+                    <li>Upload your image — we generate a <strong>direct image URL</strong> instantly</li>
+                    <li>Click the copy button next to your link</li>
+                    <li>Paste anywhere: WhatsApp, Telegram, Facebook, Twitter/X, Discord, email, forums, or your website</li>
+                </ol>
+                <p>The link opens the image directly — no landing page, no ads, no login wall. Perfect for <strong>WhatsApp image sharing</strong> where recipients just tap and view, or for embedding in blog posts and forums.</p>
+            </div>
+        </div>
+
+        <div class="faq-item-advanced">
+            <input type="checkbox" id="faq7">
+            <label for="faq7" class="faq-question"><strong>Can I upload multiple images at once? Bulk image upload support?</strong></label>
+            <div class="faq-answer">
+                <p><strong>Yes, bulk image upload is fully supported.</strong> Select multiple files via drag-and-drop or file picker. Our tool processes each image and creates separate <strong>shareable image URLs</strong> for every file — perfect for:</p>
+                <ul>
+                    <li>📦 Amazon sellers managing product photo catalogs (up to 10+ images per listing)</li>
+                    <li>🎨 Designers sharing portfolio assets</li>
+                    <li>📝 Forum moderators uploading multiple screenshots</li>
+                    <li>🛒 eBay or Etsy sellers with bulk product images</li>
+                </ul>
+                <p>All generated links appear in your <strong>History</strong> section — copy them anytime, even after closing the page. You can also delete individual images or clear all history.</p>
+            </div>
+        </div>
+
+        <div class="faq-item-advanced">
+            <input type="checkbox" id="faq8">
+            <label for="faq8" class="faq-question"><strong>Image not uploading? Troubleshooting guide</strong></label>
+            <div class="faq-answer">
+                <p>If your <strong>image to URL conversion</strong> fails, try these fixes:</p>
+                <ul>
+                    <li>🔍 Check file size — must be under 20 MB</li>
+                    <li>📁 Verify format — JPG, PNG, GIF, WebP only</li>
+                    <li>🌐 Refresh your internet connection</li>
+                    <li>🗑️ Clear browser cache or try incognito mode</li>
+                    <li>🔄 Switch browsers (Chrome, Firefox, Edge all supported)</li>
+                    <li>🖼️ Try a different image — sometimes corrupted files can cause issues</li>
+                </ul>
+                <p>Still stuck? Contact us via the feedback form — we reply personally within 24 hours and can help you diagnose.</p>
+            </div>
+        </div>
+
+        <div class="faq-item-advanced">
+            <input type="checkbox" id="faq9">
+            <label for="faq9" class="faq-question"><strong>Privacy: Do you keep my images? Is my data safe?</strong></label>
+            <div class="faq-answer">
+                <p><strong>Your privacy is our priority.</strong> Here's what happens to your images:</p>
+                <ul>
+                    <li>🔒 <strong>No login required</strong> — we never ask for personal info</li>
+                    <li>📦 Images stored securely on Cloudinary CDN (enterprise-grade security)</li>
+                    <li>🗑️ <strong>Automatic cleanup after an extended period for storage efficiency</strong></li>
+                    <li>🚫 <strong>We never share, sell, or publicly index your images</strong></li>
+                    <li>📊 Google Analytics is anonymized — we don't know who you are</li>
+                    <li>👑 You retain full ownership — we only host the image to make it accessible via URL</li>
+                </ul>
+                <p>Unlike ImageBam (no deletion option) or free hosts that sell your data, we built this tool with <strong>privacy-first</strong> principles. Full details in our <a href="/footer/privacy-policy" target="_blank">Privacy Policy</a>. You have complete control: upload, share, delete — all without ever creating an account.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="video-subscribe-container">
+    <div class="video-wrapper" id="videoWrapper">
+        <img 
+            src="/images/thamb-image-to-url-buy.jpg" 
+            alt="Free Image to URL Converter tutorial - how to convert images to shareable links" 
+            class="video-thumbnail"
+            loading="lazy"
+        >
+
+        <div class="play-button" id="playButton" role="button" aria-label="Play tutorial: How to convert image to URL free">
+            <i class="fas fa-play"></i>
+        </div>
+
+        <iframe 
+            class="video-iframe"
+            id="videoIframe"
+            src="about:blank"
+            data-src="https://www.youtube.com/embed/slshy0Azas8?si=awcFSM1eEg-uhbHo"
+            title="Free Image to URL Converter Tutorial - No Signup Required"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </div>
+    
+    <div class="content-below-video">
+        <h3 class="video-title">Free Image to URL Converter - How to Convert Image to Link</h3>
+        
+        <p class="video-description">
+            Learn how to convert images to shareable URLs instantly with this free tool. No signup required. Bulk upload JPG, PNG, GIF, WebP. Perfect for WhatsApp, eBay, Amazon, and forums.
+        </p>
+        
+        <div class="subscribe-section">
+            <a 
+                href="https://www.youtube.com/@gunatools0105?sub_confirmation=1" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="subscribe-btn">
+                <i class="fab fa-youtube"></i> Subscribe Now
+            </a>
+
+            <p class="subscriber-count">Join our community for more free tools</p>
+        </div>
+    </div>
+</div>
+
+    <!-- NOTICE BAR - Place this at the TOP of your image-to-url tool page -->
+<div class="notice-bar">
+  <div class="notice-left">
+    <span class="notice-icon">🎙️</span>
+    <span class="notice-text">
+      <strong>✅Notice</strong> — Buy your own image to url tools. (gunatools.dev)
+    </span>
+  </div>
+
+  <div class="notice-center">
+    <span class="offer-icon">🔥</span>
+    <span class="offer-text">
+  <strong>Launch your own Image-to-URL tool and allow others to use it — just like this platform</strong> — 
+  I will build a complete setup for you with your own website and dashboard. 
+  Easily upload, manage, and track all your images in one place. 
+  Perfect for sharing on WhatsApp, social media, blogs, or eCommerce platforms like Amazon and Flipkart. 
+  <strong>You get full control</strong> — use your own image links, update or delete them anytime you want. 
+  <strong>You become the full owner</strong> — use it for your business or even sell it later if you don’t need it. 
+  <strong>One-time cost: just $2 (₹100 for India) — lifetime ownership. So Buy your own image to link generator tools contacts Us. and comment below..</strong>
+</span>
+    <a href="https://gunatools.dev/footer/contact-us/contact" class="offer-btn">🚀 Contacts Us →</a>
+  </div>
+
+  <div class="notice-actions">
+    <button id="speakEnBtn">🔊 English (Listen)</button>
+    <button id="speakHiBtn">🔊 Hindi (सुनें)</button>
+  </div>
+</div>
+  
+<div class="container">
+    <div class="header">
+        <div class="profile-widget" id="profileCard" onclick="window.location='../footer/contact-us/contact.html'">
+            <div class="card-content">
+
+                <div class="profile-photo">
+                    <img src="../blog/images/gunatools0105.jpg" alt="Aarif Alam - Web Developer and Creator of Free Image to URL Tool">
+                </div>
+
+                <div class="profile-info">
+                    <div class="profile-name">Need Your Own Image to URL Tool? | one-time cost -2$</div>
+                    <div class="profile-title">Get a fast, ad-free Image to URL converter — your own website for just $2 with complete set up (pay after delivery).</div>
+                </div>
+
+                <button class="profile-button" type="button">Get Your Own Tool</button>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<div id="creator-tag" style="display:none;">Created by @AarifAlam0105</div>
+  
+<footer class="site-footer">
+  <p>
+    <a href="/footer/privacy-policy.html">Privacy</a> |
+    <a href="/footer/terms.html">Terms</a> |
+    <a href="/footer/about.html">About</a> |
+    <a href="/footer/contact-us/contact.html">For API❇️Contact</a>
+  </p>
+  <p>© 2026 gunatools.dev | All rights reserved.</p>
+</footer>
+
+  <script src="/main/js/lang-switcher.js"></script>
+  
+  <!-- Google Translate Widget -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'auto',
+    includedLanguages: 'en,es,fr,de,it,pt,ru,zh-CN,zh-TW,ja,ko,ar,hi,bn,ur,id,ms,th,vi,tr,pl,nl,sv,no,da,fi,el,he',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+       <script>
+    const card = document.getElementById('profileCard');
+    
+    for (let i = 0; i < 8; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+        sparkle.style.left = Math.random() * 100 + '%';
+        sparkle.style.top = Math.random() * 100 + '%';
+        sparkle.style.animationDelay = Math.random() * 3 + 's';
+        card.appendChild(sparkle);
+    }
+    
+    card.addEventListener('click', function(e) {
+        const ripple = document.createElement('div');
+        ripple.className = 'ripple';
+        ripple.style.left = e.offsetX + 'px';
+        ripple.style.top = e.offsetY + 'px';
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
+    });
+    
+    card.addEventListener('mousemove', function(e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const angleY = (x - centerX) / 25;
+        const angleX = (centerY - y) / 25;
+        
+        this.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateY(-8px) scale(1.02)`;
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(-8px) scale(1.02)';
+        setTimeout(() => {
+            this.style.transform = '';
+        }, 150);
+    });
+</script>
+<script>
+ !function(){"use strict";let e="https://comments.aarifbabu8948.workers.dev",t=[],n=5,a=!1,r={used:0,limit:4,reset:null},s="A",i=["badword1","badword2","offensive","explicit"],o=document.getElementById("commentForm"),l=document.getElementById("commentName"),m=document.getElementById("commentMessage"),c=document.getElementById("commentsList"),d=document.getElementById("commentCount"),p=document.getElementById("loadMoreBtn"),u=document.getElementById("loadMoreContainer"),g=document.getElementById("charCount"),v=document.getElementById("charWarning"),y=document.getElementById("avatarPreview"),h=document.getElementById("formWarnings"),$=document.getElementById("submitBtn"),f=document.getElementById("dailyLimitDisplay");function w(e){let t=e.toLowerCase();return i.some(e=>t.includes(e.toLowerCase()))}function L(e,t="warning"){let n=document.createElement("div");n.className=`warning-message ${t}`,n.innerHTML=`
+      <span>${"error"===t?"❌":"success"===t?"✅":"⚠️"}</span>
+      <span>${e}</span>
+    `,h.appendChild(n),setTimeout(()=>{n.style.opacity="0",n.style.transform="translateY(-10px)",setTimeout(()=>n.remove(),300)},4e3)}function C(e){if(!e)return"";let t=new Date(e),n=new Date,a=n-t,r=Math.floor(a/6e4),s=Math.floor(a/36e5),i=Math.floor(a/864e5);return r<1?"Just now":r<60?`${r}m ago`:s<24?`${s}h ago`:i<7?`${i}d ago`:t.toLocaleDateString()}function E(e){if(!e)return"";let t=document.createElement("div");return t.textContent=e,t.innerHTML}async function x(e,t="en"){return new Promise(t=>{t(e)})}function B(){if(!t.length){c.innerHTML=`
+        <div class="empty-state">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M8 12h8M8 8h8M8 16h4" stroke-width="2" stroke-linecap="round"/>
+            <rect x="3" y="3" width="18" height="18" rx="2" stroke-width="2"/>
+          </svg>
+          <p>No comments yet. Be the first to share your thoughts!</p>
+        </div>
+      `,u.classList.add("hidden"),d.textContent="0";return}d.textContent=t.length;let e=[...t].sort((e,t)=>t.timestamp-e.timestamp),a=e.slice(0,n),r="";a.forEach(e=>{var t,n;let a=(t=e.name)&&t.trim()?t.trim().charAt(0).toUpperCase():"A",s=e.id||e.timestamp;r+=`
+        <div class="comment-thread" data-comment-id="${s}">
+          <div class="comment-card">
+            <div class="user-avatar">
+              <span class="avatar-letter">${E(a)}</span>
+            </div>
+            <div class="comment-content">
+              <div class="comment-header">
+                <span class="comment-author">${E(e.name||"Anonymous")}</span>
+                <span class="comment-time">${C(e.timestamp)}</span>
+                <button class="translate-comment-btn" onclick="window.translateComment('${s}', '${E(e.message).replace(/'/g,"\\'")}')">
+                  🌐 Translate
+                </button>
+              </div>
+              <div class="comment-text" id="comment-${s}">${E(e.message)}</div>
+            </div>
+          </div>
+          ${e.adminReply?(n=e.adminReply,`
+      <div class="admin-reply-section">
+        <div class="reply-header">
+          <span class="admin-badge">
+            <span class="blue-tick">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M20 6L9 17l-5-5" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </span>
+            Official Reply
+          </span>
+          <span class="comment-time">${C(n.timestamp)}</span>
+        </div>
+        <div class="reply-text">${E(n.message)}</div>
+      </div>
+    `):""}
+        </div>
+      `}),c.innerHTML=r,n<t.length?u.classList.remove("hidden"):u.classList.add("hidden")}async function _(){if(!a){a=!0;try{let n=await fetch(`${e}/comments`),r=await n.json();t=r&&"object"==typeof r?Object.entries(r).map(([e,t])=>({id:e,...t})):[],B()}catch(s){console.error("Error loading comments:",s),c.innerHTML=`
+        <div class="empty-state">
+          <p>Failed to load comments. Please refresh.</p>
+        </div>
+      `}finally{a=!1}}}async function k(){try{let t=await fetch(`${e}/limit`),n=await t.json();r=n;let a=r.limit-r.used;f.textContent=`${a}/${r.limit} comments remaining today`,a<=0&&($.disabled=!0,L("Daily comment limit reached. Please try again tomorrow.","error"))}catch(s){console.error("Error loading limit:",s)}}async function M(t){t.preventDefault(),h.innerHTML="";let a=l.value.trim(),s=m.value.trim();if(!s){L("Please enter a comment","error"),m.classList.add("error");return}if(s.length>150){L("Comment exceeds 150 character limit","error"),m.classList.add("error");return}if(w(s)){L("Please keep comments respectful and avoid inappropriate language","error"),m.classList.add("error");return}if(r.used>=r.limit){L("You have reached your daily comment limit (4 per day)","error");return}$.disabled=!0,$.innerHTML="<span>Posting...</span>";try{let i=await fetch(`${e}/comments`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:a||"Anonymous",message:s,timestamp:Date.now()})}),o=await i.json();i.ok?(l.value="",m.value="",g.textContent="0",y.textContent="A",L("Comment posted successfully!","success"),await _(),await k(),n=5):429===i.status?L("Daily limit reached. Please try again tomorrow.","error"):L(o.error||"Failed to post comment","error")}catch(c){L("Network error. Please try again.","error")}finally{$.disabled=!1,$.innerHTML='<span>Post Comment</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'}}async function b(){await k(),await _(),setInterval(_,3e4)}window.translateComment=async function(e,t){let n=document.getElementById(`comment-${e}`);if(n.querySelector(".translated-text")){let a=n.querySelector(".translated-text");a.remove();return}try{let r=document.createElement("div");r.className="translated-text",r.textContent="[Translation: "+t+"]",n.appendChild(r)}catch(s){console.error("Translation error:",s)}},m.addEventListener("input",function e(){let t=m.value,n=t.length;return(g.textContent=n,n>150)?(g.parentElement.classList.add("danger"),v.textContent="Exceeded 150 character limit!",m.classList.add("error"),!1):n>130?(g.parentElement.classList.add("warning"),g.parentElement.classList.remove("danger"),v.textContent="Approaching limit",m.classList.remove("error"),!0):(g.parentElement.classList.remove("warning","danger"),v.textContent="",m.classList.remove("error"),!(n>0&&w(t))||(v.textContent="Please keep comments respectful",m.classList.add("error"),!1))}),l.addEventListener("input",function(){let e=this.value.trim();s=e?e.charAt(0).toUpperCase():"A",y.textContent=s}),o.addEventListener("submit",M),p.addEventListener("click",function e(){n+=5,B()}),document.getElementById("translateAllBtn").addEventListener("click",function(){t.slice(0,n).forEach(e=>{let t=e.id||e.timestamp;window.translateComment(t,e.message)})}),b()}();   
+</script>
+<script>
+function _0x1082(){const _0x57ffd3=['re\x20is\x20ever','chased,\x20yo','UpuQF','or\x20your\x20co','wn\x20Image\x20t','stener','\x20करें\x20जब\x20च','\x20हैं।\x0a\x0aसबस','पये\x20में\x20खर','ton\x20above\x20',',\x20JPG,\x20PNG','hly\x20fees.\x20','ं;\x20एक\x20बार\x20','entirely\x20w','डैशबोर्ड\x20ज','बाद\x20पे\x20करे','you\x20become','\x20Image\x20to\x20','यूआरएल\x20टूल','le\x20owner\x20o','rted.','\x20its\x20owner','े\x20अच्छी\x20बा','इफटाइम\x20एक्','े\x20और\x20कोई\x20भ','t?\x20No\x20mont','P\x20सब\x20सपोर्','pitch','ut\x20free\x20co','्या\x20मिलेगा','ं।\x0aपाँचवा,','ech.','lick.\x0aThir',',\x20GIF,\x20Web','\x0aदूसरा,\x20एक','end\x20uses\x20y','ोल\x20कर\x20सकते','t\x20your\x20ver','e\x20their\x20ac','er\x20you\x20wis','ा,\x20कोई\x20भी\x20','lang','\x20your\x20dash','ely\x20no\x20adv','ं\x20और\x20कंट्र','to\x20get\x20sta','\x20today\x20for','hvRsN','ड\x20करेगा,\x20व','हाँ\x20आप\x20हर\x20','u\x20can\x20view','r\x20own\x20dedi','ool,\x20compl',',\x20clients,','िए।\x20आज\x20ही\x20','e\x20best\x20par','l\x20remains\x20','URL\x20tool,\x20','Your\x20brows','\x20just\x202\x20do','WhatsApp,\x20','आरएल\x20कॉपी\x20','\x20students.','o\x20generate','or\x20JPG,\x20PN','y.\x0aFifth,\x20','\x20तो\x20आप\x20डैश','ूल\x20खरीद\x20ले','rAdoY','er\x20doesn\x27t','ete\x20with\x20f','d,\x20the\x20opt','rd\x20where\x20y','l.\x0aYou\x20can','mNBAL','mats;\x20you\x20','\x20सेटअप\x20के\x20','eBay,\x20or\x20A','volume','f\x20this\x20too','ई\x20फोटो\x20देख','वर्टर\x20छोड़','onend','अपना\x20इमेज\x20','ने\x20का\x20चार्','click','eceive\x20you','ce\x20you\x20pur','\x202\x20dollars','ंगे\x20तो\x20आप\x20','l\x20for\x20just','en-US','uSaqM','your\x20perso','to\x20URL\x20too','\x20या\x20व्हाट्',':\x0aपहला,\x20एक','\x20सकते\x20हैं।','\x20किसी\x20को\x20भ','Listen\x20clo',';\x20once\x20pur','ट्रोल\x20के\x20स','e\x20to\x20URL\x20t','बोर्ड\x20पर\x20द','अपना\x20खुद\x20क','ith\x20anyone','llars.\x20Cli','addEventLi','\x20support\x20t','ाहें।\x0aचौथा','plete.\x0a\x0aHe','fNjhv','2100756RrGQjA','ete\x20any\x20im','\x20and\x20manag','उसके\x20मालिक','our\x20tool\x20t','त?\x20कोई\x20मही','rate','1\x20डॉलर\x20स्ट','\x20नाम\x20पेजेस','ेख\x20सकते\x20है','getElement','.\x20If\x20a\x20fri','ertisement','omain\x20such','ूडेंट्स\x20के','\x20बन\x20जाएँगे','HIJUH','cancel','speak','onerror','7790cedbmd','an\x20share\x20t','\x20purchase\x20','ध्यान\x20से\x20स','तेमाल\x20करो।','\x20a\x20URL,\x20yo','nverters.\x20','a\x20single\x20c','ById','loaded\x20pho','दिखेगी।\x20पू','\x20as\x20yourna','\x20अपलोड\x20करे','7330020QAxUOP','his\x20tool\x20w','बाद,\x20आप\x20टू','778119JEsJpm','ेगा।\x0a\x0aजब\x20आ','ज\x20नहीं।\x20ला','मेन\x20मिलेगा','JMHEP','ं।\x0a\x0aआपको\x20क','o\x20URL\x20tool','ो\x20आपके\x20डैश','ाथ\x20कई\x20फोटो','ll\x20appear\x20','hi-IN','speakEnBtn','\x20get:\x0aFirs','ith\x20you.\x0a\x0a','12LTDFex','1\x20डॉलर\x20में','सएप,\x20ईबे,\x20','।\x0aकोई\x20भी\x20व','\x20क्लिक\x20करे','ल\x20के\x20मालिक','मत?\x20सिर्फ\x20','\x20हमेशा\x20इस्','?\x20Just\x202\x20d','\x20का\x20इमेज\x20ट','nal\x20Image\x20','ॉलर\x20यानि\x20ल','ी\x20दे\x20सकते\x20','ccess.\x0aAnd','photos\x20sim','ultaneousl','ार\x20पे\x20करो,','ploaded\x20by','can\x20now\x20ge','l.\x0aAbsolut','displayed\x20','tup\x20is\x20com','बोर्ड\x20में\x20','ीद\x20सकते\x20है','ट\x20है,\x20एक\x20स','\x20आपके\x20पास।','s\x20will\x20be\x20','\x20डॉट\x20देव।\x0a','ter\x20the\x20se','me.pages.d','\x20फोटो\x20अपलो','shboard.\x20F','kysiH','ything\x20you','tivity\x20dir','ूल\x20का\x20उपयो','\x20use\x20forev','\x20हर\x20कोई\x20जो','3580vWnNiF','can\x20upload','speakHiBtn','प\x20अपना\x20खुद','ull\x20contro','\x20the\x20price','ev.\x0a\x0aYou\x20c','\x20जैसे\x20आपका','te\x20dashboa','y\x20own\x20Imag','6043513ariZZi','ry\x20photo\x20u','ू\x20यूआरएल\x20ट','\x20Pay\x20once,','with\x20just\x20','ी\x20आपका\x20फ्र','\x20anyone\x20wi','खरीदने\x20के\x20','रा\x20कंट्रोल','ुनिए।\x20अब\x20आ','\x20लें।\x20ऊपर\x20','करें।\x0aतीसर','टू\x20यूआरएल\x20','\x20सिर्फ\x201\x20ड','\x20support\x20f','गभग\x20100\x20रु','ext-to-spe','chase\x20your','cated\x20subd','Forget\x20abo','to.\x0aSecond','ion\x20to\x20del','\x20friends,\x20','adpuQ','टूल\x20सिर्फ\x20','45riPpmH','er.\x20Pay\x20af','9941928JeZWeS','574760lVsqwZ','ेंड\x20आपके\x20ट','hesis','on\x20it.\x0a\x0aOn','\x0a\x0aफ्री\x20कन्','हैं\x20—\x20ग्रा','\x20लिए।\x20एक\x20ब','\x20कोई\x20भी\x20यू','रएल\x20बनाएगा','you\x20will\x20r','w\x20every\x20up','ollars\x20for','\x20बन\x20जायेंग','h.\x0aFourth,','Lifetime\x20a','ectly\x20from','अमेज़न\x20पर।','in\x20your\x20da','mazon.\x20Eve','y\x20any\x20URL\x20','खाई\x20नहीं\x20द','age\x20whenev','G,\x20GIF,\x20an','board.\x0a\x0aTh','ाथ\x20ले\x20सकते','\x20हैं।\x20\x0aआप\x20','ूल\x20पूरे\x20कं','ntacts\x20on\x20','ome\x20the\x20so','िज्ञापन\x20दि','\x20multiple\x20','ity\x20to\x20cop','अपलोड\x20की\x20ग','ck\x20the\x20but','\x20अपना\x20सबडो','u\x20will\x20bec','\x0aआप\x20यह\x20टूल','दिए\x20बटन\x20पर','इमेज\x20डिलीट','हक,\x20दोस्त,','speechSynt','ग\x20करके\x20यूआ','ou\x20can\x20vie','d\x20WebP\x20for','\x20प्राइवेट\x20',',\x20the\x20abil','\x20क्लिक\x20में','सेस।\x0aऔर\x20की','Get\x20your\x20o','t,\x20a\x20priva','sely.\x20You\x20','ा\x20इमेज\x20टू\x20'];_0x1082=function(){return _0x57ffd3;};return _0x1082();}function _0x5d01(_0x572037,_0x485161){_0x572037=_0x572037-(-0x23a+-0x65*-0x16+-0x5d5);const _0x5d98de=_0x1082();let _0x47f0a9=_0x5d98de[_0x572037];return _0x47f0a9;}(function(_0x40ca32,_0x47b7ef){const _0x175d58=_0x5d01,_0x722602=_0x40ca32();while(!![]){try{const _0x599a1b=-parseInt(_0x175d58(0xd6))/(-0xa7*0x3b+-0xa3+0x2721)+parseInt(_0x175d58(0x1ac))/(-0x7*0xd3+-0x1bd8*-0x1+-0x3*0x75b)*(-parseInt(_0x175d58(0x19e))/(-0x7*0x362+0x238b+0x25*-0x52))+parseInt(_0x175d58(0xb0))/(-0x1fa2*0x1+-0x1ca7+0x1*0x3c4d)*(-parseInt(_0x175d58(0x18e))/(0x15cb+0x16*0x131+-0x2ffc))+parseInt(_0x175d58(0x17a))/(0xc5*-0x22+0x1e49*0x1+-0x1*0x419)+-parseInt(_0x175d58(0xba))/(0x6d6+0x1*0x2a5+0x79*-0x14)+parseInt(_0x175d58(0xd5))/(-0x1327+0x2099+0x6b5*-0x2)+-parseInt(_0x175d58(0xd3))/(0x1dbb+0xf*-0x26d+0x6b1)*(-parseInt(_0x175d58(0x19b))/(0x1a6f+0x2ff*-0x3+0x8*-0x22d));if(_0x599a1b===_0x47b7ef)break;else _0x722602['push'](_0x722602['shift']());}catch(_0x47b236){_0x722602['push'](_0x722602['shift']());}}}(_0x1082,-0x10c98f+-0x18bcb7+0x36c93c),(function(){const _0x37eeda=_0x5d01,_0x2b494c={'HIJUH':function(_0x5129a9){return _0x5129a9();},'kysiH':function(_0x3823d4,_0xa9cf5a){return _0x3823d4(_0xa9cf5a);},'fNjhv':_0x37eeda(0x144)+_0x37eeda(0x14f)+_0x37eeda(0x176)+_0x37eeda(0xca)+_0x37eeda(0x129),'hvRsN':function(_0x3910e6,_0x299800,_0x252b7f){return _0x3910e6(_0x299800,_0x252b7f);},'rAdoY':_0x37eeda(0x165),'adpuQ':function(_0x1875f8,_0x52ed8e,_0x5ec917){return _0x1875f8(_0x52ed8e,_0x5ec917);},'UpuQF':_0x37eeda(0x1a8),'JMHEP':_0x37eeda(0x1a9),'uSaqM':_0x37eeda(0xb2),'mNBAL':_0x37eeda(0x15f)};let _0x264bff=null;function _0x376061(){const _0x198e4e=_0x37eeda;window[_0x198e4e(0xfe)+_0x198e4e(0xd8)]&&window[_0x198e4e(0xfe)+_0x198e4e(0xd8)][_0x198e4e(0x18b)](),_0x264bff&&(_0x264bff[_0x198e4e(0x15c)]=null,_0x264bff[_0x198e4e(0x18d)]=null,_0x264bff=null);}function _0x4782bc(_0x1e1208,_0x72f8bd){const _0x1bf4a0=_0x37eeda;_0x2b494c[_0x1bf4a0(0x18a)](_0x376061);if(!window[_0x1bf4a0(0xfe)+_0x1bf4a0(0xd8)]){_0x2b494c[_0x1bf4a0(0xaa)](alert,_0x2b494c[_0x1bf4a0(0x179)]);return;}const _0x3c57bf=new SpeechSynthesisUtterance(_0x1e1208);_0x3c57bf[_0x1bf4a0(0x133)]=_0x72f8bd,_0x3c57bf[_0x1bf4a0(0x180)]=-0x105f+0x1c37+-0xbd8+0.92,_0x3c57bf[_0x1bf4a0(0x125)]=0x1478+-0x4*0x9a4+0x1219,_0x3c57bf[_0x1bf4a0(0x158)]=0x155d+0x23bf+0x391b*-0x1,_0x3c57bf[_0x1bf4a0(0x15c)]=function(){_0x264bff=null;},_0x3c57bf[_0x1bf4a0(0x18d)]=function(){_0x264bff=null;},_0x264bff=_0x3c57bf,window[_0x1bf4a0(0xfe)+_0x1bf4a0(0xd8)][_0x1bf4a0(0x18c)](_0x3c57bf);}const _0xeb510b=_0x37eeda(0x16d)+_0x37eeda(0x108)+_0x37eeda(0x1be)+_0x37eeda(0x12f)+_0x37eeda(0xb9)+_0x37eeda(0x170)+_0x37eeda(0x13e)+_0x37eeda(0x150)+_0x37eeda(0xb4)+_0x37eeda(0x153)+_0x37eeda(0x190)+_0x37eeda(0x167)+_0x37eeda(0x1b6)+_0x37eeda(0x168)+_0x37eeda(0x164)+_0x37eeda(0x162)+_0x37eeda(0x16e)+_0x37eeda(0x10b)+_0x37eeda(0xf9)+_0x37eeda(0xf2)+_0x37eeda(0x11d)+_0x37eeda(0x159)+_0x37eeda(0x1bf)+_0x37eeda(0x135)+_0x37eeda(0x186)+_0x37eeda(0xa4)+_0x37eeda(0x1c0)+_0x37eeda(0xd9)+_0x37eeda(0x161)+_0x37eeda(0xcb)+_0x37eeda(0x11b)+_0x37eeda(0x143)+_0x37eeda(0x11a)+_0x37eeda(0x11f)+_0x37eeda(0x185)+_0x37eeda(0x12d)+_0x37eeda(0x17e)+_0x37eeda(0x149)+_0x37eeda(0x193)+_0x37eeda(0x13c)+_0x37eeda(0x17c)+_0x37eeda(0x130)+_0x37eeda(0xac)+_0x37eeda(0xe5)+_0x37eeda(0x134)+_0x37eeda(0xed)+_0x37eeda(0x141)+_0x37eeda(0x123)+_0x37eeda(0x115)+_0x37eeda(0xe4)+_0x37eeda(0x1b9)+_0x37eeda(0xb5)+_0x37eeda(0x1b4)+_0x37eeda(0xe1)+_0x37eeda(0x148)+_0x37eeda(0xbd)+_0x37eeda(0xae)+_0x37eeda(0xd4)+_0x37eeda(0xa6)+_0x37eeda(0x9f)+_0x37eeda(0x178)+_0x37eeda(0x10a)+_0x37eeda(0xab)+_0x37eeda(0x1aa)+_0x37eeda(0x107)+_0x37eeda(0xb8)+_0x37eeda(0x152)+_0x37eeda(0x100)+_0x37eeda(0xe0)+_0x37eeda(0x197)+_0x37eeda(0xce)+_0x37eeda(0x103)+_0x37eeda(0xf5)+_0x37eeda(0xe9)+_0x37eeda(0xbe)+_0x37eeda(0x195)+_0x37eeda(0x12a)+_0x37eeda(0x151)+_0x37eeda(0xcf)+_0x37eeda(0x17b)+_0x37eeda(0xeb)+_0x37eeda(0x131)+_0x37eeda(0xe3)+_0x37eeda(0xc8)+_0x37eeda(0x14a)+_0x37eeda(0xec)+_0x37eeda(0x101)+_0x37eeda(0x155)+_0x37eeda(0xb1)+_0x37eeda(0xf4)+_0x37eeda(0x1ba)+_0x37eeda(0x1bb)+_0x37eeda(0x14b)+_0x37eeda(0xdf)+_0x37eeda(0x160)+_0x37eeda(0x13d)+_0x37eeda(0xcc)+_0x37eeda(0x187)+_0x37eeda(0x199)+_0x37eeda(0xa7)+(_0x37eeda(0xb6)+_0x37eeda(0x18f)+_0x37eeda(0x19c)+_0x37eeda(0x173)+_0x37eeda(0x13f)+_0x37eeda(0xd0)+_0x37eeda(0x10d)+_0x37eeda(0xf1)+_0x37eeda(0x146)+_0x37eeda(0x157)+_0x37eeda(0xe8)+_0x37eeda(0xbb)+_0x37eeda(0x1bd)+_0x37eeda(0xc0)+_0x37eeda(0x1a7)+_0x37eeda(0xe7)+_0x37eeda(0xa9)+_0x37eeda(0xb4)+_0x37eeda(0x142)+_0x37eeda(0x117)+_0x37eeda(0x1ab)+_0x37eeda(0xcd)+_0x37eeda(0x126)+_0x37eeda(0x194)+_0x37eeda(0x106)+_0x37eeda(0x10e)+_0x37eeda(0x1a4)+_0x37eeda(0x138)+_0x37eeda(0x145)+_0x37eeda(0x174)+_0x37eeda(0xf7)+_0x37eeda(0x113)+_0x37eeda(0x137)+_0x37eeda(0x11e)),_0x2c5d9e=_0x37eeda(0x191)+_0x37eeda(0xc3)+_0x37eeda(0xb3)+_0x37eeda(0x1b5)+_0x37eeda(0xbc)+_0x37eeda(0xf0)+_0x37eeda(0x16f)+_0x37eeda(0xee)+_0x37eeda(0xef)+_0x37eeda(0x172)+_0x37eeda(0x109)+_0x37eeda(0x11c)+_0x37eeda(0xc7)+_0x37eeda(0x1b7)+_0x37eeda(0xc9)+_0x37eeda(0x112)+_0x37eeda(0xa1)+_0x37eeda(0x116)+_0x37eeda(0xc1)+_0x37eeda(0x19d)+_0x37eeda(0x1b1)+_0x37eeda(0x189)+_0x37eeda(0x1af)+_0x37eeda(0xf3)+_0x37eeda(0xea)+_0x37eeda(0x19f)+_0x37eeda(0xb3)+_0x37eeda(0x1b5)+_0x37eeda(0xbc)+_0x37eeda(0x14d)+_0x37eeda(0x163)+_0x37eeda(0x17d)+_0x37eeda(0xe2)+_0x37eeda(0x122)+_0x37eeda(0xbf)+_0x37eeda(0xd7)+_0x37eeda(0xad)+_0x37eeda(0xff)+_0x37eeda(0xde)+_0x37eeda(0x14c)+_0x37eeda(0x171)+_0x37eeda(0x183)+_0x37eeda(0x136)+_0x37eeda(0x12e)+_0x37eeda(0x111)+_0x37eeda(0x120)+_0x37eeda(0x17f)+_0x37eeda(0x15e)+_0x37eeda(0x1a0)+_0x37eeda(0x121)+_0x37eeda(0x105)+_0x37eeda(0x1b2)+_0x37eeda(0x181)+_0x37eeda(0x188)+_0x37eeda(0xdc)+_0x37eeda(0x1bc)+_0x37eeda(0x1b3)+_0x37eeda(0x192)+_0x37eeda(0x156)+_0x37eeda(0x119)+_0x37eeda(0x1a3)+_0x37eeda(0x127)+_0x37eeda(0x16a)+_0x37eeda(0x102)+_0x37eeda(0x118)+_0x37eeda(0x13b)+_0x37eeda(0xf6)+_0x37eeda(0x15a)+_0x37eeda(0x16b)+_0x37eeda(0x12c)+_0x37eeda(0x104)+_0x37eeda(0xdd)+_0x37eeda(0x147)+_0x37eeda(0xc5)+_0x37eeda(0x132)+_0x37eeda(0xfc)+_0x37eeda(0x110)+_0x37eeda(0x177)+_0x37eeda(0x114)+_0x37eeda(0x12b)+_0x37eeda(0x124)+_0x37eeda(0xa2)+_0x37eeda(0x1a6)+_0x37eeda(0x19a)+_0x37eeda(0x128)+_0x37eeda(0xf8)+_0x37eeda(0x1a1)+_0x37eeda(0xb7)+_0x37eeda(0x182)+_0x37eeda(0xa5)+_0x37eeda(0xfa)+_0x37eeda(0x16c)+_0x37eeda(0x1b8)+_0x37eeda(0xdb)+_0x37eeda(0xfd)+_0x37eeda(0x169)+_0x37eeda(0x1ae)+_0x37eeda(0xe6)+_0x37eeda(0xaf)+_0x37eeda(0xa8)+(_0x37eeda(0x13a)+_0x37eeda(0x1a5)+_0x37eeda(0xa0)+_0x37eeda(0x198)+_0x37eeda(0xc2)+_0x37eeda(0xa3)+_0x37eeda(0xda)+_0x37eeda(0x15b)+_0x37eeda(0x140)+_0x37eeda(0x15d)+_0x37eeda(0xc6)+_0x37eeda(0xd2)+_0x37eeda(0x1ad)+_0x37eeda(0xc4)+_0x37eeda(0xfb)+_0x37eeda(0x1b0)+'ं।'),_0x3394ad=document[_0x37eeda(0x184)+_0x37eeda(0x196)](_0x2b494c[_0x37eeda(0x1a2)]),_0x32a651=document[_0x37eeda(0x184)+_0x37eeda(0x196)](_0x2b494c[_0x37eeda(0x166)]);_0x3394ad&&_0x3394ad[_0x37eeda(0x175)+_0x37eeda(0x10f)](_0x2b494c[_0x37eeda(0x154)],function(){const _0x326129=_0x37eeda;_0x2b494c[_0x326129(0x139)](_0x4782bc,_0xeb510b,_0x2b494c[_0x326129(0x14e)]);}),_0x32a651&&_0x32a651[_0x37eeda(0x175)+_0x37eeda(0x10f)](_0x2b494c[_0x37eeda(0x154)],function(){const _0x1b4e3c=_0x37eeda;_0x2b494c[_0x1b4e3c(0xd1)](_0x4782bc,_0x2c5d9e,_0x2b494c[_0x1b4e3c(0x10c)]);});}()));
+</script>
+  
+    <script src="js/img-url.js"></script>
+    <script src="js/img-url-faq.js"></script>
+    <script src="../main/js/main-header.js?v=2"></script>
+    <script src="https://gunatools.dev/blog/js/video-frame.js"></script>
+</body>
+</html>
