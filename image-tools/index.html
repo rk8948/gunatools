@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebApplication">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ========== PRIMARY SEO META ========== -->
+  <title>Free Image Tools Online – Bulk Convert, Compress & Edit Images</title>
+  <meta name="description" content="Free online image tools: bulk convert JPG, PNG, WebP; compress, resize, and edit images instantly. 100% private, no signup, browser-based processing.">
+  <meta name="keywords" content="free image tools, image converter, bulk image compressor, webp to jpg, png to jpg, resize images online, batch image editor, image optimizer, convert images free, gunatools">
+
+  <!-- ========== CANONICAL & ROBOTS ========== -->
+  <link rel="canonical" href="https://gunatools.dev/image-tools/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Guna Tools">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="aarifalam0105-verify" content="protect-verification">
+
+
+  <!-- ========== OPEN GRAPH (Facebook, LinkedIn) ========== -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Image Tools Online – Bulk Convert, Compress & Edit">
+  <meta property="og:description" content="100% free bulk image tools. Convert JPG, PNG, WebP. Compress and resize instantly. No registration, no server upload – privacy first.">
+  <meta property="og:url" content="https://gunatools.dev/image-tools/">
+  <meta property="og:image" content="https://gunatools.dev/images/image-tools-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Guna Tools">
+  <meta property="og:locale" content="en_US">
+
+  <!-- ========== TWITTER CARD ========== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Image Tools Online | Bulk Processing">
+  <meta name="twitter:description" content="Convert, compress, and edit images in bulk. 100% free, private, no signup required. Instant browser tools.">
+  <meta name="twitter:image" content="https://gunatools.dev/images/image-tools-twitter.jpg">
+  <meta name="twitter:site" content="@gunatools">
+
+  <!-- ========== STRUCTURED DATA (JSON-LD) ========== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Guna Tools – Free Image Tools",
+    "url": "https://gunatools.dev/image-tools/",
+    "description": "Free browser-based suite to convert, compress, and edit images in bulk. Supports JPG, PNG, WebP. No signup, fully private.",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Bulk Image Converter",
+      "Image Compressor",
+      "Resize Images",
+      "JPG to WebP",
+      "PNG to JPG",
+      "Client-side Privacy",
+      "No Signup Required"
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "Guna Tools"
+    }
+  }
+  </script>
+
+  <!-- ========== FAVICON & PWA ========== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/logo/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/logo/favicon-16x16.png">
+  <link rel="manifest" href="../images/logo/site.webmanifest">
+  <link rel="shortcut icon" href="../images/logo/favicon.ico" type="image/x-icon">
+
+  <!-- ========== PRELOADS & FONTS ========== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ========== EXTERNAL CSS/JS (your existing files) ========== -->
+  <link rel="stylesheet" href="css/main-header.css">
+  <link rel="preload" href="js/aarifalam0105-image-tools-lib.js" as="script">
+  <script src="js/aarifalam0105-image-tools-lib.js" defer></script>
+
+        
+  
+  <!-- ========== ANALYTICS & ADS ========== -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV220VSL5G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZV220VSL5G');
+  </script>
+<!-- optional head script -->
+ 
+<style>
+.image-tools-container-xyz-header{max-width:1400px;margin:0 auto;padding:1rem 1.5rem;width:100%;box-sizing:border-box}.image-tools-header-section-xyz-main{text-align:center;margin-bottom:2rem;width:100%}.image-tools-h1-xyz-title{font-size:clamp(1.75rem, 5vw, 3.5rem);font-weight:800;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1rem;line-height:1.2;max-width:95%;margin-left:auto;margin-right:auto;word-wrap:break-word;padding:0 .5rem}.image-tools-breadcrumb-xyz-nav ol,.image-tools-h2-xyz-subtitle{background:var(--bg-card);box-shadow:var(--shadow);backdrop-filter:blur(10px);max-width:95%}.image-tools-h2-xyz-subtitle{font-size:clamp(.95rem, 3vw, 1.3rem);color:var(--text-secondary);margin:0 auto 1.5rem;font-weight:400;line-height:1.5;padding:1rem 1.5rem;border-radius:16px;border:1px solid var(--border-color);word-wrap:break-word}.image-tools-breadcrumb-xyz-nav{margin-top:1.5rem;width:100%}.image-tools-breadcrumb-xyz-nav ol{display:flex;justify-content:center;align-items:center;list-style:none;gap:.5rem;padding:.75rem 1.25rem;border-radius:50px;border:1px solid var(--border-color);margin:0 auto;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}.image-tools-breadcrumb-xyz-nav ol::-webkit-scrollbar{display:none}.image-tools-breadcrumb-xyz-nav a{color:var(--text-secondary);text-decoration:none;font-size:.875rem;font-weight:500;padding:.4rem .8rem;border-radius:20px;white-space:nowrap;display:inline-flex;align-items:center;gap:.4rem;transition:.2s;flex-shrink:0}.image-tools-breadcrumb-xyz-nav a:hover{color:var(--accent-primary);background:rgba(124,58,237,.1)}.image-tools-breadcrumb-xyz-nav li:not(:last-child)::after{content:"›";margin-left:.5rem;color:var(--accent-primary);font-weight:700;font-size:1rem;flex-shrink:0}.image-tools-breadcrumb-xyz-nav li:last-child{color:var(--accent-primary);font-weight:600;padding:.4rem .8rem;white-space:nowrap;flex-shrink:0}@media (max-width:480px){.image-tools-container-xyz-header{padding:1rem}.image-tools-h1-xyz-title{font-size:1.5rem;padding:0 .25rem}.image-tools-h2-xyz-subtitle{font-size:.9rem;padding:.75rem 1rem;border-radius:12px;margin-bottom:1rem}.image-tools-breadcrumb-xyz-nav a{font-size:.8rem;padding:.3rem .6rem}.image-tools-breadcrumb-xyz-nav ol{padding:.6rem 1rem;gap:.3rem}}@media (min-width:481px) and (max-width:768px){.image-tools-h1-xyz-title{font-size:clamp(1.8rem, 4vw, 2.5rem)}.image-tools-h2-xyz-subtitle{font-size:1.1rem;padding:1rem 1.25rem}}@media (min-width:769px){.image-tools-container-xyz-header{padding:2rem 3rem}.image-tools-header-section-xyz-main{margin-bottom:3rem}}@media (max-height:500px) and (orientation:landscape){.image-tools-header-section-xyz-main{margin-bottom:1.5rem}.image-tools-h1-xyz-title{font-size:1.5rem;margin-bottom:.5rem}.image-tools-h2-xyz-subtitle{font-size:.9rem;padding:.5rem 1rem;margin-bottom:1rem}.image-tools-breadcrumb-xyz-nav{margin-top:1rem}}@media (prefers-reduced-motion:reduce){.image-tools-breadcrumb-xyz-nav a,.image-tools-h2-xyz-subtitle{transition:none}}</style> <style>
+/* Welcome Overlay - Fast Loading Cover (1.5 seconds) */
+.welcome-page-cover-image-tools {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(124, 58, 237, 0.98) 0%, 
+        rgba(168, 85, 247, 0.96) 50%, 
+        rgba(236, 72, 153, 0.94) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    animation: welcomeExitImageTools 1.2s ease-in-out forwards;
+    pointer-events: none;
+}
+
+@keyframes welcomeExitImageTools {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.welcome-page-content-image-tools {
+    text-align: center;
+    animation: contentAppearImageTools 0.5s ease-out;
+}
+
+@keyframes contentAppearImageTools {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.welcome-page-title-image-tools {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    color: white;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, 
+        rgba(255, 255, 255, 1) 0%, 
+        rgba(255, 255, 255, 0.95) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+}
+
+.welcome-page-subtitle-image-tools {
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.05em;
+}
+
+.welcome-page-credit-image-tools {
+    position: absolute;
+    bottom: 2.5rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-align: center;
+    width: 100%;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    animation: creditSlideUpImageTools 0.6s ease-out 0.2s both;
+}
+
+@keyframes creditSlideUpImageTools {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-page-credit-image-tools strong {
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.welcome-page-cover-image-tools::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, 
+            rgba(255, 255, 255, 0.15) 0%, 
+            transparent 50%),
+        radial-gradient(circle at 80% 70%, 
+            rgba(255, 255, 255, 0.1) 0%, 
+            transparent 50%);
+    animation: bgPulseImageTools 2s ease-in-out infinite;
+}
+
+@keyframes bgPulseImageTools {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.7; }
+}
+
+.welcome-page-cover-image-tools::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    background: 
+        radial-gradient(circle, 
+            rgba(255, 255, 255, 0.08) 0%, 
+            transparent 70%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    filter: blur(20px);
+}
+
+@media (max-width: 768px) {
+    .welcome-page-title-image-tools {
+        font-size: 2.2rem;
+    }
+    
+    .welcome-page-subtitle-image-tools {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .welcome-page-credit-image-tools {
+        font-size: 0.9rem;
+        bottom: 2rem;
+        padding: 0.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-page-title-image-tools {
+        font-size: 1.8rem;
+    }
+    
+    .welcome-page-subtitle-image-tools {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .welcome-page-credit-image-tools {
+        font-size: 0.8rem;
+        bottom: 1.8rem;
+        padding: 0.3rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .welcome-page-cover-image-tools,
+    .welcome-page-content-image-tools,
+    .welcome-page-title-image-tools,
+    .welcome-page-subtitle-image-tools,
+    .welcome-page-credit-image-tools,
+    .welcome-page-cover-image-tools::before,
+    .welcome-page-cover-image-tools::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+</style>
+</head>
+<body>
+ <div class="header-0105-scroll-progress" id="header0105ScrollProgress" aria-hidden="true"></div>
+    <header class="header-0105" role="banner">
+        <div class="header-0105-container">
+            <div class="header-0105-inner">
+                <a href="/index.html" class="header-0105-logo" aria-label="Go to homepage">
+                    <div class="header-0105-logo-icon" aria-hidden="true">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <span class="header-0105-logo-text">gunatools.dev</span>
+                </a>
+
+                <nav class="header-0105-nav" aria-label="Primary navigation">
+                    <ul class="header-0105-nav-links" id="header0105NavLinks">
+                        <li><a href="/index.html"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+                        <li><a href="/blog/index.html"><i class="fas fa-blog" aria-hidden="true"></i>Blog</a></li>
+                        <li><a href="/Game/index.html"><i class="fas fa-gamepad"></i>GunaTools Game</a></li>
+                        <li><a href="/pdf/index.html"><i class="fas fa-file-pdf" aria-hidden="true"></i>Fast PDF</a></li>
+                        <li><a href="/footer/contact-us/contact.html"><i class="fas fa-handshake"></i>Contact Us</a></li>
+                      </ul>
+                   </nav>
+
+<div class="header-0105-tools-dropdown">
+    <button class="header-0105-tools-btn">
+        <i class="fas fa-th-large"></i> More Tools
+    </button>
+    <div class="header-0105-tools-menu">
+   <a href="/blog/index.html" class="header-0105-mobile-tool-item">
+    <div class="header-0105-tool-icon">
+        <i class="fas fa-blog"></i>
+    </div>
+    <span class="header-0105-tool-name">Blog</span>
+   </a>
+
+        <a href="/GreetingCard/img-to-url.html" class="header-0105-tool-item">
+            <div class="header-0105-tool-icon">
+                <i class="fas fa-image"></i>
+            </div>
+            <span class="header-0105-tool-name">Image to URL</span>
+        </a>
+        <a href="https://gunatools.dev/pdf/merge-pdf" class="header-0105-tool-item">
+            <div class="header-0105-tool-icon">
+                <i class="fas fa-object-group"></i>
+            </div>
+            <span class="header-0105-tool-name">Merge PDFs</span>
+        </a>
+        <a href="/pdf/image-to-pdf.html" class="header-0105-tool-item">
+            <div class="header-0105-tool-icon">
+                <i class="fas fa-file-image"></i>
+            </div>
+            <span class="header-0105-tool-name">Image to PDF</span>
+        </a>
+        <a href="/pdf/text-to-pdf" class="header-0105-tool-item">
+            <div class="header-0105-tool-icon">
+                <i class="fas fa-file-alt"></i>
+            </div>
+            <span class="header-0105-tool-name">Text to PDF</span>
+        </a>
+        <a href="/footer/contact-us/feedback" class="header-0105-tool-item">
+            <div class="header-0105-tool-icon">
+                <i class="fas fa-comment-dots"></i>
+            </div>
+            <span class="header-0105-tool-name">Feedback</span>
+        </a>
+    </div>
+</div>
+
+                <button
+                    class="header-0105-mobile-tools-btn"
+                    id="header0105MobileToolsBtn"
+                    type="button"
+                    aria-label="Toggle tools menu"
+                    aria-expanded="false"
+                >
+                    <i class="fas fa-th-large" aria-hidden="true"></i>
+                </button>
+                <button
+                    class="header-0105-mobile-menu-btn"
+                    id="header0105MobileMenuBtn"
+                    type="button"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                    aria-controls="header0105NavLinks"
+                >
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+<div class="header-0105-mobile-tools-menu" id="header0105MobileToolsMenu">
+    <a href="https://gunatools.dev/" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-home"></i>
+        </div>
+        <span class="header-0105-tool-name">Home</span>
+    </a>
+
+   <a href="/blog/index.html" class="header-0105-mobile-tool-item">
+    <div class="header-0105-tool-icon">
+        <i class="fas fa-blog"></i>
+    </div>
+    <span class="header-0105-tool-name">Blog</span>
+   </a>
+
+    <a href="https://gunatools.dev/pdf/remove-pdf-page" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-trash-alt"></i>
+        </div>
+        <span class="header-0105-tool-name">Remove PDF page</span>
+   </a>
+    <a href="https://gunatools.dev/footer/contact-us/contact" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-envelope"></i>
+        </div>
+        <span class="header-0105-tool-name">Contact Us</span>
+    </a>
+
+    <a href="/tools/image-to-url.html" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-link"></i>
+        </div>
+        <span class="header-0105-tool-name">Image to URL</span>
+    </a>
+
+    <a href="/pdf/merge-pdf.html" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-object-group"></i>
+        </div>
+        <span class="header-0105-tool-name">Merge PDF</span>
+    </a>
+    <a href="/pdf/split-pdf.html" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-columns"></i>
+        </div>
+        <span class="header-0105-tool-name">Split PDF</span>
+    </a>
+    <a href="/pdf/image-to-pdf.html" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-file-pdf"></i>
+        </div>
+        <span class="header-0105-tool-name">Image to PDF</span>
+    </a>
+
+    <a href="/card/index.html" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-gift"></i>
+        </div>
+        <span class="header-0105-tool-name">Greeting Card</span>
+    </a>
+
+       <a href="/footer/contact-us/contact.html" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-envelope"></i>
+        </div>
+        <span class="header-0105-tool-name">Contact Us</span>
+    </a>
+    <a href="/footer/contact-us/feedback.html" class="header-0105-mobile-tool-item">
+        <div class="header-0105-tool-icon">
+            <i class="fas fa-comment-dots"></i>
+        </div>
+        <span class="header-0105-tool-name">Feedback</span>
+    </a>
+</div>
+
+ <div class="container">
+
+  <!-- Main Content with SEO-rich content -->
+  <div class="image-tools-header-section-xyz-main">
+    <h1 class="image-tools-h1-xyz-title">Free Image Tools Online: Convert, Compress & Edit</h1>
+    <h2 class="image-tools-h2-xyz-subtitle">Professional bulk image processing — 100% free and no signup required!</h2>
+    
+    <!-- SEO Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="image-tools-breadcrumb-xyz-nav">
+      <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="https://gunatools.dev/" itemprop="item">
+            <span itemprop="name">Home</span>
+          </a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="https://gunatools.dev/pdf/" itemprop="item">
+            <span itemprop="name">PDF Tools</span>
+          </a>
+          <meta itemprop="position" content="2">
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">Image Tools</span>
+          <meta itemprop="position" content="3">
+        </li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Tools Grid with Schema.org markup -->
+  <main class="tools-grid" itemscope itemtype="https://schema.org/ItemList" data-responsive="true">
+
+    <!-- Tool Card 1 - Compress Image -->
+    <a href="/tools/compress-image.html" class="tool-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareApplication">
+      <div class="icon-container" style="background: linear-gradient(135deg, #6c63ff, #4a44c9);">
+        <i class="fas fa-compress-alt"></i>
+      </div>
+      <h3 class="tool-title" itemprop="name">Compress Image</h3>
+      <p class="tool-description" itemprop="description">Reduce image file size without losing quality. Support for JPG, PNG, WebP formats.</p>
+      <meta itemprop="applicationCategory" content="MultimediaApplication">
+      <meta itemprop="operatingSystem" content="Web">
+      <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        <meta itemprop="price" content="0">
+        <meta itemprop="priceCurrency" content="USD">
+      </div>
+    </a>
+
+    <!-- Tool Card 2 - Image to URL -->
+    <a href="/tools/image-to-url.html" class="tool-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareApplication">
+      <div class="icon-container" style="background: linear-gradient(135deg, #ff6584, #e04a6d);">
+        <i class="fas fa-link"></i>
+      </div>
+      <h3 class="tool-title" itemprop="name">Image to URL</h3>
+      <p class="tool-description" itemprop="description">Convert images to shareable URLs instantly. Bulk upload support.</p>
+      <meta itemprop="applicationCategory" content="MultimediaApplication">
+      <meta itemprop="operatingSystem" content="Web">
+      <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        <meta itemprop="price" content="0">
+        <meta itemprop="priceCurrency" content="USD">
+      </div>
+    </a>
+
+    <!-- Tool Card 3 - Image Cropper -->
+    <a href="/tools/crop-image/index.html" class="tool-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareApplication">
+      <div class="icon-container" style="background: linear-gradient(135deg, #fd746c, #ff9068);">
+        <i class="fas fa-crop-alt"></i>
+      </div>
+      <h3 class="tool-title" itemprop="name">Image Cropper</h3>
+      <p class="tool-description" itemprop="description">Crop images to perfect dimensions. Multiple aspect ratios.</p>
+      <meta itemprop="applicationCategory" content="MultimediaApplication">
+      <meta itemprop="operatingSystem" content="Web">
+      <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        <meta itemprop="price" content="0">
+        <meta itemprop="priceCurrency" content="USD">
+      </div>
+    </a>
+
+    <!-- Tool Card 4 - Image to PDF -->
+    <a href="/pdf/image-to-pdf.html" class="tool-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareApplication">
+      <div class="icon-container" style="background: linear-gradient(135deg, #36d1dc, #5b86e5);">
+        <i class="fas fa-file-pdf"></i>
+      </div>
+      <h3 class="tool-title" itemprop="name">Image to PDF</h3>
+      <p class="tool-description" itemprop="description">Convert multiple images to PDF documents easily. Merge and organize.</p>
+      <meta itemprop="applicationCategory" content="MultimediaApplication">
+      <meta itemprop="operatingSystem" content="Web">
+      <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        <meta itemprop="price" content="0">
+        <meta itemprop="priceCurrency" content="USD">
+      </div>
+    </a>
+
+    <!-- Tool Card 5 - Image Converter -->
+    <a href="/tools/image-converter.html" class="tool-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareApplication">
+      <div class="icon-container" style="background: linear-gradient(135deg, #ff9a9e, #fad0c4);">
+        <i class="fas fa-exchange-alt"></i>
+      </div>
+      <h3 class="tool-title" itemprop="name">Image Formats Converter</h3>
+      <p class="tool-description" itemprop="description">Convert between JPG, PNG, WebP, and more formats. Batch processing available.</p>
+      <meta itemprop="applicationCategory" content="MultimediaApplication">
+      <meta itemprop="operatingSystem" content="Web">
+      <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        <meta itemprop="price" content="0">
+        <meta itemprop="priceCurrency" content="USD">
+      </div>
+    </a>
+
+    <!-- Tool Card 6 - Image Rename -->
+    <a href="/tools/image-rename.html" class="tool-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareApplication">
+      <div class="icon-container" style="background: linear-gradient(135deg, #a8ff78, #78ffd6);">
+        <i class="fas fa-font"></i>
+      </div>
+      <h3 class="tool-title" itemprop="name">Image Rename</h3>
+      <p class="tool-description" itemprop="description">Batch rename multiple images at once. Custom naming patterns.</p>
+      <meta itemprop="applicationCategory" content="UtilityApplication">
+      <meta itemprop="operatingSystem" content="Web">
+      <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        <meta itemprop="price" content="0">
+        <meta itemprop="priceCurrency" content="USD">
+      </div>
+    </a>
+
+
+    <!-- Tool Card 7 - Background Remove -->
+<!-- Tool Card 7 - Background Remove -->
+<a href="/tools/remove-bg.html" class="tool-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareApplication">
+  <div class="icon-container" style="background: linear-gradient(135deg, #ff6a6a, #ffb199);">
+    <i class="fas fa-cut"></i>
+  </div>
+  <h3 class="tool-title" itemprop="name">Background Remove</h3>
+  <p class="tool-description" itemprop="description">
+    Remove backgrounds from images automatically with AI precision.
+  </p>
+  <meta itemprop="applicationCategory" content="MultimediaApplication">
+  <meta itemprop="operatingSystem" content="Web">
+  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <meta itemprop="price" content="0">
+    <meta itemprop="priceCurrency" content="USD">
+  </div>
+</a>
+
+    <!-- Tool Card 8 - Sketch Effect -->
+    <a href="/tools/sketch-effect/index.html" class="tool-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareApplication">
+      <div class="icon-container">
+        <i class="fas fa-pencil-alt"></i>
+      </div>
+      <h3 class="tool-title" itemprop="name">Image to Sketch Effect</h3>
+      <p class="tool-description" itemprop="description">Convert photos to beautiful pencil sketches and artistic drawings.</p>
+      <meta itemprop="applicationCategory" content="MultimediaApplication">
+      <meta itemprop="operatingSystem" content="Web">
+      <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        <meta itemprop="price" content="0">
+        <meta itemprop="priceCurrency" content="USD">
+      </div>
+    </a>
+
+  </main>
+
+  <div class="tagline">
+    <p class="tagline-text">Transform your images with our comprehensive toolkit - 100% Free! and very super fast</p>
+  </div>
+    
+  <!-- Additional SEO Content -->
+  <div class="seo-content" style="margin-top: 30px; text-align: center; color: #315a62; font-size: 0.9rem;">
+    <p>Our free toolkit covers everything from converting image formats and compressing large photos to generating shareable image URLs and creating PDF documents — all processed directly in your browser for speed and privacy.</p>
+    <p>All tools work directly in your browser - no downloads, no registration, completely free and fast!</p>
+  </div>
+
+  <!-- New FAQ Section -->
+  <div class="image-tools-faq-aa0105-xyz">
+    <p class="description-xyz">Find answers to common questions about our Free Super Fast Image Tools Online</p>
+    
+    <div class="faq-container-advanced-xyz">
+      <button class="faq-toggle-btn-xyz" id="faqToggleXyz">
+        Frequently Asked Questions
+        <span></span>
+      </button>
+      
+      <div class="faq-content-xyz" id="faqContentXyz">
+        <h3 class="faq-main-title-xyz">Frequently Asked Questions – Free Super Fast Image Tools Online</h3>
+
+        <div class="faq-item-advanced-xyz">
+          <input type="checkbox" id="faq1Xyz">
+          <label for="faq1Xyz" class="faq-question-xyz">1. What can I do with Free Super Fast Image Tools?</label>
+          <div class="faq-answer-xyz">
+            This platform offers browser-based image tools for compressing images, cropping photos, changing formats, removing backgrounds, generating image URLs, applying sketch effects, renaming images, and converting images to PDF – all in one place.
+          </div>
+        </div>
+
+        <div class="faq-item-advanced-xyz">
+          <input type="checkbox" id="faq2Xyz">
+          <label for="faq2Xyz" class="faq-question-xyz">2. How does the Compress Image tool work?</label>
+          <div class="faq-answer-xyz">
+            The Compress Image tool reduces image file size using smart optimization techniques while maintaining visual quality. It's ideal for speeding up website loading times, reducing upload sizes, and optimizing images for SEO.
+          </div>
+        </div>
+
+        <div class="faq-item-advanced-xyz">
+          <input type="checkbox" id="faq3Xyz">
+          <label for="faq3Xyz" class="faq-question-xyz">3. What is the Image Cropper used for?</label>
+          <div class="faq-answer-xyz">
+            The Image Cropper allows you to cut out unwanted parts and adjust images to specific dimensions or aspect ratios, making it useful for social media posts, profile pictures, and thumbnails.
+          </div>
+        </div>
+
+        <div class="faq-item-advanced-xyz">
+          <input type="checkbox" id="faq4Xyz">
+          <label for="faq4Xyz" class="faq-question-xyz">4. What is the Image to URL tool?</label>
+          <div class="faq-answer-xyz">
+            The Image to URL tool lets you upload an image and instantly generate a direct shareable link, which can be used to embed images on websites, forums, or share them online.
+          </div>
+        </div>
+
+        <div class="faq-item-advanced-xyz">
+          <input type="checkbox" id="faq5Xyz">
+          <label for="faq5Xyz" class="faq-question-xyz">5. How does Background Removal work?</label>
+          <div class="faq-answer-xyz">
+            The Background Removal tool automatically separates the subject from the background using AI-based detection, helping you create clean images for products, profiles, and designs.
+          </div>
+        </div>
+
+        <div class="faq-item-advanced-xyz">
+          <input type="checkbox" id="faq6Xyz">
+          <label for="faq6Xyz" class="faq-question-xyz">6. What is the Image to Sketch Effect tool?</label>
+          <div class="faq-answer-xyz">
+            This tool transforms photos into pencil sketch-style artwork, making it useful for creative designs, illustrations, and artistic visuals without manual editing.
+          </div>
+        </div>
+
+        <div class="faq-item-advanced-xyz">
+          <input type="checkbox" id="faq7Xyz">
+          <label for="faq7Xyz" class="faq-question-xyz">7. What image formats can I convert?</label>
+          <div class="faq-answer-xyz">
+            The image format converter supports JPG, JPEG, PNG, and WebP, allowing for easy conversion between formats based on quality, size, or compatibility requirements.
+          </div>
+        </div>
+
+        <div class="faq-item-advanced-xyz">
+          <input type="checkbox" id="faq8Xyz">
+          <label for="faq8Xyz" class="faq-question-xyz">8. What does the Image to PDF tool do?</label>
+          <div class="faq-answer-xyz">
+            The Image to PDF tool allows you to convert multiple images into a single PDF file, rearrange them, and create a document suitable for sharing, printing, or submitting.
+          </div>
+        </div>
+
+        <div class="faq-item-advanced-xyz">
+          <input type="checkbox" id="faq9Xyz">
+          <label for="faq9Xyz" class="faq-question-xyz">9. What is the Image Rename tool useful for?</label>
+          <div class="faq-answer-xyz">
+            The Image Rename tool helps you rename multiple images simultaneously using custom naming patterns, which is useful for organizing files and maintaining clean filenames.
+          </div>
+        </div>
+
+        <div class="faq-item-advanced-xyz">
+          <input type="checkbox" id="faq10Xyz">
+          <label for="faq10Xyz" class="faq-question-xyz">10. Where are the images processed, and are they stored?</label>
+          <div class="faq-answer-xyz">
+            All images are processed directly through the web tool workflow and are not permanently stored, ensuring enhanced privacy and faster performance.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Image Tools Footer -->
+  <footer class="footer-xyz-aa0105">
+    <div class="container-xyz">
+      <div class="footer-content-xyz">
+        <!-- Logo Section -->
+        <div class="footer-section-xyz">
+          <div class="footer-logo-xyz">
+            <div class="footer-logo-icon-xyz">
+              <i class="fas fa-image"></i>
+            </div>
+            <div class="footer-logo-text-xyz">
+              <span class="logo-main-xyz">Free Image Tools</span>
+              <span class="logo-sub-xyz">by GunaTools</span>
+            </div>
+          </div>
+          <p class="footer-description-xyz">
+            Transform your images with our powerful, 100% free online toolkit. No registration, no downloads, just instant results!
+          </p>
+          <div class="tool-stats-xyz">
+            <div class="stat-item-xyz">
+              <i class="fas fa-bolt"></i>
+              <span>Super Fast</span>
+            </div>
+            <div class="stat-item-xyz">
+              <i class="fas fa-lock-open"></i>
+              <span>100% Free</span>
+            </div>
+            <div class="stat-item-xyz">
+              <i class="fas fa-shield-alt"></i>
+              <span>Secure</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-section-xyz">
+          <h3 class="section-title-xyz">Popular Image Tools</h3>
+          <ul class="footer-links-xyz">
+            <li><a href="/tools/compress-image.html"><i class="fas fa-compress-alt"></i> Compress Image</a></li>
+            <li><a href="/tools/crop-image/index.html"><i class="fas fa-crop-alt"></i> Image Cropper</a></li>
+            <li><a href="/tools/image-to-url.html"><i class="fas fa-link"></i> Image to URL</a></li>
+            <li><a href="/tools/image-converter.html"><i class="fas fa-exchange-alt"></i> Image Converter</a></li>
+            <li><a href="/tools/sketch-effect/index.html"><i class="fas fa-pencil-alt"></i> Sketch Effect</a></li>
+            <li><a href="/tools/background-remove.html"><i class="fas fa-cut"></i> Background Remove</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section-xyz">
+          <h3 class="section-title-xyz">More Tools</h3>
+          <ul class="footer-links-xyz">
+            <li><a href="/pdf/image-to-pdf.html"><i class="fas fa-file-pdf"></i> Image to PDF</a></li>
+            <li><a href="/tools/image-rename.html"><i class="fas fa-font"></i> Image Rename</a></li>
+            <li><a href="/tools/drawing.html"><i class="fas fa-paint-brush"></i> Drawing Tool</a></li>
+            <li><a href="/pdf/pdf-to-image.html"><i class="fas fa-file-image"></i> PDF to Image</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section-xyz">
+          <h3 class="section-title-xyz">Connect With Us</h3>
+          <p class="connect-text-xyz">Follow for updates & new tools!</p>
+          <div class="social-links-xyz">
+            <a href="https://t.me/GunaTools0105" class="social-link-xyz telegram-xyz" target="_blank" title="Telegram">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://youtube.com/@GunaTools0105" class="social-link-xyz youtube-xyz" target="_blank" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/GunaTools0105/" class="social-link-xyz instagram-xyz" target="_blank" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com/GunaTools0105/" class="social-link-xyz twitter-xyz" target="_blank" title="X (Twitter)">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          
+          <div class="footer-actions-xyz">
+            <a href="/footer/contact-us/feedback.html" class="feedback-btn-xyz">
+              <i class="fas fa-comment"></i> Send Feedback
+            </a>
+            <a href="mailto:GunaTools0105@gmail.com" class="email-btn-xyz">
+              <i class="fas fa-envelope"></i> Contact
+            </a>
+          </div>
+          
+          <div class="newsletter-xyz">
+            <p>Want updates on new tools?</p>
+            <a href="https://t.me/GunaTools0105" class="telegram-join-xyz">
+              <i class="fab fa-telegram"></i> Join Telegram Channel
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom-xyz">
+        <div class="footer-bottom-content-xyz">
+          <div class="copyright-xyz">
+            <p>&copy; <span id="currentYearXyz"></span> Free Image Tools by Guna Tools. All rights reserved.</p>
+            <p class="love-text-xyz">Made with <i class="fas fa-heart heart-icon-xyz"></i> for the creative community</p>
+          </div>
+          
+          <div class="footer-legal-xyz">
+            <a href="/footer/privacy-policy.html">Privacy Policy</a>
+            <span class="separator-xyz">•</span>
+            <a href="/footer/terms.html">Terms of Use</a>
+            <span class="separator-xyz">•</span>
+            <a href="/footer/about.html">About</a>
+            <span class="separator-xyz">•</span>
+            <a href="/footer/contact-us/contact.html">Contact</a>
+          </div>
+          
+          <div class="back-to-top-xyz">
+            <button id="backToTopXyz" class="back-to-top-btn-xyz" aria-label="Back to top">
+              <i class="fas fa-arrow-up"></i>
+              <span>Back to Top</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!--this protected by GunaTools0105, do you need anything contact -->
+<div id="aarifalam0105-protect" style="display: none !important;">aarifalam0105</div>
+ <!-- Welcome tag -->
+<div class="welcome-page-cover-image-tools" id="welcomePageCoverImageTools">
+    <div class="welcome-page-content-image-tools">
+        <h4 class="welcome-page-title-image-tools">Welcome to Image Tools</h4>
+        <p class="welcome-page-subtitle-image-tools">Professional Image Processing Suite</p>
+    </div>
+    <div class="welcome-page-credit-image-tools">Created by <strong>@GunaTools0105</strong></div>
+</div>
+
+ <script>
+// welcome tag js
+document.addEventListener('DOMContentLoaded', function() {
+    const welcomePageCover = document.getElementById('welcomePageCoverImageTools');
+    
+    if (welcomePageCover) {
+        setTimeout(() => {
+            welcomePageCover.style.opacity = '0';
+            welcomePageCover.style.visibility = 'hidden';
+            
+            setTimeout(() => {
+                if (welcomePageCover.parentNode) {
+                    welcomePageCover.parentNode.removeChild(welcomePageCover);
+                }
+            }, 300);
+        }, 1200);
+    }
+});
+</script>
+ 
+<script>
+document.addEventListener("DOMContentLoaded",function(){(function e(){let t=document.getElementById("currentYearXyz");if(t){let n=new Date().getFullYear();t.textContent=n}})(),function e(){let t=document.getElementById("backToTopXyz");if(t){function n(){window.pageYOffset>300?t.classList.add("visible"):t.classList.remove("visible")}t.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})}),window.addEventListener("scroll",n),n()}}(),function e(){let t=document.querySelectorAll(".stat-item-xyz");if(t.length>0){let n=new IntersectionObserver(e=>{e.forEach((e,t)=>{e.isIntersecting&&setTimeout(()=>{e.target.classList.add("animated")},200*t)})},{threshold:.5});t.forEach(e=>n.observe(e))}}(),function e(){let t=document.querySelectorAll(".footer-links-xyz a");t.forEach(e=>{e.addEventListener("mouseenter",function(){this.style.transform="translateX(5px)"}),e.addEventListener("mouseleave",function(){this.style.transform="translateX(0)"})})}(),function e(){let t=new MutationObserver(e=>{e.forEach(e=>{"data-theme"===e.attributeName&&console.log("Footer theme updated")})});t.observe(document.documentElement,{attributes:!0})}(),console.log("Footer XYZ initialized successfully")}),window.addEventListener("load",function(){let e=document.getElementById("currentYearXyz");if(e&&!e.textContent){let t=new Date().getFullYear();e.textContent=t}});</script><script>
+function initAdvancedCardEffects(){let t=document.querySelectorAll(".tool-card");function l(){if("dark"===document.documentElement.getAttribute("data-theme")){let t=document.querySelector(".cosmic-bg");if(!t){let l=document.createElement("div");l.className="cosmic-bg",l.style.position="fixed",l.style.top="0",l.style.left="0",l.style.width="100%",l.style.height="100%",l.style.pointerEvents="none",l.style.zIndex="-2",l.style.opacity="1",document.body.appendChild(l);let a=15+Math.floor(10*Math.random());for(let n=0;n<a;n++){let r=document.createElement("div");r.className="cosmic-particle";let s=30+90*Math.random();r.style.width=`${s}px`,r.style.height=`${s}px`,r.style.left=`${100*Math.random()}%`,r.style.top=`${100*Math.random()}%`;let i=200*Math.random()-100,o=200*Math.random()-100;r.style.setProperty("--tx",`${i}px`),r.style.setProperty("--ty",`${o}px`);let d=["primary","secondary"],y=d[Math.floor(Math.random()*d.length)];r.style.background=`var(--gradient-${y})`,r.style.filter=`blur(${5+10*Math.random()}px)`,r.style.opacity=`${.05+.1*Math.random()}`;let c=15+20*Math.random();r.style.animation=`cosmicFloat ${c}s infinite linear`,l.appendChild(r)}}}}t.forEach((t,l)=>{let a=t.querySelector(".icon-wrapper");if(!a){(a=document.createElement("div")).className="icon-wrapper";let n=t.querySelector(".icon-container");n.parentNode.insertBefore(a,n),a.appendChild(n)}for(let r=1;r<=3;r++){let s=document.createElement("div");s.className=`icon-ring ring-${r}`;let i=r%2==0?"secondary":"primary";s.style.borderColor=`var(--accent-${i})`,s.style.opacity="0",s.style.transition="opacity 0.5s ease",a.appendChild(s)}let o=document.createElement("div");o.className="scan-line",o.style.position="absolute",o.style.top="0",o.style.left="0",o.style.width="100%",o.style.height="3px",o.style.background="var(--gradient-primary)",o.style.transform="translateY(-100%)",o.style.opacity="0",o.style.transition="all 0.6s ease",o.style.zIndex="2",t.appendChild(o);let d=t.querySelector(".icon-container"),y=document.createElement("div");y.className="icon-shine",y.style.position="absolute",y.style.top="-50%",y.style.left="-50%",y.style.width="200%",y.style.height="200%",y.style.background="linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.8) 50%, transparent 70%)",y.style.transform="rotate(45deg)",y.style.opacity="0",y.style.transition="opacity 0.3s ease",y.style.pointerEvents="none",d.appendChild(y);let c=document.createElement("div");c.className="particle-trail",c.style.position="absolute",c.style.width="100%",c.style.height="100%",c.style.pointerEvents="none",c.style.zIndex="1",c.style.top="0",c.style.left="0",t.appendChild(c);let $;t.addEventListener("mousemove",l=>{if($)return;let a=t.getBoundingClientRect(),n=l.clientX-a.left,r=l.clientY-a.top,s=Math.random()>.7?2:1;for(let i=0;i<s;i++){let o=document.createElement("div");o.className="particle",o.style.position="absolute",o.style.width="4px",o.style.height="4px",o.style.borderRadius="50%",o.style.pointerEvents="none",o.style.left=`${n}px`,o.style.top=`${r}px`;let d=Math.random()>.5?"primary":"secondary";o.style.background=`var(--gradient-${d})`,c.appendChild(o);let y=Math.random()*Math.PI*2,p=15+20*Math.random(),m=Math.cos(y)*p,f=Math.sin(y)*p;o.style.animation="particleFloat 1s ease-out forwards",o.style.setProperty("--tx",`${m}px`),o.style.setProperty("--ty",`${f}px`),setTimeout(()=>{o.parentNode===c&&c.removeChild(o)},1e3)}$=setTimeout(()=>{$=null},50)}),t.addEventListener("mouseenter",()=>{let l=t.querySelectorAll(".icon-ring");l.forEach(t=>{t.style.opacity="0.3"}),o.style.transform="translateY(0)",o.style.opacity="1"}),t.addEventListener("mouseleave",()=>{let l=t.querySelectorAll(".icon-ring");l.forEach(t=>{t.style.opacity="0"}),o.style.transform="translateY(-100%)",o.style.opacity="0"}),t.addEventListener("click",()=>{let l=document.createElement("div");l.style.position="absolute",l.style.borderRadius="50%",l.style.background="rgba(124, 58, 237, 0.3)",l.style.transform="scale(0)",l.style.animation="ripple 0.6s linear",l.style.pointerEvents="none";let a=t.getBoundingClientRect(),n=Math.max(a.width,a.height);l.style.width=`${n}px`,l.style.height=`${n}px`,l.style.left=`${e.clientX-a.left-n/2}px`,l.style.top=`${e.clientY-a.top-n/2}px`,t.appendChild(l),setTimeout(()=>{l.parentNode===t&&t.removeChild(l)},600)})}),l();let a=new MutationObserver(t=>{t.forEach(t=>{if("data-theme"===t.attributeName){let a=document.querySelector(".cosmic-bg");a&&a.remove(),"dark"===document.documentElement.getAttribute("data-theme")&&l()}})});a.observe(document.documentElement,{attributes:!0})}function addDynamicCSS(){if(!document.querySelector("#dynamic-styles")){let t=document.createElement("style");t.id="dynamic-styles",t.textContent=`
+      @keyframes particleFloat {
+        0% {
+          transform: translate(0, 0) scale(1);
+          opacity: 0.8;
+        }
+        100% {
+          transform: translate(var(--tx, 50px), var(--ty, 50px)) scale(0);
+          opacity: 0;
+        }
+      }
+      
+      @keyframes ripple {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+      
+      @keyframes cosmicFloat {
+        0% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        100% {
+          transform: translate(var(--tx, 100px), var(--ty, 100px)) rotate(360deg);
+        }
+      }
+    `,document.head.appendChild(t)}}document.addEventListener("DOMContentLoaded",function(){addDynamicCSS(),initAdvancedCardEffects(),console.log("Advanced card effects initialized!")}),window.addEventListener("load",function(){setTimeout(initAdvancedCardEffects,100)});</script><script src="js/main-header.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>शब्दार्थ गेम | हिंदी-अंग्रेजी शब्द ज्ञान बढ़ाएं | शिक्षा के लिए इंटरएक्टिव गेम</title>
+  <meta name="description" content="पहली बार शब्दार्थ पर आधारित गेम! हिंदी-अंग्रेजी शब्दों के अर्थ सीखें, मज़े से अपनी शब्दावली बढ़ाएं और दिमाग को तेज़ करें। यह गेम सभी छात्रों के लिए एक अनोखा अनुभव है।">
+  <meta name="keywords" content="शब्दार्थ गेम, हिंदी इंग्लिश शब्द गेम, शब्द ज्ञान, शैक्षिक गेम, भाषा सीखने का गेम, बच्चों के लिए गेम, दिमागी खेल, हिंदी शब्दों का अर्थ, वर्ड मीनिंग गेम">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gunatools.dev/Game/hi/index.html">
+  <meta property="og:title" content="शब्दार्थ गेम | हिंदी-अंग्रेजी शब्द ज्ञान बढ़ाएं">
+  <meta property="og:description" content="पहली बार इंटरएक्टिव शब्दार्थ गेम — बच्चों और छात्रों के लिए मज़ेदार और शैक्षिक अनुभव। अभी खेलें!">
+  <meta property="og:image" content="/images/word-meaning-game-thamb.png">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://gunatools.dev/Game/hi/index.html">
+  <meta property="twitter:title" content="शब्दार्थ गेम | हिंदी-अंग्रेजी शब्द ज्ञान बढ़ाएं">
+  <meta property="twitter:description" content="बच्चों और छात्रों के लिए शब्दों का मीनिंग सीखने का अनोखा गेम! हिंदी-इंग्लिश शब्दावली बढ़ाएं और दिमाग को तेज करें।">
+  <meta property="twitter:image" content="/images/word-meaning-game-thamb.png">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV220VSL5G" type="1f84bee807ab2635086b75cc-text/javascript"></script>
+  <script type="1f84bee807ab2635086b75cc-text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-ZV220VSL5G');
+  </script>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://gunatools.dev/Game/hi/index.html">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://gunatools.dev/favicon.ico">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../game-css/word-meaning-table.css">
+  <link rel="stylesheet" href="../game-css/translate.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "शब्दार्थ गेम",
+    "description": "हिंदी और इंग्लिश शब्दों को सीखने के लिए मजेदार और शैक्षिक गेम",
+    "url": "https://gunatools.dev/Game/hi/index.html",
+    "genre": "शैक्षिक गेम",
+    "operatingSystem": "Web browser",
+    "applicationCategory": "Game",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "1800"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "Game Zone India"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #6e45e2;
+      --primary-light: #88d3ce;
+      --secondary: #ff7e5f;
+      --dark-bg: #0f0e17;
+      --darker-bg: #0a0a12;
+      --card-bg: #1e1e2e;
+      --card-hover: #2a2a3a;
+      --text-light: #f8f8f8;
+      --text-muted: #b8b8b8;
+      --accent: #ff8906;
+      --success: #2cb67d;
+      --glow: 0 0 20px rgba(110, 69, 226, 0.4);
+      --border-radius: 16px;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-light);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    /* Back Button */
+    .back-btn {
+      position: fixed;
+      top: 2rem;
+      left: 2rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(30, 30, 46, 0.8);
+      backdrop-filter: blur(5px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: 1.5rem;
+      z-index: 100;
+
+
+      border: 1px solid rgba(255, 142, 6, 0.3);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .back-btn:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(110, 69, 226, 0.4);
+    }
+    
+    /* Game Header */
+    .game-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    
+    .game-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .game-subtitle {
+      color: var(--primary-light);
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    /* Premium Button */
+    .premium-btn {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 2rem auto;
+      padding: 1.2rem;
+      border-radius: var(--border-radius);
+      background: linear-gradient(135deg, #ffd700, #ff9500);
+      color: #0a0a12;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+
+      box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .premium-btn::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0) 60%
+      );
+      transform: rotate(30deg);
+    }
+    
+    .premium-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
+    }
+    
+    .premium-btn:hover::before {
+      left: 100%;
+    }
+    
+    .premium-btn i {
+      margin-right: 10px;
+    }
+    
+    /* Game Rules */
+    .game-rules {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      padding: 2.5rem;
+      margin: 3rem 0;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 142, 6, 0.1);
+    }
+    
+    .game-rules::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    }
+    
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    
+    .section-title i {
+      color: var(--accent);
+    }
+    
+    .rules-list {
+      list-style-type: none;
+    }
+    
+    .rules-list li {
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+      position: relative;
+      color: var(--text-muted);
+    }
+    
+    .rules-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    
+    /* Media Sections */
+    .media-section {
+      margin: 3rem 0;
+    }
+    
+    .media-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .media-card {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .media-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(110, 69, 226, 0.3);
+    }
+    
+    .media-title {
+      padding: 1.5rem;
+      font-size: 1.3rem;
+      background: linear-gradient(90deg, var(--darker-bg), var(--card-bg));
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    
+    .media-title i {
+      color: var(--accent);
+    }
+    
+    .game-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .game-title {
+        font-size: 2.2rem;
+      }
+      
+      .game-subtitle {
+        font-size: 1rem;
+      }
+      
+      .premium-btn {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+      
+      .game-rules {
+        padding: 1.5rem;
+      }
+      
+      .section-title {
+        font-size: 1.5rem;
+      }
+      
+      .back-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        top: 1rem;
+        left: 1rem;
+      }
+      
+      th, td {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        padding: 1.5rem;
+      }
+      
+      .game-title {
+        font-size: 1.8rem;
+      }
+      
+      .rules-list li {
+        padding-left: 1.5rem;
+      }
+      
+      th, td {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+      }
+      
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+    
+   </style>
+</head>
+<body>
+  <!-- Back Button -->
+  <a href="index.html" class="back-btn" aria-label="Go back">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+  
+  <div class="container">
+    <!-- Game Header -->
+    <header class="game-header">
+      <h1 class="game-title">Word-Meaning GAME</h1>
+      <p class="game-subtitle">This game is for educational purposes and is very beneficial for students from Class 1 to 12, as well as for people of any age group.</p>
+    </header>
+    
+    <button onclick="window.location.href='../word-meaning-game.html'" class="premium-btn pulse">
+      <i class="fas fa-gamepad"></i> Start Game - FREE
+    </button>
+
+<!-- Language Switcher Button Start -->
+<div class="blog-lang-switcher-bar">
+  <div class="blog-lang-dropdown">
+    <button class="blog-lang-btn">🌐 Translate-Hindi ▼</button>
+    <div class="blog-lang-dropdown-content">
+      <a href="../word-meaning-page.html">English</a>
+      <a href="word-meaning-page.html">हिन्दी</a>
+    </div>
+  </div>
+</div>
+    
+    <!-- Game Rules -->
+<section class="game-rules">
+  <h2 class="section-title">
+    <i class="fas fa-book"></i> गेम के नियम
+  </h2>
+  <ul class="rules-list">
+    <li>इस गेम को अपने दोस्त या किसी ऐसे व्यक्ति के साथ खेलें जिसे अंग्रेजी शब्द और उनके अर्थ पता हों।</li>
+    <li>एक खिलाड़ी किसी एक सेल में कोई भी अक्षर लिखेगा।</li>
+    <li>फिर दूसरा खिलाड़ी अगला सेल भरकर एक अर्थपूर्ण शब्द बनाने की कोशिश करेगा।</li>
+    <li>उदाहरण के लिए, अगर आपका दोस्त 'M' भरता है और आप 'E' भरते हैं, और आप "ME" (मुझे) का मतलब जानते हैं, तो आपके अंक 2 बढ़ जाएंगे।</li>
+    <li>शब्द बाएं से दाएं या ऊपर से नीचे पूरे होने चाहिए। उदाहरण: 'CAR' सही है लेकिन 'RAC' (दाएं से बाएं) गलत है।</li>
+    <li>शब्द की लंबाई के अनुसार अंक मिलते हैं – 3 अक्षरों वाले शब्द पर 3 अंक मिलते हैं।</li>
+   <li> नोट: आपको वास्तविक शब्द बनाने हैं, न कि IIT, JEE या NEET जैसे संक्षेप। उदाहरण: apple , ball, car , boy, sun,  जैसे शब्द बना सकते हैं।</li>
+  </ul>
+</section>
+
+
+    <!-- Word-Meaning Tables -->
+    <section class="word-tables">
+      <h2>🔠 2-Letter Words</h2>
+      <table>
+        <tr><th>S.No</th><th>Word</th><th>Hindi Meaning</th></tr>
+        <tr><td>1</td><td>Go</td><td>जाना</td></tr>
+        <tr><td>2</td><td>Do</td><td>करना</td></tr>
+        <tr><td>3</td><td>He</td><td>वह</td></tr>
+        <tr><td>4</td><td>We</td><td>हम</td></tr>
+        <tr><td>5</td><td>It</td><td>यह</td></tr>
+        <tr><td>6</td><td>Up</td><td>ऊपर</td></tr>
+        <tr><td>7</td><td>On</td><td>पर</td></tr>
+        <tr><td>8</td><td>In</td><td>अंदर</td></tr>
+        <tr><td>9</td><td>Is</td><td>है</td></tr>
+        <tr><td>10</td><td>Me</td><td>मुझे</td></tr>
+        <tr><td>11</td><td>My</td><td>मेरा</td></tr>
+        <tr><td>12</td><td>By</td><td>के द्वारा</td></tr>
+        <tr><td>13</td><td>To</td><td>को</td></tr>
+        <tr><td>14</td><td>No</td><td>नहीं</td></tr>
+        <tr><td>15</td><td>Be</td><td>होना</td></tr>
+        <tr><td>16</td><td>As</td><td>जैसे</td></tr>
+        <tr><td>17</td><td>If</td><td>यदि</td></tr>
+        <tr><td>18</td><td>Or</td><td>या</td></tr>
+        <tr><td>19</td><td>Am</td><td>हूं</td></tr>
+        <tr><td>20</td><td>Us</td><td>हमें</td></tr>
+        <tr><td>21</td><td>At</td><td>पर</td></tr>
+        <tr><td>22</td><td>So</td><td>इसलिए</td></tr>
+        <tr><td>23</td><td>Of</td><td>का</td></tr>
+        <tr><td>24</td><td>An</td><td>एक</td></tr>
+        <tr><td>25</td><td>He</td><td>वह</td></tr>
+      </table>
+
+      <h2>🔡 3-Letter Words</h2>
+      <table>
+        <tr><th>S.No</th><th>Word</th><th>Hindi Meaning</th></tr>
+        <tr><td>1</td><td>Cat</td><td>बिल्ली</td></tr>
+        <tr><td>2</td><td>Dog</td><td>कुत्ता</td></tr>
+        <tr><td>3</td><td>Sun</td><td>सूरज</td></tr>
+        <tr><td>4</td><td>Fun</td><td>मज़ा</td></tr>
+        <tr><td>5</td><td>Run</td><td>दौड़ना</td></tr>
+        <tr><td>6</td><td>Hat</td><td>टोपी</td></tr>
+        <tr><td>7</td><td>Bat</td><td>बल्ला</td></tr>
+        <tr><td>8</td><td>Pen</td><td>पेन</td></tr>
+        <tr><td>9</td><td>Map</td><td>नक्शा</td></tr>
+        <tr><td>10</td><td>Bus</td><td>बस</td></tr>
+        <tr><td>11</td><td>Fan</td><td>पंखा</td></tr>
+        <tr><td>12</td><td>Box</td><td>डिब्बा</td></tr>
+        <tr><td>13</td><td>Ice</td><td>बर्फ</td></tr>
+        <tr><td>14</td><td>Ant</td><td>चींटी</td></tr>
+        <tr><td>15</td><td>Egg</td><td>अंडा</td></tr>
+        <tr><td>16</td><td>Net</td><td>जाल</td></tr>
+        <tr><td>17</td><td>Bed</td><td>बिस्तर</td></tr>
+        <tr><td>18</td><td>Jam</td><td>जैम</td></tr>
+        <tr><td>19</td><td>Boy</td><td>लड़का</td></tr>
+        <tr><td>20</td><td>Girl</td><td>लड़की</td></tr>
+        <tr><td>21</td><td>Zip</td><td>जिप</td></tr>
+        <tr><td>22</td><td>Car</td><td>गाड़ी</td></tr>
+        <tr><td>23</td><td>Toe</td><td>पैर की अंगुली</td></tr>
+        <tr><td>24</td><td>Ear</td><td>कान</td></tr>
+        <tr><td>25</td><td>Leg</td><td>टांग</td></tr>
+      </table>
+
+      <h2>🔠 4-Letter Words</h2>
+      <table>
+        <tr><th>S.No</th><th>Word</th><th>Hindi Meaning</th></tr>
+        <tr><td>1</td><td>Book</td><td>किताब</td></tr>
+        <tr><td>2</td><td>Fish</td><td>मछली</td></tr>
+        <tr><td>3</td><td>Tree</td><td>पेड़</td></tr>
+        <tr><td>4</td><td>Milk</td><td>दूध</td></tr>
+        <tr><td>5</td><td>Ball</td><td>गेंद</td></tr>
+        <tr><td>6</td><td>Read</td><td>पढ़ना</td></tr>
+        <tr><td>7</td><td>Play</td><td>खेलना</td></tr>
+        <tr><td>8</td><td>Work</td><td>काम</td></tr>
+        <tr><td>9</td><td>Hope</td><td>आशा</td></tr>
+        <tr><td>10</td><td>Love</td><td>प्यार</td></tr>
+        <tr><td>11</td><td>Door</td><td>दरवाज़ा</td></tr>
+        <tr><td>12</td><td>Rain</td><td>बारिश</td></tr>
+        <tr><td>13</td><td>Jump</td><td>कूदना</td></tr>
+        <tr><td>14</td><td>Kind</td><td>दयालु</td></tr>
+        <tr><td>15</td><td>Blue</td><td>नीला</td></tr>
+        <tr><td>16</td><td>Cold</td><td>ठंडा</td></tr>
+        <tr><td>17</td><td>Team</td><td>टीम</td></tr>
+        <tr><td>18</td><td>Girl</td><td>लड़की</td></tr>
+        <tr><td>19</td><td>Boy</td><td>लड़का</td></tr>
+        <tr><td>20</td><td>Food</td><td>भोजन</td></tr>
+        <tr><td>21</td><td>Back</td><td>पीठ</td></tr>
+        <tr><td>22</td><td>Hair</td><td>बाल</td></tr>
+        <tr><td>23</td><td>Rock</td><td>चट्टान</td></tr>
+        <tr><td>24</td><td>Hand</td><td>हाथ</td></tr>
+        <tr><td>25</td><td>Foot</td><td>पैर</td></tr>
+      </table>
+
+      <h2>🔠 5-Letter Words</h2>
+      <table>
+        <tr><th>S.No</th><th>Word</th><th>Hindi Meaning</th></tr>
+        <tr><td>1</td><td>Clean</td><td>साफ</td></tr>
+        <tr><td>2</td><td>Chair</td><td>कुर्सी</td></tr>
+        <tr><td>3</td><td>Sharp</td><td>तेज़</td></tr>
+        <tr><td>4</td><td>Happy</td><td>खुश</td></tr>
+        <tr><td>5</td><td>Sweet</td><td>मीठा</td></tr>
+        <tr><td>6</td><td>Water</td><td>पानी</td></tr>
+        <tr><td>7</td><td>River</td><td>नदी</td></tr>
+        <tr><td>8</td><td>Stone</td><td>पत्थर</td></tr>
+        <tr><td>9</td><td>Dance</td><td>नृत्य</td></tr>
+        <tr><td>10</td><td>Class</td><td>कक्षा</td></tr>
+        <tr><td>11</td><td>Watch</td><td>घड़ी</td></tr>
+        <tr><td>12</td><td>Smile</td><td>मुस्कान</td></tr>
+        <tr><td>13</td><td>Fruit</td><td>फल</td></tr>
+        <tr><td>14</td><td>Table</td><td>मेज</td></tr>
+        <tr><td>15</td><td>World</td><td>दुनिया</td></tr>
+        <tr><td>16</td><td>Write</td><td>लिखना</td></tr>
+        <tr><td>17</td><td>Brave</td><td>बहादुर</td></tr>
+        <tr><td>18</td><td>Light</td><td>रोशनी</td></tr>
+        <tr><td>19</td><td>Smart</td><td>चतुर</td></tr>
+        <tr><td>20</td><td>Train</td><td>रेलगाड़ी</td></tr>
+        <tr><td>21</td><td>Begin</td><td>शुरू करना</td></tr>
+        <tr><td>22</td><td>White</td><td>सफेद</td></tr>
+        <tr><td>23</td><td>Sound</td><td>ध्वनि</td></tr>
+        <tr><td>24</td><td>Plant</td><td>पौधा</td></tr>
+        <tr><td>25</td><td>Learn</td><td>सीखना</td></tr>
+      </table>
+    </section>
+    
+    <!-- Game Image -->
+<section class="media-section">
+  <div class="media-card">
+    <h2 class="media-title">
+      <i class="fas fa-image"></i> Game Screenshot
+    </h2>
+    <img src="/images/word-meaning-game-thamb.png"
+         alt="Word-Meaning Game screenshot" class="game-image">
+  </div>
+</section>
+
+  </div>
+  
+<script>  document.addEventListener('DOMContentLoaded', function () {
+    var premiumBtn = document.querySelector('.premium-btn');
+
+    if (premiumBtn) {
+      premiumBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        premiumBtn.classList.add('clicked');
+        premiumBtn.classList.remove('pulse');
+
+        setTimeout(function () {
+          premiumBtn.classList.remove('clicked');
+          premiumBtn.classList.add('pulse');
+          window.location.href = '../word-meaning-game.html';
+        }, 300);
+      });
+    }
+
+    animateOnScroll();
+
+    var isScrolling;
+    window.addEventListener('scroll', function () {
+      clearTimeout(isScrolling);
+      isScrolling = setTimeout(animateOnScroll, 66);
+    });
+  });
+  </script>
+  
+</body>
+</html>
+
+
