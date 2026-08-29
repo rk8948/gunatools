@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitMCP + Gitingest + AI: The Workflow That 3x's Your Productivity | gunatools.dev</title>
+<meta name="description" content="GitMCP aur Gitingest se kisi bhi GitHub repo ko AI ke saath analyze karo — structure samjho, bugs dhundho, aur 3x fast kaam karo. Students ke liye complete workflow guide.">
+<meta name="keywords" content="gitmcp, gitingest, ai github workflow, github ai tools, understand github repo with ai, chatgpt github, claude github, gunatools blog, github productivity">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gunatools.dev/blog/gitmcp-gitingest-ai-workflow/">
+
+<meta property="og:title" content="GitMCP + Gitingest + AI: The Workflow That 3x's Your Productivity">
+<meta property="og:description" content="GitMCP aur Gitingest se kisi bhi GitHub repo ko AI ke saath analyze karo. Students ke liye complete AI + GitHub workflow.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://gunatools.dev/blog/gitmcp-gitingest-ai-workflow/">
+<meta property="og:site_name" content="gunatools.dev">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GitMCP + Gitingest + AI: The Workflow That 3x's Your Productivity">
+<meta name="twitter:description" content="GitMCP aur Gitingest se kisi bhi GitHub repo ko AI ke saath analyze karo.">
+<meta name="twitter:creator" content="@GunaTools0105">
+<meta name="twitter:site" content="@GunaTools0105">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "GitMCP + Gitingest + AI: The Workflow That 3x's Your Productivity",
+  "description": "GitMCP aur Gitingest se kisi bhi GitHub repo ko AI ke saath analyze karo — structure samjho, bugs dhundho, aur 3x fast kaam karo.",
+  "author": {"@type": "Organization", "name": "gunatools.dev"},
+  "publisher": {"@type": "Organization", "name": "gunatools.dev"},
+  "datePublished": "2026-06-23",
+  "dateModified": "2026-06-23",
+  "inLanguage": "hi-IN",
+  "url": "https://gunatools.dev/blog/gitmcp-gitingest-ai-workflow/",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://gunatools.dev/blog/gitmcp-gitingest-ai-workflow/"}
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&family=Sora:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV220VSL5G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-ZV220VSL5G');
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --brand: #2563EB;
+    --brand-dark: #1D4ED8;
+    --brand-light: #EFF6FF;
+    --brand-mid: #BFDBFE;
+    --accent: #7C3AED;
+    --accent-light: #F5F3FF;
+    --green: #059669;
+    --green-light: #ECFDF5;
+    --amber: #D97706;
+    --amber-light: #FFFBEB;
+    --red: #DC2626;
+    --red-light: #FEF2F2;
+    --orange: #EA580C;
+    --orange-light: #FFF7ED;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #94A3B8;
+    --surface: #FFFFFF;
+    --bg: #F8FAFC;
+    --border: #E2E8F0;
+    --border-strong: #CBD5E1;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --shadow-sm: 0 1px 3px rgba(15,23,42,0.06), 0 1px 2px rgba(15,23,42,0.04);
+    --shadow-md: 0 4px 12px rgba(15,23,42,0.08), 0 2px 4px rgba(15,23,42,0.04);
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Sora', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  .top-nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 1.5rem; height: 58px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .nav-brand {
+    font-family: var(--font-display); font-weight: 800;
+    font-size: 1.05rem; color: var(--brand);
+    text-decoration: none; margin-right: auto; letter-spacing: -0.01em;
+  }
+  .nav-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-body); font-size: 0.8rem; font-weight: 500;
+    padding: 7px 14px; border-radius: var(--radius-sm);
+    text-decoration: none; transition: all 0.18s ease; white-space: nowrap;
+  }
+  .nav-btn-outline {
+    color: var(--text-secondary); border: 1px solid var(--border-strong); background: var(--surface);
+  }
+  .nav-btn-outline:hover { color: var(--brand); border-color: var(--brand); background: var(--brand-light); }
+  .nav-btn-primary { color: var(--surface); background: var(--brand); border: 1px solid var(--brand); }
+  .nav-btn-primary:hover { background: var(--brand-dark); border-color: var(--brand-dark); transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, #EFF6FF 0%, #F5F3FF 40%, #FFFFFF 80%);
+    border-bottom: 1px solid var(--border);
+    padding: 3.5rem 1.5rem 3rem;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: -60px; right: -80px;
+    width: 340px; height: 340px;
+    background: radial-gradient(circle, rgba(124,58,237,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: ''; position: absolute; bottom: -40px; left: -60px;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, rgba(37,99,235,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner { max-width: 780px; margin: 0 auto; position: relative; z-index: 1; }
+  .hero-meta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 1.4rem; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-family: var(--font-display); font-size: 0.7rem; font-weight: 700;
+    padding: 4px 10px; border-radius: 100px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .badge-series { background: var(--accent-light); color: var(--accent); border: 1px solid rgba(124,58,237,0.15); }
+  .badge-day    { background: var(--green-light); color: var(--green); border: 1px solid rgba(5,150,105,0.15); }
+  .badge-final  { background: var(--amber-light); color: var(--amber); border: 1px solid rgba(217,119,6,0.2); }
+
+  .hero-title {
+    font-family: var(--font-display); font-weight: 800;
+    font-size: clamp(1.75rem, 5vw, 2.8rem);
+    line-height: 1.2; letter-spacing: -0.03em;
+    color: var(--text-primary); margin-bottom: 1rem;
+  }
+  .hero-title .highlight {
+    background: linear-gradient(135deg, #2563EB, #7C3AED);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .hero-desc { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.75; max-width: 640px; margin-bottom: 1.8rem; }
+  .hero-stats { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 2rem; align-items: center; }
+  .hero-stat { display: flex; align-items: center; gap: 6px; font-size: 0.82rem; color: var(--text-secondary); font-weight: 500; }
+  .hero-stat svg { width: 15px; height: 15px; color: var(--text-muted); flex-shrink: 0; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 10px; }
+  .cta-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-display); font-weight: 700; font-size: 0.88rem;
+    padding: 11px 22px; background: var(--brand); color: #fff;
+    border-radius: var(--radius-sm); text-decoration: none;
+    transition: all 0.18s ease; box-shadow: 0 2px 8px rgba(37,99,235,0.25); letter-spacing: -0.01em;
+  }
+  .cta-primary:hover { background: var(--brand-dark); transform: translateY(-2px); box-shadow: 0 4px 14px rgba(37,99,235,0.3); }
+  .cta-secondary {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-display); font-weight: 600; font-size: 0.88rem;
+    padding: 11px 20px; background: var(--surface); color: var(--text-primary);
+    border: 1px solid var(--border-strong); border-radius: var(--radius-sm);
+    text-decoration: none; transition: all 0.18s ease;
+  }
+  .cta-secondary:hover { border-color: var(--brand); color: var(--brand); background: var(--brand-light); transform: translateY(-1px); }
+
+  /* ── LAYOUT ── */
+  .page-wrap { max-width: 780px; margin: 0 auto; padding: 0 1.5rem; }
+  .content-grid { padding: 2.5rem 0 4rem; }
+
+  /* ── TOC ── */
+  .toc-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 3px solid var(--brand); border-radius: var(--radius-md);
+    padding: 1.4rem 1.5rem; margin-bottom: 2.5rem; box-shadow: var(--shadow-sm);
+  }
+  .toc-card h3 {
+    font-family: var(--font-display); font-weight: 700; font-size: 0.82rem;
+    color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.9rem;
+  }
+  .toc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .toc-list a {
+    font-size: 0.875rem; color: var(--text-secondary); text-decoration: none;
+    display: flex; align-items: center; gap: 8px; transition: color 0.15s;
+  }
+  .toc-list a:hover { color: var(--brand); }
+  .toc-num {
+    font-family: var(--font-display); font-weight: 700; font-size: 0.7rem;
+    color: var(--brand); background: var(--brand-light);
+    width: 20px; height: 20px; border-radius: 5px;
+    display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+
+  /* ── SERIES STRIP ── */
+  .series-strip {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 1.2rem 1.4rem;
+    margin-bottom: 2.5rem; box-shadow: var(--shadow-sm);
+  }
+  .series-strip h3 {
+    font-family: var(--font-display); font-weight: 700; font-size: 0.78rem;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;
+  }
+  .series-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .series-list li { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; flex-wrap: wrap; }
+  .series-list li a { color: var(--brand); text-decoration: none; }
+  .series-list li a:hover { text-decoration: underline; }
+  .s-label {
+    font-size: 0.68rem; padding: 2px 8px; border-radius: 10px;
+    font-weight: 700; font-family: var(--font-display);
+  }
+  .s-done  { background: var(--green-light); color: var(--green); border: 1px solid #A7F3D0; }
+  .s-today { background: var(--amber-light); color: var(--amber); border: 1px solid #FDE68A; }
+  .s-icon-done { color: var(--green); }
+  .s-icon-today { color: var(--amber); }
+
+  /* ── ARTICLE ── */
+  .article-section { margin-bottom: 3rem; scroll-margin-top: 80px; }
+  .section-eyebrow {
+    font-family: var(--font-display); font-weight: 700; font-size: 0.7rem;
+    color: var(--brand); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .section-title {
+    font-family: var(--font-display); font-weight: 800;
+    font-size: clamp(1.25rem, 3.5vw, 1.6rem);
+    line-height: 1.3; letter-spacing: -0.02em;
+    color: var(--text-primary); margin-bottom: 1rem;
+  }
+  .article-p { font-size: 0.975rem; line-height: 1.82; color: var(--text-secondary); margin-bottom: 1rem; }
+  .article-p:last-child { margin-bottom: 0; }
+
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 2.5rem 0;
+  }
+
+  /* ── STEPS ── */
+  .steps-list { display: flex; flex-direction: column; gap: 1rem; margin: 1.2rem 0; }
+  .step-card {
+    display: flex; gap: 1rem;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 1.1rem 1.2rem;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.18s, transform 0.18s;
+  }
+  .step-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .step-num {
+    font-family: var(--font-display); font-weight: 800; font-size: 1.2rem;
+    color: var(--brand); min-width: 36px; line-height: 1; padding-top: 2px;
+  }
+  .step-body strong {
+    display: block; font-family: var(--font-display); font-weight: 700;
+    font-size: 0.95rem; color: var(--text-primary); margin-bottom: 4px;
+  }
+  .step-body p { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.65; margin: 0; }
+
+  /* ── CODE BLOCKS ── */
+  .code-block {
+    background: #0F172A; border-radius: var(--radius-md);
+    padding: 1.1rem 1.25rem; margin: 1.2rem 0;
+    overflow-x: auto; box-shadow: var(--shadow-sm);
+  }
+  .code-block-label {
+    font-family: var(--font-display); font-weight: 700; font-size: 0.65rem;
+    color: #64748B; letter-spacing: 0.06em; text-transform: uppercase;
+    margin-bottom: 10px; display: block;
+  }
+  .code-block pre {
+    font-family: var(--font-mono); font-size: 0.8rem; line-height: 1.7;
+    color: #E2E8F0; margin: 0; white-space: pre-wrap; word-break: break-word;
+  }
+  .ck { color: #7DD3FC; }
+  .cv { color: #86EFAC; }
+  .cc { color: #64748B; }
+  .cs { color: #FCA5A5; }
+  .cm { color: #FCD34D; }
+  .co { color: #FDBA74; }
+
+  /* ── URL SWAP ── */
+  .url-swap { display: flex; flex-direction: column; gap: 8px; margin: 1.2rem 0; }
+  .url-row {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-mono); font-size: 0.82rem;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 10px 14px; overflow-x: auto;
+  }
+  .url-label {
+    font-family: var(--font-display); font-size: 0.65rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em; min-width: 52px; flex-shrink: 0;
+  }
+  .url-old { border-left: 3px solid var(--red); }
+  .url-old .url-label { color: var(--red); }
+  .url-old .url-change { color: var(--red); text-decoration: line-through; }
+  .url-new { border-left: 3px solid var(--green); }
+  .url-new .url-label { color: var(--green); }
+  .url-new .url-change { color: var(--green); font-weight: 600; }
+  .url-base { color: var(--text-secondary); }
+  .url-arrow { color: var(--text-muted); font-size: 1rem; }
+
+  /* ── CALLOUTS ── */
+  .callout {
+    border-radius: var(--radius-md); padding: 1rem 1.2rem; margin: 1.2rem 0;
+    display: flex; gap: 10px; font-size: 0.875rem; line-height: 1.65;
+  }
+  .callout-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+  .callout-body { color: var(--text-secondary); }
+  .callout-body strong { font-weight: 600; display: block; margin-bottom: 3px; }
+  .callout-tip     { background: var(--brand-light); border: 1px solid var(--brand-mid); }
+  .callout-tip .callout-body { color: #1E40AF; }
+  .callout-fire    { background: var(--orange-light); border: 1px solid #FED7AA; }
+  .callout-fire .callout-body { color: #7C2D12; }
+  .callout-success { background: var(--green-light); border: 1px solid #A7F3D0; }
+  .callout-success .callout-body { color: #065F46; }
+  .callout-purple  { background: var(--accent-light); border: 1px solid #DDD6FE; }
+  .callout-purple .callout-body { color: #4C1D95; }
+
+  /* ── CHIPS ── */
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 5px 12px; border-radius: 100px;
+    font-size: 0.76rem; font-weight: 600; font-family: var(--font-display);
+  }
+  .chip-blue   { background: var(--brand-light); color: var(--brand); border: 1px solid var(--brand-mid); }
+  .chip-green  { background: var(--green-light); color: var(--green); border: 1px solid #A7F3D0; }
+  .chip-orange { background: var(--orange-light); color: var(--orange); border: 1px solid #FED7AA; }
+  .chip-purple { background: var(--accent-light); color: var(--accent); border: 1px solid #DDD6FE; }
+  .chip-amber  { background: var(--amber-light); color: var(--amber); border: 1px solid #FDE68A; }
+
+  /* ── WORKFLOW VISUAL ── */
+  .workflow {
+    display: flex; flex-direction: column; gap: 0;
+    margin: 1.5rem 0;
+  }
+  .wf-item {
+    display: flex; gap: 16px; align-items: flex-start;
+    position: relative;
+  }
+  .wf-left {
+    display: flex; flex-direction: column; align-items: center;
+    flex-shrink: 0; width: 44px;
+  }
+  .wf-icon {
+    width: 44px; height: 44px; border-radius: var(--radius-md);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem; flex-shrink: 0; border: 1px solid var(--border);
+    background: var(--surface); box-shadow: var(--shadow-sm);
+  }
+  .wf-line {
+    width: 2px; background: var(--border); flex: 1;
+    min-height: 28px; margin-top: 4px;
+  }
+  .wf-item:last-child .wf-line { display: none; }
+  .wf-body {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 14px 16px;
+    margin-bottom: 16px; flex: 1; box-shadow: var(--shadow-sm);
+    transition: border-color 0.18s, transform 0.18s;
+  }
+  .wf-body:hover { border-color: var(--brand); transform: translateX(3px); }
+  .wf-body strong {
+    display: block; font-family: var(--font-display); font-weight: 700;
+    font-size: 0.9rem; color: var(--text-primary); margin-bottom: 4px;
+  }
+  .wf-body p { font-size: 0.855rem; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+  .wf-tag {
+    display: inline-block; font-family: var(--font-display); font-size: 0.68rem;
+    font-weight: 700; padding: 2px 8px; border-radius: 6px; margin-bottom: 6px;
+  }
+  .wf-tag-blue   { background: var(--brand-light); color: var(--brand); }
+  .wf-tag-green  { background: var(--green-light); color: var(--green); }
+  .wf-tag-purple { background: var(--accent-light); color: var(--accent); }
+  .wf-tag-orange { background: var(--orange-light); color: var(--orange); }
+
+  /* ── TOOL CARDS ── */
+  .tool-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin: 1.4rem 0; }
+  .tool-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 18px;
+    box-shadow: var(--shadow-sm); transition: border-color 0.18s, transform 0.18s, box-shadow 0.18s;
+  }
+  .tool-card:hover { border-color: var(--brand); transform: translateY(-3px); box-shadow: var(--shadow-md); }
+  .tool-card-icon { font-size: 1.8rem; margin-bottom: 10px; }
+  .tool-card-name {
+    font-family: var(--font-display); font-weight: 800; font-size: 1rem;
+    color: var(--text-primary); margin-bottom: 4px;
+  }
+  .tool-card-url { font-family: var(--font-mono); font-size: 0.72rem; color: var(--brand); margin-bottom: 10px; }
+  .tool-card-desc { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
+
+  /* ── PROMPTS ── */
+  .prompt-list { display: flex; flex-direction: column; gap: 10px; margin: 1.2rem 0; }
+  .prompt-item {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius-sm); padding: 12px 16px;
+    font-family: var(--font-mono); font-size: 0.82rem;
+    color: var(--text-secondary); line-height: 1.6;
+    box-shadow: var(--shadow-sm);
+  }
+  .prompt-item strong {
+    display: block; font-family: var(--font-display); font-weight: 700;
+    font-size: 0.7rem; color: var(--accent); text-transform: uppercase;
+    letter-spacing: 0.06em; margin-bottom: 5px;
+  }
+
+  /* ── RESULT LIST ── */
+  .result-preview {
+    background: var(--green-light); border: 1px solid #A7F3D0;
+    border-radius: var(--radius-lg); padding: 1.4rem; margin: 1.5rem 0;
+  }
+  .result-preview-title {
+    font-family: var(--font-display); font-weight: 700; font-size: 0.9rem;
+    color: #065F46; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
+  }
+  .result-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .result-list li {
+    display: flex; align-items: flex-start; gap: 8px;
+    font-size: 0.875rem; color: #065F46; line-height: 1.5;
+  }
+  .result-list li::before { content: '✓'; font-weight: 700; color: var(--green); flex-shrink: 0; margin-top: 1px; }
+
+  /* ── SERIES COMPLETE BANNER ── */
+  .series-complete {
+    background: linear-gradient(135deg, var(--accent-light), var(--brand-light));
+    border: 1px solid #DDD6FE;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  .series-complete-icon { font-size: 2.5rem; margin-bottom: 12px; }
+  .series-complete h3 {
+    font-family: var(--font-display); font-weight: 800; font-size: 1.2rem;
+    color: var(--text-primary); margin-bottom: 8px; letter-spacing: -0.02em;
+  }
+  .series-complete p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; max-width: 480px; margin: 0 auto 16px; }
+  .series-complete-links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .sc-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-display); font-size: 0.8rem; font-weight: 600;
+    padding: 8px 16px; border-radius: var(--radius-sm);
+    text-decoration: none; transition: all 0.18s;
+    background: var(--surface); color: var(--text-primary);
+    border: 1px solid var(--border-strong);
+  }
+  .sc-link:hover { color: var(--brand); border-color: var(--brand); background: var(--brand-light); }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--surface); border-top: 1px solid var(--border);
+    text-align: center; padding: 1.6rem 1.5rem;
+  }
+  .site-footer p { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 6px; line-height: 1.6; }
+  .site-footer p:last-child { margin-bottom: 0; }
+  .site-footer a { color: var(--text-secondary); text-decoration: none; transition: color 0.15s; font-weight: 500; }
+  .site-footer a:hover { color: var(--brand); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .top-nav { padding: 0 1rem; gap: 7px; }
+    .nav-btn { padding: 6px 10px; font-size: 0.75rem; }
+    .nav-brand { font-size: 0.95rem; }
+    .hero { padding: 2.5rem 1rem 2rem; }
+    .page-wrap { padding: 0 1rem; }
+    .step-card { flex-direction: column; gap: 6px; }
+    .tool-cards { grid-template-columns: 1fr; }
+    .wf-body { margin-bottom: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="top-nav" role="navigation" aria-label="Site navigation">
+  <a href="/" class="nav-brand">gunatools.dev</a>
+  <a href="/" class="nav-btn nav-btn-outline">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    Home
+  </a>
+  <a href="/blog/" class="nav-btn nav-btn-primary">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    Explore Blogs
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" aria-label="Article hero">
+  <div class="hero-inner">
+    <div class="hero-meta-row">
+      <span class="badge badge-series">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        GitHub Tricks Series
+      </span>
+      <span class="badge badge-day">Day 4 of 4</span>
+      <span class="badge badge-final">🏁 Series Final</span>
+    </div>
+
+    <h1 class="hero-title">
+      GitMCP + Gitingest + AI:<br>
+      <span class="highlight">The Workflow That 3x's Your Productivity</span>
+    </h1>
+
+    <p class="hero-desc">
+      Kisi bhi GitHub repo ko — chahe wo kitna bhi bada ho — AI se seedha analyze karwao. Structure samjho, bugs dhundho, logic decode karo. Yeh ek workflow hai jo zyatar devs aur students jaante hi nahi.
+    </p>
+
+    <div class="hero-stats">
+      <span class="hero-stat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        6 min read
+      </span>
+      <span class="hero-stat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        23 Jun 2026
+      </span>
+      <span class="hero-stat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Students · Devs · Open Source
+      </span>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#tools" class="cta-primary">
+        Workflow Dekho
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="/blog/" class="cta-secondary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        All Blogs
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main class="page-wrap">
+  <div class="content-grid">
+
+    <!-- TOC -->
+    <nav class="toc-card" aria-label="Table of contents">
+      <h3>Is Blog Mein</h3>
+      <ul class="toc-list">
+        <li><a href="#problem"><span class="toc-num">1</span> Problem — Bade Repos Samajhna Mushkil Kyun Hota Hai?</a></li>
+        <li><a href="#tools"><span class="toc-num">2</span> Teen Tools Jo Sab Kuch Badal Dete Hain</a></li>
+        <li><a href="#gitmcp"><span class="toc-num">3</span> GitMCP — AI aur GitHub ka Direct Bridge</a></li>
+        <li><a href="#gitingest"><span class="toc-num">4</span> Gitingest — Repo ka X-Ray Scan</a></li>
+        <li><a href="#github-dev"><span class="toc-num">5</span> github.dev — Browser Mein VS Code</a></li>
+        <li><a href="#workflow"><span class="toc-num">6</span> Complete Workflow — Step by Step</a></li>
+        <li><a href="#prompts"><span class="toc-num">7</span> Best AI Prompts — Copy Karo Seedha</a></li>
+        <li><a href="#usecases"><span class="toc-num">8</span> Real Use Cases — Kab Kaam Aata Hai</a></li>
+      </ul>
+    </nav>
+
+    <!-- SERIES STRIP -->
+    <div class="series-strip">
+      <h3>🔥 Ultimate GitHub Tricks Series</h3>
+      <ul class="series-list">
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="s-icon-done" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Day 1 — <a href="/blog/github-tricks/">10 GitHub Tricks Most Developers Don't Know</a></span>
+          <span class="s-label s-done">Done</span>
+        </li>
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="s-icon-done" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Day 2 — <a href="/blog/github-profile-readme/">GitHub Profile README: Portfolio Jaisi Profile Banao</a></span>
+          <span class="s-label s-done">Done</span>
+        </li>
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="s-icon-done" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Day 3 — <a href="/blog/github-search-dorking/">GitHub Search Dorking: Find Repos, Issues &amp; Internships</a></span>
+          <span class="s-label s-done">Done</span>
+        </li>
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="s-icon-today" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
+          <span style="color:var(--text-primary);font-weight:600;">Day 4 — GitMCP + Gitingest + AI: The Workflow That 3x's Your Productivity</span>
+          <span class="s-label s-today">Today</span>
+        </li>
+      </ul>
+    </div>
+
+    <article>
+
+      <!-- SECTION 1 -->
+      <section class="article-section" id="problem">
+        <div class="section-eyebrow">The Problem</div>
+        <h2 class="section-title">Bade Repos Samajhna Mushkil Kyun Hota Hai?</h2>
+        <p class="article-p">
+          Kabhi kisi bade open source project ka GitHub repo khola hai? Next.js, Express, TailwindCSS — koi bhi le lo. Saikdon files, dozens of folders, config files jo samajh nahi aate, aur ek README jo sirf basics batata hai.
+        </p>
+        <p class="article-p">
+          Zyatar students wahan se seedha file-by-file padhne lagte hain. Ghante lag jaate hain aur phir bhi poori picture clear nahi hoti. <strong>Yeh problem solve karne ke liye do tools hain jo game completely change kar dete hain — GitMCP aur Gitingest.</strong>
+        </p>
+        <div class="callout callout-fire">
+          <span class="callout-icon">🔥</span>
+          <div class="callout-body">
+            <strong>Real scenario:</strong>
+            Ek 50,000 line ka repo manually padhne mein 2-3 din lag sakte hain. GitMCP + Gitingest + AI se same understanding 20-30 minutes mein ho jaati hai. Yahi difference hai.
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECTION 2 -->
+      <section class="article-section" id="tools">
+        <div class="section-eyebrow">The Toolkit</div>
+        <h2 class="section-title">Teen Tools Jo Sab Kuch Badal Dete Hain</h2>
+        <p class="article-p">
+          Ye poora workflow sirf teen tools pe chalta hai. Teeno free hain, koi signup nahi chahiye zyatar cases mein, aur browser mein directly kaam karte hain.
+        </p>
+        <div class="tool-cards">
+          <div class="tool-card">
+            <div class="tool-card-icon">🧠</div>
+            <div class="tool-card-name">GitMCP</div>
+            <div class="tool-card-url">gitmcp.io</div>
+            <div class="tool-card-desc">GitHub repo ko AI-readable format mein convert karta hai. AI directly repo ka structure, files aur code samajh sakta hai.</div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-card-icon">🔍</div>
+            <div class="tool-card-name">Gitingest</div>
+            <div class="tool-card-url">gitingest.com</div>
+            <div class="tool-card-desc">Poore repo ko ek text file mein compress kar deta hai — folder structure, file purposes, flow — sab AI-friendly summary mein.</div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-card-icon">💻</div>
+            <div class="tool-card-name">github.dev</div>
+            <div class="tool-card-url">github.com → .dev</div>
+            <div class="tool-card-desc">Browser ke andar VS Code khul jaata hai. Samajhne ke baad seedha wahan edit karo — koi download nahi, koi setup nahi.</div>
+          </div>
+        </div>
+        <div class="callout callout-tip">
+          <span class="callout-icon">💡</span>
+          <div class="callout-body">
+            <strong>Combination power:</strong>
+            Teeno tools alag alag bhi useful hain, but jab combo mein use karo — pehle Gitingest se overview, phir GitMCP se AI dive-in, phir github.dev se edit — tabhi asli 3x productivity milti hai.
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECTION 3 -->
+      <section class="article-section" id="gitmcp">
+        <div class="section-eyebrow">Tool 1</div>
+        <h2 class="section-title">GitMCP — AI aur GitHub ka Direct Bridge</h2>
+        <p class="article-p">
+          MCP ka matlab hai <strong>Model Context Protocol</strong> — yeh AI tools ko GitHub jaisi platforms ke saath deeply connect karne ka tarika hai. GitMCP iska ek simple implementation hai.
+        </p>
+        <p class="article-p">
+          Seedha bola jaaye to: GitMCP ek bridge hai jo repo ka structure samajhta hai, files ko AI-readable banata hai, aur AI ko batata hai ki kaunsa code kahan hai.
+        </p>
+
+        <div class="steps-list">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <div class="step-body">
+              <strong>gitmcp.io pe jao</strong>
+              <p>Koi account nahi chahiye — directly site open karo.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <div class="step-body">
+              <strong>GitHub repo URL paste karo</strong>
+              <p>Koi bhi public repo link do — example: <code style="font-family:var(--font-mono);font-size:0.82rem;">https://github.com/vercel/next.js</code></p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <div class="step-body">
+              <strong>GitMCP URL milega — AI mein paste karo</strong>
+              <p>ChatGPT ya Claude mein yeh URL do aur apna sawal poocho. AI seedha repo ke context mein jawab dega.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout callout-success">
+          <span class="callout-icon">✅</span>
+          <div class="callout-body">
+            <strong>Best use cases:</strong>
+            Open source projects samajhne ke liye, large repos decode karne ke liye, interview prep ke liye kisi company ke codebase ko quickly samajhna.
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECTION 4 -->
+      <section class="article-section" id="gitingest">
+        <div class="section-eyebrow">Tool 2</div>
+        <h2 class="section-title">Gitingest — Repo ka X-Ray Scan</h2>
+        <p class="article-p">
+          Gitingest ek alag approach use karta hai. Ye poore repo ko — structure, files, logic — ek single AI-friendly text mein compress kar deta hai. Phir tum wo text seedha ChatGPT ya Claude mein paste kar sakte ho.
+        </p>
+        <p class="article-p">
+          Aur sabse best trick? <strong>Bas URL mein ek word change karo:</strong>
+        </p>
+
+        <div class="url-swap">
+          <div class="url-row url-old">
+            <span class="url-label">Before</span>
+            <span class="url-base">https://</span><span class="url-change">github</span><span class="url-base">.com/expressjs/express</span>
+          </div>
+          <div class="url-row url-new">
+            <span class="url-label">After</span>
+            <span class="url-base">https://</span><span class="url-change">gitingest</span><span class="url-base">.com/expressjs/express</span>
+          </div>
+        </div>
+
+        <p class="article-p">Bas itna karo — Gitingest automatically woh repo process kar lega aur tumhe milega:</p>
+
+        <div class="chips">
+          <span class="chip chip-blue">📁 Folder breakdown</span>
+          <span class="chip chip-green">📄 File purposes</span>
+          <span class="chip chip-purple">🔄 Flow explanation</span>
+          <span class="chip chip-orange">🤖 AI-friendly summary</span>
+          <span class="chip chip-amber">📊 Code structure overview</span>
+        </div>
+
+        <div class="callout callout-purple">
+          <span class="callout-icon">🎯</span>
+          <div class="callout-body">
+            <strong>GitMCP vs Gitingest — difference kya hai?</strong>
+            GitMCP AI tools ko directly repo se connect karta hai (MCP protocol se). Gitingest repo ko text mein convert karta hai jo tum manually AI mein paste karo. Dono ka result similar hai — route alag hai. Gitingest beginners ke liye slightly easier hai.
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECTION 5 -->
+      <section class="article-section" id="github-dev">
+        <div class="section-eyebrow">Tool 3</div>
+        <h2 class="section-title">github.dev — Browser Mein VS Code, Zero Setup</h2>
+        <p class="article-p">
+          Ye trick Day 1 mein bhi thi — lekin workflow mein iska role alag hai. Jab tum GitMCP ya Gitingest se repo samajh lo aur kuch change karna ho, <strong>github.dev pe directly woh file edit karo bina kuch download kiye.</strong>
+        </p>
+
+        <div class="url-swap">
+          <div class="url-row url-old">
+            <span class="url-label">URL</span>
+            <span class="url-base">https://github<span style="color:var(--red);text-decoration:line-through;">.com</span>/facebook/react</span>
+          </div>
+          <div class="url-row url-new">
+            <span class="url-label">Magic</span>
+            <span class="url-base">https://github<span style="color:var(--green);font-weight:600;">.dev</span>/facebook/react</span>
+          </div>
+        </div>
+
+        <p class="article-p">Ya shortcut: koi bhi repo kholo aur keyboard pe sirf <strong style="font-family:var(--font-mono);background:#F1F5F9;padding:2px 8px;border-radius:5px;">.</strong> (dot) press karo. VS Code web directly khul jayega.</p>
+
+        <div class="callout callout-tip">
+          <span class="callout-icon">⚡</span>
+          <div class="callout-body">
+            <strong>College lab PC pe kaam karta hai:</strong>
+            Koi installation nahi, koi permission nahi chahiye. Browser mein seedha code edit karo — perfect for labs, shared PCs, ya kisi bhi device pe quick edits.
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECTION 6 — FULL WORKFLOW -->
+      <section class="article-section" id="workflow">
+        <div class="section-eyebrow">The Full Workflow</div>
+        <h2 class="section-title">Complete Workflow — Step by Step</h2>
+        <p class="article-p">
+          Ab teeno tools ko ek saath use karne ka tarika dekho. Yeh ek complete loop hai — kisi bhi nayi repo ke liye use karo:
+        </p>
+
+        <div class="workflow">
+          <div class="wf-item">
+            <div class="wf-left">
+              <div class="wf-icon">🔗</div>
+              <div class="wf-line"></div>
+            </div>
+            <div class="wf-body">
+              <span class="wf-tag wf-tag-blue">Step 1 — GitHub</span>
+              <strong>Repo dhundho ya identify karo</strong>
+              <p>Koi bhi public GitHub repo lo — kisi ka project, interview prep ke liye koi company ka codebase, ya koi open source project jisme contribute karna hai.</p>
+            </div>
+          </div>
+          <div class="wf-item">
+            <div class="wf-left">
+              <div class="wf-icon">🔍</div>
+              <div class="wf-line"></div>
+            </div>
+            <div class="wf-body">
+              <span class="wf-tag wf-tag-orange">Step 2 — Gitingest</span>
+              <strong>URL mein github → gitingest karo</strong>
+              <p>Gitingest.com pe poore repo ka overview aayega — folder structure, main files, logic flow. Yeh tumhara starting point hai. Jaldi samjho ki project mein kya kya hai.</p>
+            </div>
+          </div>
+          <div class="wf-item">
+            <div class="wf-left">
+              <div class="wf-icon">🧠</div>
+              <div class="wf-line"></div>
+            </div>
+            <div class="wf-body">
+              <span class="wf-tag wf-tag-purple">Step 3 — GitMCP + AI</span>
+              <strong>GitMCP URL generate karo, AI mein do</strong>
+              <p>gitmcp.io pe repo URL paste karo, generated URL ChatGPT ya Claude mein do. Ab AI directly repo ke context mein hai — deep questions poocho.</p>
+            </div>
+          </div>
+          <div class="wf-item">
+            <div class="wf-left">
+              <div class="wf-icon">💬</div>
+              <div class="wf-line"></div>
+            </div>
+            <div class="wf-body">
+              <span class="wf-tag wf-tag-purple">Step 4 — AI Conversation</span>
+              <strong>Specific questions poocho AI se</strong>
+              <p>Structure samjho, bugs dhundho, logic explain karwao, changes suggest karwao. AI ab context mein hai toh answers sharp honge — generic nahi.</p>
+            </div>
+          </div>
+          <div class="wf-item">
+            <div class="wf-left">
+              <div class="wf-icon">💻</div>
+              <div class="wf-line"></div>
+            </div>
+            <div class="wf-body">
+              <span class="wf-tag wf-tag-green">Step 5 — github.dev</span>
+              <strong>Changes implement karo browser mein</strong>
+              <p>.com ko .dev karo ya dot press karo — VS Code khul jayega. AI ne jo suggest kiya, woh seedha yahan implement karo. Koi setup nahi, direct action.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout callout-success">
+          <span class="callout-icon">🚀</span>
+          <div class="callout-body">
+            <strong>Productivity kaise 3x hoti hai:</strong>
+            Normally ek nayi repo samajhne mein 2-3 ghante lagte hain. Is workflow se same kaam 40-50 minutes mein ho jaata hai — aur understanding bhi better hoti hai kyunki AI tum se directly baat kar raha hota hai.
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECTION 7 — PROMPTS -->
+      <section class="article-section" id="prompts">
+        <div class="section-eyebrow">Ready-to-Use</div>
+        <h2 class="section-title">Best AI Prompts — Copy Karo Seedha</h2>
+        <p class="article-p">
+          GitMCP ya Gitingest se context dene ke baad yeh prompts use karo. Seedhe paste karo — generic nahi, specific results milenge:
+        </p>
+
+        <div class="prompt-list">
+          <div class="prompt-item">
+            <strong>Repo Overview</strong>
+            "Explain this repo in simple terms. What does it do, how is it structured, and what are the most important files I should understand first?"
+          </div>
+          <div class="prompt-item">
+            <strong>Architecture Samjho</strong>
+            "Walk me through the architecture of this project. How do the main components connect with each other? Draw a simple flow if possible."
+          </div>
+          <div class="prompt-item">
+            <strong>Auth Logic Dhundho</strong>
+            "Find the authentication logic in this repo. Explain how login, token handling, and session management works here."
+          </div>
+          <div class="prompt-item">
+            <strong>Bug / Issue Find Karo</strong>
+            "Look at the [specific file or feature] in this repo. Can you spot any potential bugs, edge cases, or improvements?"
+          </div>
+          <div class="prompt-item">
+            <strong>Contribute Kaise Karein</strong>
+            "I want to contribute to this repo. Based on its structure and coding style, what should I keep in mind? Give me 3 beginner-friendly areas where I can help."
+          </div>
+          <div class="prompt-item">
+            <strong>Interview Prep</strong>
+            "I have an interview at a company that uses this stack. Based on this repo, what concepts, patterns and questions should I prepare for?"
+          </div>
+          <div class="prompt-item">
+            <strong>Specific Function Explain Karo</strong>
+            "Explain what the [function/module name] does in this repo, step by step. Use simple language."
+          </div>
+        </div>
+
+        <div class="callout callout-tip">
+          <span class="callout-icon">💡</span>
+          <div class="callout-body">
+            <strong>Pro tip:</strong>
+            Ek hi conversation mein multiple prompts use karo — AI context yaad rakhega. Pehle overview poocho, phir specific file, phir bug — yeh layered approach best results deta hai.
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECTION 8 — USE CASES -->
+      <section class="article-section" id="usecases">
+        <div class="section-eyebrow">Real Scenarios</div>
+        <h2 class="section-title">Real Use Cases — Kab Kaam Aata Hai Yeh Workflow</h2>
+
+        <div class="steps-list">
+          <div class="step-card">
+            <div class="step-num" style="font-size:1.4rem;min-width:40px;">🎓</div>
+            <div class="step-body">
+              <strong>Open Source Contribution ke liye</strong>
+              <p>Kisi bade project mein contribute karna chahte ho but samajh nahi aata kahan se shuru karein? GitMCP + AI se pehle poora structure samjho, phir "good first issue" dhundh ke confident contribution karo.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num" style="font-size:1.4rem;min-width:40px;">💼</div>
+            <div class="step-body">
+              <strong>Interview Preparation</strong>
+              <p>Company ka tech stack GitHub pe available hai? Gitingest se repo summary nikalo, AI se us stack ke patterns samjho, aur interview mein "haan maine inka codebase dekha hai" bol sako confidently.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num" style="font-size:1.4rem;min-width:40px;">📚</div>
+            <div class="step-body">
+              <strong>Nayi Technology Sikhna</strong>
+              <p>Koi nayi framework ya library sikhni hai? Official examples ke repos ko Gitingest + AI se decode karo — documentation padhne se 2x fast sikhoge kyunki real working code dekh rahe ho.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num" style="font-size:1.4rem;min-width:40px;">🔧</div>
+            <div class="step-body">
+              <strong>Freelance ya Team Projects</strong>
+              <p>Kisi aur ka codebase inherit kiya hai? GitMCP se seedha AI se poocho "yahan kya ho raha hai" — onboarding 3x fast ho jaati hai. Team mein nayi joining ke liye bhi yahi use karo.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num" style="font-size:1.4rem;min-width:40px;">🏫</div>
+            <div class="step-body">
+              <strong>College Projects aur Assignments</strong>
+              <p>Professor ne koi open source project assignment diya hai analyze karne ke liye? Gitingest summary nikalo, AI se breakdown karwao, properly samjhke apne words mein likho.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-preview">
+          <div class="result-preview-title">✅ Is Poori Series Mein Kya Seekha — Final Summary</div>
+          <ul class="result-list">
+            <li>Day 1 — 10 GitHub tricks jo 99% students use nahi karte — .dev, ZIP download, Insights, ?plain=1</li>
+            <li>Day 2 — GitHub Profile README se portfolio jaisi profile — stats, badges, streak, animation</li>
+            <li>Day 3 — GitHub Search Dorking — language filter, good first issue, star range, file search</li>
+            <li>Day 4 — GitMCP + Gitingest + AI workflow — koi bhi bada repo 40 minute mein decode karo</li>
+            <li>Teeno tools free hain, koi heavy setup nahi — aaj se hi use shuru kar sakte ho</li>
+            <li>Yeh workflow students, freelancers, job seekers — sab ke kaam aata hai</li>
+          </ul>
+        </div>
+
+        <!-- SERIES COMPLETE -->
+        <div class="series-complete">
+          <div class="series-complete-icon">🏁</div>
+          <h3>GitHub Tricks Series Complete!</h3>
+          <p>Chaar blogs, chaar din, aur GitHub ka poora power tumhare haath mein. Ab in tools ko actually use karo — tabhi real fayda hoga.</p>
+          <div class="series-complete-links">
+            <a href="/blog/github-tricks/" class="sc-link">Day 1 — 10 Tricks</a>
+            <a href="/blog/github-profile-readme/" class="sc-link">Day 2 — Profile README</a>
+            <a href="/blog/github-search-dorking/" class="sc-link">Day 3 — Search Dorking</a>
+            <a href="/blog/" class="sc-link">📚 All Blogs</a>
+          </div>
+        </div>
+
+      </section>
+
+    </article>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>
+    <a href="/footer/privacy-policy">Privacy</a> |
+    <a href="/footer/terms">Terms</a> |
+    <a href="/footer/about">About</a> |
+    <a href="/footer/contact-us/contact">Contact</a>
+  </p>
+  <p>© 2026 gunatools.dev | All rights reserved.</p>
+</footer>
+
+</body>
+</html>

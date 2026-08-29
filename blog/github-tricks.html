@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>10 GitHub Tricks Most Developers Don't Know – GunaTools</title>
+  <meta name="description" content="Ultimate GitHub tricks for students, devs, and open-source contributors. GitMCP, github.dev, Gitingest, Search Dorking, Profile README and more — all in one place." />
+  <meta name="keywords" content="GitHub tricks, github.dev, GitMCP, Gitingest, GitHub profile README, GitHub search dorking, GitHub tips 2026" />
+  <link rel="canonical" href="https://gunatools.dev/blog/github-tricks" />
+  <meta name="author" content="GunaTools" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://gunatools.dev/blog/github-tricks" />
+  <meta property="og:title" content="10 GitHub Tricks Most Developers Don't Know – GunaTools" />
+  <meta property="og:description" content="GitMCP, github.dev, Gitingest, Search Dorking, Profile README and more — the ultimate GitHub tricks document." />
+  <meta property="og:site_name" content="GunaTools" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@gunatools0105" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "10 GitHub Tricks Most Developers Don't Know",
+    "description": "Ultimate GitHub tricks for students, devs, and open-source contributors.",
+    "url": "https://gunatools.dev/blog/github-tricks",
+    "author": { "@type": "Organization", "name": "GunaTools", "url": "https://gunatools.dev" },
+    "publisher": { "@type": "Organization", "name": "GunaTools" },
+    "datePublished": "2026-06-16"
+  }
+  </script>
+
+    
+
+<!-- Google Analytics (Preserved) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV220VSL5G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-ZV220VSL5G');
+</script>
+  
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0c10;
+      --surface: #111318;
+      --card: #161a22;
+      --border: #1f2533;
+      --accent: #4f8ef7;
+      --accent2: #a78bfa;
+      --gold: #f59e0b;
+      --green: #4ade80;
+      --text: #e8eaf0;
+      --muted: #8892a4;
+      --highlight: #1a2540;
+      --radius: 12px;
+      --font-head: 'Georgia', 'Times New Roman', serif;
+      --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Courier New', Courier, monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,12,16,0.93);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 58px;
+      gap: 12px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+      flex-shrink: 0;
+    }
+
+    .nav-btns {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+    .btn-home {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-home:hover { background: #3a7de0; }
+
+    .btn-blog {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-blog:hover { background: var(--highlight); color: var(--accent); border-color: var(--accent); }
+
+    /* MAIN */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    /* BADGE */
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 1.2rem;
+    }
+    .badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+    .badge-blue  { background: rgba(79,142,247,0.15); color: var(--accent);  border: 1px solid rgba(79,142,247,0.3); }
+    .badge-gold  { background: rgba(245,158,11,0.12); color: var(--gold);    border: 1px solid rgba(245,158,11,0.3); }
+    .badge-purple{ background: rgba(167,139,250,0.12);color: var(--accent2); border: 1px solid rgba(167,139,250,0.3); }
+    .badge-green { background: rgba(74,222,128,0.10); color: var(--green);   border: 1px solid rgba(74,222,128,0.3); }
+
+    /* HEADLINE */
+    h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+    h1 .accent { color: var(--accent); }
+
+    .lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+    }
+
+    /* TOC */
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.4rem;
+      margin-bottom: 2.5rem;
+    }
+    .toc-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 0.8rem;
+    }
+    .toc ol {
+      padding-left: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .toc ol li a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .toc ol li a:hover { color: var(--accent); }
+
+    /* SECTION HEADINGS */
+    h2 {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 2.8rem 0 0.8rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .trick-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    p { color: var(--text); margin-bottom: 1rem; }
+
+    /* CODE / URL BOX */
+    .code-block {
+      background: #0d1117;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent2);
+      border-radius: var(--radius);
+      padding: 1rem 1.3rem;
+      font-family: var(--font-mono);
+      font-size: 0.83rem;
+      line-height: 1.7;
+      color: #c9d1d9;
+      margin: 0.8rem 0 1.2rem;
+      overflow-x: auto;
+      white-space: pre;
+    }
+    .code-block .c-blue  { color: #79c0ff; }
+    .code-block .c-green { color: #7ee787; }
+    .code-block .c-orange{ color: #ffa657; }
+    .code-block .c-purple{ color: #d2a8ff; }
+
+    /* URL SWAP VISUAL */
+    .url-swap {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      margin: 0.8rem 0 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.83rem;
+    }
+    .url-swap .from { color: #f87171; text-decoration: line-through; opacity: 0.7; }
+    .url-swap .arrow { color: var(--muted); font-size: 0.8rem; margin: -2px 0; }
+    .url-swap .to   { color: #4ade80; }
+    .url-swap .label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+
+    /* CALLOUT */
+    .callout {
+      background: var(--highlight);
+      border: 1px solid rgba(79,142,247,0.3);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      margin: 1.4rem 0;
+    }
+    .callout strong { color: var(--accent); }
+    .callout p { color: var(--text); font-size: 0.93rem; margin: 0; }
+
+    .callout-warn {
+      border-color: rgba(245,158,11,0.3);
+      border-left-color: var(--gold);
+    }
+    .callout-warn strong { color: var(--gold); }
+
+    /* TIPS LIST */
+    .tips-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      margin: 0.6rem 0 1.2rem;
+      padding-left: 0;
+    }
+    .tips-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.93rem;
+      color: var(--text);
+    }
+    .tips-list li::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* FEATURE CARD GRID */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 1.6rem;
+    }
+    .feat-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.1rem;
+    }
+    .feat-card .fi { font-size: 1.4rem; margin-bottom: 6px; }
+    .feat-card strong { display: block; color: #fff; font-size: 0.92rem; margin-bottom: 3px; }
+    .feat-card p { color: var(--muted); font-size: 0.84rem; margin: 0; }
+
+    /* WORKFLOW STEPS */
+    .workflow {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 1rem 0 1.4rem;
+      position: relative;
+    }
+    .workflow-step {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 0.9rem 1.1rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 6px;
+    }
+    .wn {
+      min-width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .ws strong { color: #fff; display: block; margin-bottom: 2px; }
+    .ws span { color: var(--muted); font-size: 0.9rem; }
+
+    /* SEARCH DORKING TABLE */
+    .search-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.8rem 0 1.4rem;
+      font-size: 0.88rem;
+    }
+    .search-table th {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      text-align: left;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+    .search-table td {
+      border: 1px solid var(--border);
+      padding: 9px 12px;
+      color: var(--text);
+      vertical-align: top;
+    }
+    .search-table tr:nth-child(even) td { background: rgba(22,26,34,0.5); }
+    .search-table td code {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: #79c0ff;
+      background: #0d1117;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    /* DIVIDER */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 1.4rem 1.5rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--accent); }
+    footer .sep { margin: 0 6px; opacity: 0.4; }
+
+    @media (max-width: 540px) {
+      main { padding: 1.8rem 1rem 3rem; }
+      h1 { font-size: 1.65rem; }
+      .code-block { font-size: 0.76rem; padding: 0.85rem 1rem; }
+      .nav-btn span.btn-label { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">GunaTools.dev</a>
+  <div class="nav-btns">
+    <a href="/" class="nav-btn btn-home">
+      <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h4a1 1 0 001-1v-3h2v3a1 1 0 001 1h4a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
+      <span class="btn-label">Home</span>
+    </a>
+    <a href="/blog/" class="nav-btn btn-blog">
+      <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/></svg>
+      <span class="btn-label">Explore More Blogs</span>
+    </a>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main>
+
+  <!-- BADGES -->
+  <div class="badge-row">
+    <span class="badge badge-gold">🔥 Ultimate Guide</span>
+    <span class="badge badge-blue">GitHub</span>
+    <span class="badge badge-purple">AI + Dev Tools</span>
+    <span class="badge badge-green">Free</span>
+  </div>
+
+  <!-- HEADLINE -->
+  <h1>10 <span class="accent">GitHub Tricks</span> Most Developers Don't Know</h1>
+
+  <p class="lead">
+    GitHub use karte ho but uska full power nahi? Ye tricks students, devs, open-source contributors — sabke liye hain. GitMCP se AI integration tak, .dev magic se Search Dorking tak — sab yahan hai.
+  </p>
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">📋 Table of Contents</div>
+    <ol>
+      <li><a href="#trick1">GitHub MCP → AI ke saath GitHub ka brain</a></li>
+      <li><a href="#trick2">.com hatao, .dev lagao — Magic Online Editor</a></li>
+      <li><a href="#trick3">Dot (.) Press Karo → VS Code Online</a></li>
+      <li><a href="#trick4">Gitingest → Repo ka X-ray Scan</a></li>
+      <li><a href="#trick5">Repo ko ZIP me Download (Hidden Trick)</a></li>
+      <li><a href="#trick6">GitHub Search Dorking — Advanced Level</a></li>
+      <li><a href="#trick7">Repo Insights — Hidden Gold</a></li>
+      <li><a href="#trick8">GitHub Profile README — Portfolio Trick</a></li>
+      <li><a href="#trick9">GitHub + AI Power Combo Workflow</a></li>
+      <li><a href="#trick10">Bonus: ?plain=1 URL Trick</a></li>
+    </ol>
+  </div>
+
+  <!-- TRICK 1 -->
+  <h2 id="trick1"><span class="trick-num">1</span> GitHub MCP → AI ke saath GitHub ka Brain 🧠</h2>
+  <p><strong style="color:#fff;">MCP</strong> ka matlab hai <em>Model Context Protocol</em> — ye AI tools ko GitHub jaise platforms ke saath deeply connect karne ka tarika hai.</p>
+
+  <div class="grid-2">
+    <div class="feat-card">
+      <div class="fi">🔗</div>
+      <strong>Bridge hai</strong>
+      <p>Repo ka structure AI ko readable format me deta hai.</p>
+    </div>
+    <div class="feat-card">
+      <div class="fi">🤖</div>
+      <strong>AI-Friendly</strong>
+      <p>ChatGPT ya Claude ko bolo "Explain this repo" — instantly samajhta hai.</p>
+    </div>
+    <div class="feat-card">
+      <div class="fi">🔍</div>
+      <strong>Code Locate</strong>
+      <p>AI ko batata hai ki kaunsa code kahan hai — file by file.</p>
+    </div>
+    <div class="feat-card">
+      <div class="fi">🎓</div>
+      <strong>Interview Prep</strong>
+      <p>Large repos ko decode karne ka fastest way.</p>
+    </div>
+  </div>
+
+  <p><strong style="color:#fff;">Kaise use kare:</strong> Visit <a href="https://gitmcp.io" target="_blank" rel="noopener" style="color:var(--accent)">gitmcp.io</a>, GitHub repo URL paste karo — GitMCP usse AI-friendly format me convert kar deta hai.</p>
+
+  <div class="code-block"><span class="c-orange"># Example</span>
+<span class="c-blue">https://github.com/vercel/next.js</span>
+<span class="c-orange">  ↓  paste in GitMCP  ↓</span>
+<span class="c-green">AI can now: "Explain this repo", "Find bug in auth logic", "Summarize project"</span></div>
+
+  <div class="callout">
+    <p><strong>💡 Best for:</strong> Open source samajhne ke liye, large repos decode karne ke liye, interview preparation ke liye.</p>
+  </div>
+
+  <!-- TRICK 2 -->
+  <h2 id="trick2"><span class="trick-num">2</span> .com Hatao → .dev Lagao ✨</h2>
+  <p>GitHub repo URL me sirf ek word change karo — browser ke andar VS Code khul jaata hai. No download, no setup.</p>
+
+  <div class="url-swap">
+    <div class="label">URL Swap</div>
+    <div class="from">https://github.com/facebook/react</div>
+    <div class="arrow">↓ change .com to .dev</div>
+    <div class="to">https://github.dev/facebook/react</div>
+  </div>
+
+  <ul class="tips-list">
+    <li>Browser ke andar VS Code open ho jata hai</li>
+    <li>Files edit kar sakte ho — no download needed</li>
+    <li>Lightweight — college lab PCs ke liye perfect</li>
+    <li>Code reading aur quick edits ke liye best</li>
+  </ul>
+
+  <!-- TRICK 3 -->
+  <h2 id="trick3"><span class="trick-num">3</span> Dot (.) Press Karo → Online VS Code 🤯</h2>
+  <p>Ye sabse underrated trick hai. Kisi bhi GitHub repo mein jaao, keyboard pe sirf <code style="background:#0d1117;padding:2px 7px;border-radius:4px;border:1px solid var(--border);color:#79c0ff;font-family:var(--font-mono)">.</code> (dot) press karo.</p>
+
+  <div class="callout">
+    <p><strong>💥 Boom:</strong> VS Code Web instantly open ho jaata hai — same as github.dev, but ye ninja shortcut hai. No URL editing, no extra steps.</p>
+  </div>
+
+  <ul class="tips-list">
+    <li>Repo open karo → . press karo → done</li>
+    <li>github.dev ka shortcut — exact same result</li>
+    <li>Mobile se bhi kaam karta hai (keyboard required)</li>
+  </ul>
+
+  <!-- TRICK 4 -->
+  <h2 id="trick4"><span class="trick-num">4</span> Gitingest → Repo ka X-ray Scan 🔬</h2>
+  <p>Gitingest repo ko summarize karta hai, structure dikhata hai, aur AI-readable format me convert karta hai. Beginners ke liye gold mine hai.</p>
+
+  <div class="url-swap">
+    <div class="label">URL Swap</div>
+    <div class="from">https://github.com/expressjs/express</div>
+    <div class="arrow">↓ change github.com to gitingest.com</div>
+    <div class="to">https://gitingest.com/expressjs/express</div>
+  </div>
+
+  <div class="grid-2">
+    <div class="feat-card">
+      <div class="fi">📁</div>
+      <strong>Folder Breakdown</strong>
+      <p>Poora folder structure clearly dikhata hai.</p>
+    </div>
+    <div class="feat-card">
+      <div class="fi">📄</div>
+      <strong>File Purpose</strong>
+      <p>Har file ka kaam explain karta hai.</p>
+    </div>
+    <div class="feat-card">
+      <div class="fi">🔄</div>
+      <strong>Flow Explanation</strong>
+      <p>Code ka logic flow step-by-step.</p>
+    </div>
+    <div class="feat-card">
+      <div class="fi">🤖</div>
+      <strong>AI-Friendly Summary</strong>
+      <p>ChatGPT/Claude me paste karne ke liye ready.</p>
+    </div>
+  </div>
+
+  <!-- TRICK 5 -->
+  <h2 id="trick5"><span class="trick-num">5</span> Repo ko ZIP me Download — Hidden Trick 📦</h2>
+  <p>Git clone nahi karna? Koi baat nahi. Bas URL ke end me ye add karo:</p>
+
+  <div class="code-block"><span class="c-orange"># Pattern</span>
+<span class="c-blue">https://github.com/[user]/[repo]/archive/refs/heads/main.zip</span>
+
+<span class="c-orange"># Real Example</span>
+<span class="c-green">https://github.com/tailwindlabs/tailwindcss/archive/refs/heads/main.zip</span></div>
+
+  <ul class="tips-list">
+    <li>Direct ZIP download — no Git required</li>
+    <li>Low-bandwidth connections ke liye perfect</li>
+    <li><code style="font-family:var(--font-mono);font-size:0.85em;color:#79c0ff">main</code> ki jagah <code style="font-family:var(--font-mono);font-size:0.85em;color:#79c0ff">master</code> ya koi aur branch name use kar sakte ho</li>
+  </ul>
+
+  <!-- TRICK 6 -->
+  <h2 id="trick6"><span class="trick-num">6</span> GitHub Search Dorking — Advanced Level 🔥</h2>
+  <p>GitHub sirf code store nahi karta — ye ek powerful search engine bhi hai. Ye queries use karo:</p>
+
+  <table class="search-table">
+    <thead>
+      <tr>
+        <th>Goal</th>
+        <th>Query</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Specific language me dhundho</td>
+        <td><code>language:javascript authentication</code></td>
+      </tr>
+      <tr>
+        <td>Beginner-friendly repos</td>
+        <td><code>good first issue</code></td>
+      </tr>
+      <tr>
+        <td>Internship / hackathon projects</td>
+        <td><code>internship OR hackathon</code></td>
+      </tr>
+      <tr>
+        <td>Python API key files (learning)</td>
+        <td><code>"api_key" language:python</code></td>
+      </tr>
+      <tr>
+        <td>Open source contribution</td>
+        <td><code>help wanted language:typescript</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-warn">
+    <p><strong>⚠️ Ethical Use Only:</strong> Search dorking knowledge sirf learning aur ethical purposes ke liye use karo. Kisi bhi exposed credential ko use karna illegal hai.</p>
+  </div>
+
+  <!-- TRICK 7 -->
+  <h2 id="trick7"><span class="trick-num">7</span> Repo Insights — Hidden Gold 💎</h2>
+  <p>Kisi bhi repo mein jaao, upar <strong style="color:#fff;">Insights</strong> tab click karo. Yahan milega:</p>
+
+  <ul class="tips-list">
+    <li>Contributor activity — kaun kitna active hai</li>
+    <li>Code frequency — kb zyada code likha gaya</li>
+    <li>Commit timeline — project ki seriousness</li>
+    <li>Traffic — kitne log dekh rahe hain repo ko</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>💡 Pro Tip:</strong> Agar commits 6 mahine se dead hain — project abandoned ho sakta hai. Open source join karne se pehle Insights zaroor check karo.</p>
+  </div>
+
+  <!-- TRICK 8 -->
+  <h2 id="trick8"><span class="trick-num">8</span> GitHub Profile README — Portfolio Trick 😎</h2>
+  <p>GitHub profile ko professional portfolio jaisa banana hai? Ye karo:</p>
+
+  <div class="workflow">
+    <div class="workflow-step">
+      <div class="wn">1</div>
+      <div class="ws">
+        <strong>Special Repo Banao</strong>
+        <span>Apne GitHub username ke same naam ka ek repo create karo (e.g., username = johndoe → repo name = johndoe)</span>
+      </div>
+    </div>
+    <div class="workflow-step">
+      <div class="wn">2</div>
+      <div class="ws">
+        <strong>README.md Add Karo</strong>
+        <span>Repo mein README.md file banao — ye automatically profile pe show hoga.</span>
+      </div>
+    </div>
+    <div class="workflow-step">
+      <div class="wn">3</div>
+      <div class="ws">
+        <strong>Content Add Karo</strong>
+        <span>Intro, skills, GitHub stats, badges, social links — sab include karo.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><strong>🔥 Result:</strong> Tumhara GitHub profile ek full professional portfolio jaisa dikhega — recruiters aur collaborators ke liye perfect first impression.</p>
+  </div>
+
+  <!-- TRICK 9 -->
+  <h2 id="trick9"><span class="trick-num">9</span> GitHub + AI Power Combo 🚀</h2>
+  <p>Ye sab tools milake use karo — productivity 3x ho jaati hai:</p>
+
+  <div class="workflow">
+    <div class="workflow-step">
+      <div class="wn">1</div>
+      <div class="ws">
+        <strong>Repo → GitMCP</strong>
+        <span>gitmcp.io pe repo URL paste karo — AI ke liye structure ready karo.</span>
+      </div>
+    </div>
+    <div class="workflow-step">
+      <div class="wn">2</div>
+      <div class="ws">
+        <strong>Structure → Gitingest</strong>
+        <span>gitingest.com se folder breakdown aur file purpose samjho.</span>
+      </div>
+    </div>
+    <div class="workflow-step">
+      <div class="wn">3</div>
+      <div class="ws">
+        <strong>Logic → ChatGPT / Claude</strong>
+        <span>Gitingest output paste karo AI mein — "Explain this", "Find bugs", "Suggest improvements".</span>
+      </div>
+    </div>
+    <div class="workflow-step">
+      <div class="wn">4</div>
+      <div class="ws">
+        <strong>Modify → github.dev</strong>
+        <span>.com → .dev karo ya dot press karo — browser mein VS Code se changes karo.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRICK 10 -->
+  <h2 id="trick10"><span class="trick-num">10</span> Bonus: ?plain=1 URL Trick ✨</h2>
+  <p>GitHub file URL ke end mein <code style="font-family:var(--font-mono);font-size:0.85em;color:#79c0ff;background:#0d1117;padding:2px 7px;border-radius:4px;border:1px solid var(--border)">?plain=1</code> add karo — clean raw code dikhega, bina UI distraction ke.</p>
+
+  <div class="url-swap">
+    <div class="label">Example</div>
+    <div class="from">https://github.com/user/repo/blob/main/index.js</div>
+    <div class="arrow">↓ add ?plain=1</div>
+    <div class="to">https://github.com/user/repo/blob/main/index.js?plain=1</div>
+  </div>
+
+  <ul class="tips-list">
+    <li>No syntax highlighting distractions — pure code</li>
+    <li>Line numbers still visible</li>
+    <li>Copy-paste ke liye clean output</li>
+    <li>AI ko code feed karne ke liye perfect</li>
+  </ul>
+
+  <hr class="divider" />
+
+  <div class="callout">
+    <p><strong>🆓 Free &amp; Share karo:</strong> Ye guide free hai. Apne dev friends ke saath share karo aur <strong>@gunatools0105</strong> ko follow karo — har hafte premium AI aur dev tricks milti hain.</p>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    <a href="/footer/privacy-policy.html">Privacy</a>
+    <span class="sep">|</span>
+    <a href="/footer/terms.html">Terms</a>
+    <span class="sep">|</span>
+    <a href="/footer/about.html">About</a>
+    <span class="sep">|</span>
+    <a href="/footer/contact-us/contact.html">Contact</a>
+  </p>
+  <p style="margin-top:8px; font-size:0.78rem; opacity:0.5;">© 2026 GunaTools · <a href="mailto:help@gunatools.dev">help@gunatools.dev</a> · <a href="https://twitter.com/gunatools0105" target="_blank" rel="noopener">@gunatools0105</a></p>
+</footer>
+
+</body>
+</html>

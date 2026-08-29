@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  
+  <!-- SEO Meta -->
+  <title>How to Make Your Own Image to URL Tool – Full Dashboard Guide | gunatools.dev</title>
+  <meta name="description" content="Complete guide: Create your own image-to-URL converter website. Get a free subdomain and dashboard to manage all uploads. Lifetime access setup for just $2.">
+  <meta name="keywords" content="make image to url tool, own image converter, dashboard image manager, free subdomain, bulk image upload, gunatools.dev">
+  <link rel="canonical" href="https://gunatools.dev/blog/how-to-make-your-own-image-to-url-tool">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="How to Create Your Own Image to URL Converter (With Dashboard)">
+  <meta property="og:description" content="Step-by-step tutorial: get your own image hosting tool on a custom subdomain. Manage all uploads from one dashboard — copy, delete, organize.">
+  <meta property="og:image" content="https://gunatools.dev/images/thamb-image-to-url-buy.jpg">
+  <meta property="og:url" content="https://gunatools.dev/blog/how-to-make-your-own-image-to-url-tool">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  
+    <!-- Google AdSense -->
+      
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV220VSL5G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZV220VSL5G');
+  </script>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f5f7fa;
+      color: #1a1e2b;
+      line-height: 1.65;
+      padding: 16px 12px 40px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .blog-container {
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      background: white;
+      border-radius: 28px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+      padding: 26px 22px 34px;
+      border: 1px solid #e9edf4;
+    }
+
+    h1 {
+      font-size: 1.95rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+      color: #0b121c;
+    }
+
+    .blog-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      font-size: 0.9rem;
+      color: #566b82;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 16px;
+    }
+
+    .featured-image {
+      margin: 8px 0 24px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      border: 1px solid #eef2f6;
+    }
+
+    .featured-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 650;
+      margin: 30px 0 14px;
+      color: #1a2536;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 24px 0 10px;
+      color: #202b3c;
+    }
+
+    p {
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+      color: #2d3848;
+    }
+
+    ul, ol {
+      margin: 8px 0 22px 24px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      font-size: 1.02rem;
+    }
+
+    .dashboard-card {
+      background: #f8fcff;
+      border-radius: 22px;
+      padding: 20px 20px;
+      margin: 28px 0;
+      border: 1px solid #d9e6f5;
+    }
+
+    .price-box {
+      background: #fefbf5;
+      padding: 20px 20px;
+      border-radius: 22px;
+      margin: 28px 0 18px;
+      border: 1px solid #ffe6b3;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #0066e0;
+      color: white;
+      font-weight: 600;
+      font-size: 1.15rem;
+      padding: 14px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 8px 14px rgba(0, 102, 224, 0.15);
+      transition: background 0.15s;
+      border: none;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background: #004bb5;
+    }
+
+    .btn-outline {
+      background: white;
+      color: #0066e0;
+      box-shadow: none;
+      border: 1.5px solid #0066e0;
+      margin-left: 10px;
+    }
+
+    .btn-outline:hover {
+      background: #eef4ff;
+    }
+
+    .perk-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      margin: 18px 0 8px;
+    }
+
+    .perk {
+      background: #edf3fa;
+      padding: 8px 18px;
+      border-radius: 40px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #1e3b5c;
+    }
+
+    .footer-nav {
+      margin-top: 36px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px 28px;
+      font-size: 0.9rem;
+      border-top: 1px solid #dce3ec;
+      padding-top: 26px;
+      color: #496181;
+    }
+
+    .footer-nav a {
+      color: #1e3b5c;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer-nav a:hover {
+      color: #0066e0;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: #65758b;
+    }
+
+    @media (max-width: 480px) {
+      .blog-container { padding: 20px 16px; }
+      h1 { font-size: 1.7rem; }
+      .btn { display: block; width: 100%; margin: 12px 0; }
+      .btn-outline { margin-left: 0; }
+    }
+
+    strong { color: #0b2138; }
+    code { background: #eef3f9; padding: 2px 8px; border-radius: 20px; font-size: 0.95rem; }
+  </style>
+  <style>
+  .official-site-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff; /* Professional Blue */
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .official-site-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    text-decoration: none;
+  }
+
+  .official-site-btn:active {
+    transform: scale(0.98); /* Slight click effect */
+  }
+</style>
+</head>
+<body>
+<div class="blog-container">
+  
+  <div style="font-size: 0.85rem; margin-bottom: 6px; color: #3a5670;">
+    <a href="https://gunatools.dev" style="text-decoration: none; color: #0066e0;">← gunatools.dev</a>  /  Blog
+  </div>
+
+  <h1>How to Get Your Own Image to URL Tool — Complete Setup Guide</h1>
+  
+  <div class="blog-meta">
+    <span>📅 April 20, 2026</span>
+    <span>✍️ Guna Tools</span>
+    <span>⏱️ 4 min read</span>
+    <span>🛠️ Lifetime access</span>
+  </div>
+
+  <!-- Image from exact path -->
+  <figure class="featured-image">
+    <img 
+      src="https://gunatools.dev/images/thamb-image-to-url-buy.jpg" 
+      alt="Image to URL converter dashboard preview – manage all uploads"
+      loading="eager"
+    />
+  </figure>
+  
+<a href="https://gunatools.dev/tools/image-to-url" class="official-site-btn">
+  Visit Official Site
+</a>
+
+  <p>If you frequently share images on WhatsApp, eBay, Amazon, or forums, you know the hassle of free converters: daily limits, broken links, or no way to manage your uploads. This guide walks you through creating <strong>your own private image‑to‑URL tool</strong> — complete with a dashboard where you can view, copy, and delete every image uploaded through your link. Best of all, it’s a one‑time setup that costs less than a coffee.</p>
+
+  <h2>What You Get: Your Personal Converter Dashboard</h2>
+  <p>Instead of relying on public tools, you'll have a dedicated subdomain like <code>yourname.pages.dev</code>. The real power is the <strong>admin dashboard</strong>:</p>
+  
+  <div class="dashboard-card">
+    <ul style="margin-bottom: 4px;">
+      <li>📁 <strong>See every uploaded image</strong> — whether uploaded by you, your customers, or anyone who uses your link.</li>
+      <li>🔗 <strong>One‑click copy URL</strong> — grab the direct image link instantly.</li>
+      <li>🗑️ <strong>Delete any image</strong> anytime — keep your storage clean.</li>
+      <li>📊 <strong>Upload counter</strong> — monthly limit 500/500 (can be increased).</li>
+      <li>🌐 Supports JPG, PNG, GIF, WebP — bulk upload enabled.</li>
+    </ul>
+  </div>
+
+  <p>This setup is perfect for sellers who need reliable product image links, students managing project assets, or anyone wanting a permanent, ad‑free image host they control.</p>
+
+  <h2>Step‑by‑Step: How to Get Your Tool</h2>
+  <ol>
+    <li><strong>Choose your subdomain name</strong> — we'll reserve <code>{yourname}.pages.dev</code> at no extra cost.</li>
+    <li><strong>We deploy the converter</strong> — a clean, mobile‑friendly upload interface.</li>
+    <li><strong>You receive dashboard access</strong> — a private link where all images appear.</li>
+    <li><strong>Share your tool's URL</strong> — anyone can upload; you see everything in the dashboard.</li>
+    <li><strong>Pay after delivery</strong> — once you confirm everything works, the one‑time fee applies.</li>
+  </ol>
+
+  <div class="price-box">
+    <div style="display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;">
+      <span style="font-size: 2.5rem; font-weight: 750; color: #1b3b5c;">$2</span>
+      <span style="font-size: 1.2rem; font-weight: 500;">for students · one‑time · lifetime dashboard</span>
+    </div>
+    <p style="margin-top: 10px; margin-bottom: 4px;"><strong>For job holders:</strong> contact for pricing. Student offer is fixed at $2.</p>
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px;">
+      <a href="#" class="btn">🚀 Buy Now – Get Your Tool</a>
+      <a href="/footer/contact-us/contact.html" class="btn btn-outline">📩 Contact for Details</a>
+    </div>
+    <p style="font-size: 0.9rem; margin-top: 14px;">✅ Pay after setup · Free subdomain · Dashboard included · No monthly fees</p>
+  </div>
+
+  <h2>What Makes the Dashboard Useful</h2>
+  <p>Most free image hosts give you a link and forget you. With your own dashboard, you maintain full visibility. For example, if you share your converter in a Facebook group or eBay description, every image uploaded by users appears in your gallery. You can copy those links for reference or delete outdated files. It's like having a private image library that grows with usage — all under your control.</p>
+
+  <div class="perk-grid">
+    <span class="perk">🖼️ All uploads visible</span>
+    <span class="perk">📋 Copy any URL</span>
+    <span class="perk">🗑️ Delete files</span>
+    <span class="perk">📦 Bulk support</span>
+    <span class="perk">🔒 Password protected</span>
+  </div>
+
+  <h3>Free Converter vs. Your Own Tool</h3>
+  <p>The public free converter on gunatools.devallows 100 uploads/day — great for occasional use. But it doesn't include a personal dashboard or the ability to see all images. Owning your tool removes limits (soft cap 500/month) and gives you the management panel. For $2 lifetime, it's a practical upgrade for anyone serious about image hosting.</p>
+
+  <h2>Frequently Asked Questions</h2>
+  <p><strong>Do I need technical skills?</strong> No — we handle the entire deployment. You just use the dashboard.</p>
+  <p><strong>Can I really see images uploaded by others?</strong> Yes, the dashboard shows every image uploaded through your subdomain. You're the owner.</p>
+  <p><strong>Is it really $2 forever?</strong> Yes, for students. One‑time payment. No hidden charges.</p>
+  <p><strong>What about storage?</strong> Images are stored indefinitely unless you delete them. Fair use applies.</p>
+
+  <div style="background: #f4f9ff; border-radius: 20px; padding: 20px; margin: 28px 0 12px;">
+    <h3 style="margin-top: 0;">📌 Ready to own your image tool?</h3>
+    <p>Setup takes less than 24 hours. You'll receive your subdomain and dashboard link. Pay only when you're satisfied.</p>
+    <div style="text-align: center; margin: 16px 0 4px;">
+      <a href="/footer/contact-us/contact.html" class="btn" style="font-size: 1.2rem; padding: 16px 32px;">✨ Get Started – $2 Lifetime ✨</a>
+    </div>
+  </div>
+
+  <!-- community / subscribe line from original image -->
+  <p style="font-style: normal; border-left: 4px solid #0066e0; padding-left: 18px; color: #2f4567; margin: 24px 0;">Subscribe to our community for more free tools and updates — join now.</p>
+
+  <!-- footer links exactly as shown in reference -->
+  <div class="footer-nav">
+    <a href="/footer/privacy-policy.html">Privacy</a> |
+    <a href="/footer/terms.html">Terms</a> |
+    <a href="/footer/about.html">About</a> |
+    <a href="/footer/contact-us/contact.html">Contact</a>
+  </div>
+  <div class="copyright">
+    © 2026 gunatools.dev— Free image to URL · Own your tools
+  </div>
+
+  <!-- Structured data for blog post -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Make Your Own Image to URL Tool – Full Dashboard Guide",
+    "image": "https://gunatools.dev/images/image-to-url-buy.jpg",
+    "datePublished": "2026-06-05",
+    "author": { "@type": "Person", "name": "Guna Tools" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "gunatools.dev",
+      "logo": { "@type": "ImageObject", "url": "https://gunatools.dev/favicon.ico" }
+    },
+    "description": "Step-by-step tutorial to create your own image-to-URL converter with a private dashboard. Manage all uploads — copy, delete, organize. One-time $2 setup.",
+    "mainEntityOfPage": "https://gunatools.dev/blog/how-to-make-your-own-image-to-url-tool"
+  }
+  </script>
+</div>
+</body>
+</html>

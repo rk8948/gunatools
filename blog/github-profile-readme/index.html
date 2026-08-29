@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Profile README: Apna Profile Portfolio Jaisa Banao | gunatools.dev</title>
+<meta name="description" content="GitHub Profile README kya hota hai aur kaise ek professional portfolio jaisi profile banate hain — step-by-step guide with badges, stats, and tricks.">
+<meta name="keywords" content="github profile readme, github readme tricks, github profile portfolio, github stats badge, github readme tutorial hindi">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gunatools.dev/blog/github-profile-readme/">
+
+<meta property="og:title" content="GitHub Profile README: Apna Profile Portfolio Jaisa Banao">
+<meta property="og:description" content="Ek simple README file se apna GitHub profile itna premium bana do ki recruiters ruk ke dekhe.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://gunatools.dev/blog/github-profile-readme/">
+<meta property="og:site_name" content="gunatools.dev">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GitHub Profile README: Apna Profile Portfolio Jaisa Banao">
+<meta name="twitter:description" content="Ek simple README file se apna GitHub profile itna premium bana do ki recruiters ruk ke dekhe.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "GitHub Profile README: Apna Profile Portfolio Jaisa Banao",
+  "description": "GitHub Profile README kya hota hai aur kaise ek professional portfolio jaisi profile banate hain — step-by-step guide with badges, stats, and tricks.",
+  "author": {"@type": "Organization", "name": "gunatools.dev"},
+  "publisher": {"@type": "Organization", "name": "gunatools.dev"},
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "inLanguage": "hi-IN",
+  "url": "https://gunatools.dev/blog/github-profile-readme/",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://gunatools.dev/blog/github-profile-readme/"}
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&family=Sora:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV220VSL5G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-ZV220VSL5G');
+</script>
+  
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --brand: #2563EB;
+    --brand-dark: #1D4ED8;
+    --brand-light: #EFF6FF;
+    --brand-mid: #BFDBFE;
+    --accent: #7C3AED;
+    --accent-light: #F5F3FF;
+    --green: #059669;
+    --green-light: #ECFDF5;
+    --amber: #D97706;
+    --amber-light: #FFFBEB;
+    --red: #DC2626;
+    --red-light: #FEF2F2;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #94A3B8;
+    --surface: #FFFFFF;
+    --bg: #F8FAFC;
+    --border: #E2E8F0;
+    --border-strong: #CBD5E1;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --shadow-sm: 0 1px 3px rgba(15,23,42,0.06), 0 1px 2px rgba(15,23,42,0.04);
+    --shadow-md: 0 4px 12px rgba(15,23,42,0.08), 0 2px 4px rgba(15,23,42,0.04);
+    --shadow-lg: 0 8px 24px rgba(15,23,42,0.10), 0 4px 8px rgba(15,23,42,0.06);
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Sora', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  .top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 1.5rem;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-brand {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: var(--brand);
+    text-decoration: none;
+    margin-right: auto;
+    letter-spacing: -0.01em;
+  }
+  .nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 7px 14px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: all 0.18s ease;
+    white-space: nowrap;
+  }
+  .nav-btn-outline {
+    color: var(--text-secondary);
+    border: 1px solid var(--border-strong);
+    background: var(--surface);
+  }
+  .nav-btn-outline:hover {
+    color: var(--brand);
+    border-color: var(--brand);
+    background: var(--brand-light);
+  }
+  .nav-btn-primary {
+    color: var(--surface);
+    background: var(--brand);
+    border: 1px solid var(--brand);
+  }
+  .nav-btn-primary:hover {
+    background: var(--brand-dark);
+    border-color: var(--brand-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, #EFF6FF 0%, #F5F3FF 40%, #FFFFFF 80%);
+    border-bottom: 1px solid var(--border);
+    padding: 3.5rem 1.5rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -80px;
+    width: 340px; height: 340px;
+    background: radial-gradient(circle, rgba(124,58,237,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: -60px;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, rgba(37,99,235,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.4rem;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .badge-series {
+    background: var(--accent-light);
+    color: var(--accent);
+    border: 1px solid rgba(124,58,237,0.15);
+  }
+  .badge-day {
+    background: var(--green-light);
+    color: var(--green);
+    border: 1px solid rgba(5,150,105,0.15);
+  }
+  .hero-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(1.75rem, 5vw, 2.8rem);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+  .hero-title .highlight {
+    background: linear-gradient(135deg, #2563EB, #7C3AED);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-desc {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    max-width: 640px;
+    margin-bottom: 1.8rem;
+  }
+  .hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 2rem;
+    align-items: center;
+  }
+  .hero-stat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  .hero-stat svg {
+    width: 15px; height: 15px;
+    color: var(--text-muted);
+    flex-shrink: 0;
+  }
+  .hero-visual {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem 1.4rem;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 1.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    line-height: 1.65;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-visual::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #2563EB, #7C3AED);
+  }
+  .code-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-r { background: #FF5F57; }
+  .dot-y { background: #FFBC2E; }
+  .dot-g { background: #28C840; }
+  .code-filename { font-size: 0.72rem; color: var(--text-muted); margin-left: 6px; }
+  .code-line { display: block; }
+  .c-purple { color: #7C3AED; }
+  .c-blue { color: #2563EB; }
+  .c-green { color: #059669; }
+  .c-gray { color: #94A3B8; }
+  .c-orange { color: #D97706; }
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.88rem;
+    padding: 11px 22px;
+    background: var(--brand);
+    color: #fff;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: all 0.18s ease;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.25);
+    letter-spacing: -0.01em;
+  }
+  .cta-primary:hover {
+    background: var(--brand-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+  }
+  .cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 11px 20px;
+    background: var(--surface);
+    color: var(--text-primary);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: all 0.18s ease;
+  }
+  .cta-secondary:hover {
+    border-color: var(--brand);
+    color: var(--brand);
+    background: var(--brand-light);
+    transform: translateY(-1px);
+  }
+
+  /* ── LAYOUT ── */
+  .page-wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 2.5rem 0 4rem;
+  }
+
+  /* ── TOC ── */
+  .toc-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--brand);
+    border-radius: var(--radius-md);
+    padding: 1.4rem 1.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .toc-card h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.9rem;
+  }
+  .toc-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .toc-list a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.15s;
+  }
+  .toc-list a:hover { color: var(--brand); }
+  .toc-num {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.7rem;
+    color: var(--brand);
+    background: var(--brand-light);
+    width: 20px; height: 20px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-section {
+    margin-bottom: 3rem;
+    scroll-margin-top: 80px;
+  }
+  .section-eyebrow {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.7rem;
+    color: var(--brand);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(1.25rem, 3.5vw, 1.6rem);
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+  .article-p {
+    font-size: 0.975rem;
+    line-height: 1.82;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+  .article-p:last-child { margin-bottom: 0; }
+
+  /* ── STEPS ── */
+  .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.2rem 0;
+  }
+  .step-card {
+    display: flex;
+    gap: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.1rem 1.2rem;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.18s, transform 0.18s;
+  }
+  .step-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  .step-num {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--brand);
+    min-width: 36px;
+    line-height: 1;
+    padding-top: 2px;
+  }
+  .step-body {}
+  .step-body strong {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+  .step-body p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* ── CODE BLOCKS ── */
+  .code-block {
+    background: #0F172A;
+    border-radius: var(--radius-md);
+    padding: 1.1rem 1.25rem;
+    margin: 1.2rem 0;
+    overflow-x: auto;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+  }
+  .code-block-label {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.65rem;
+    color: #64748B;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .code-block pre {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: #E2E8F0;
+    margin: 0;
+    white-space: pre;
+  }
+  .code-block .ck { color: #7DD3FC; }
+  .code-block .cv { color: #86EFAC; }
+  .code-block .cc { color: #64748B; }
+  .code-block .cs { color: #FCA5A5; }
+  .code-block .cm { color: #FCD34D; }
+
+  /* ── CALLOUT BOXES ── */
+  .callout {
+    border-radius: var(--radius-md);
+    padding: 1rem 1.2rem;
+    margin: 1.2rem 0;
+    display: flex;
+    gap: 10px;
+    font-size: 0.875rem;
+    line-height: 1.65;
+  }
+  .callout-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+  .callout-body { color: var(--text-secondary); }
+  .callout-body strong { font-weight: 600; display: block; margin-bottom: 3px; }
+  .callout-tip { background: var(--brand-light); border: 1px solid var(--brand-mid); }
+  .callout-tip .callout-body { color: #1E40AF; }
+  .callout-fire { background: #FFF7ED; border: 1px solid #FED7AA; }
+  .callout-fire .callout-body { color: #92400E; }
+  .callout-success { background: var(--green-light); border: 1px solid #A7F3D0; }
+  .callout-success .callout-body { color: #065F46; }
+
+  /* ── SECTION DIVIDER ── */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 2.5rem 0;
+  }
+
+  /* ── BADGE SHOWCASE ── */
+  .badge-showcase {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin: 1.2rem 0;
+    box-shadow: var(--shadow-sm);
+  }
+  .badge-showcase-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+  }
+  .badge-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .badge-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: var(--font-display);
+    border: 1px solid;
+  }
+  .bi-js { background: #FEFCE8; color: #713F12; border-color: #FDE68A; }
+  .bi-py { background: #EFF6FF; color: #1E3A8A; border-color: #BFDBFE; }
+  .bi-react { background: #ECFEFF; color: #164E63; border-color: #A5F3FC; }
+  .bi-git { background: #FFF1F2; color: #881337; border-color: #FECDD3; }
+  .bi-node { background: #F0FDF4; color: #14532D; border-color: #BBF7D0; }
+  .bi-css { background: #F5F3FF; color: #4C1D95; border-color: #DDD6FE; }
+  .bi-html { background: #FFF7ED; color: #7C2D12; border-color: #FED7AA; }
+  .bi-ts { background: #EFF6FF; color: #1D4ED8; border-color: #93C5FD; }
+
+  /* ── URL SWAP VISUAL ── */
+  .url-swap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 1.2rem 0;
+  }
+  .url-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    overflow-x: auto;
+  }
+  .url-label {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    min-width: 44px;
+    flex-shrink: 0;
+  }
+  .url-old { border-left: 3px solid var(--red); }
+  .url-old .url-label { color: var(--red); }
+  .url-old .url-change { color: var(--red); text-decoration: line-through; }
+  .url-new { border-left: 3px solid var(--green); }
+  .url-new .url-label { color: var(--green); }
+  .url-new .url-change { color: var(--green); font-weight: 600; }
+  .url-base { color: var(--text-secondary); }
+
+  /* ── PROFILE CARD MOCK ── */
+  .profile-mock {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow-md);
+  }
+  .profile-mock-header {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+    padding: 1.5rem 1.5rem 3rem;
+    position: relative;
+  }
+  .profile-mock-avatar {
+    width: 60px; height: 60px;
+    background: linear-gradient(135deg, #2563EB, #7C3AED);
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: white;
+  }
+  .profile-mock-name {
+    color: white;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-top: 10px;
+    margin-bottom: 2px;
+  }
+  .profile-mock-handle { color: #94A3B8; font-size: 0.82rem; }
+  .profile-mock-body {
+    padding: 1.2rem 1.5rem;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .profile-mock-bio {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding: 10px 14px;
+    background: var(--bg);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+  }
+  .profile-mock-stats {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .profile-stat-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .profile-stat-num {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+  }
+  .profile-stat-label {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .profile-mock-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .ptag {
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    font-family: var(--font-display);
+  }
+
+  /* ── RESULT PREVIEW ── */
+  .result-preview {
+    background: linear-gradient(135deg, var(--green-light), #F0FDF4);
+    border: 1px solid #A7F3D0;
+    border-radius: var(--radius-lg);
+    padding: 1.4rem;
+    margin: 1.5rem 0;
+  }
+  .result-preview-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #065F46;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .result-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .result-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.875rem;
+    color: #065F46;
+    line-height: 1.5;
+  }
+  .result-list li::before {
+    content: '✓';
+    font-weight: 700;
+    color: var(--green);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ── NEXT BLOG ── */
+  .next-blog-card {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+    border-radius: var(--radius-lg);
+    padding: 1.8rem;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow-md);
+  }
+  .next-blog-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+  }
+  .next-blog-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+  .next-blog-label {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748B;
+    margin-bottom: 5px;
+  }
+  .next-blog-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1rem;
+    color: white;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+  }
+  .next-blog-arrow {
+    margin-left: auto;
+    color: #475569;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    transition: transform 0.18s, color 0.18s;
+  }
+  .next-blog-card:hover .next-blog-arrow {
+    transform: translateX(4px);
+    color: #94A3B8;
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 1.6rem 1.5rem;
+  }
+  .site-footer p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    line-height: 1.6;
+  }
+  .site-footer p:last-child { margin-bottom: 0; }
+  .site-footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+    font-weight: 500;
+  }
+  .site-footer a:hover { color: var(--brand); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .top-nav { padding: 0 1rem; gap: 7px; }
+    .nav-btn { padding: 6px 10px; font-size: 0.75rem; }
+    .nav-brand { font-size: 0.95rem; }
+    .hero { padding: 2.5rem 1rem 2rem; }
+    .page-wrap { padding: 0 1rem; }
+    .hero-title { font-size: 1.65rem; }
+    .hero-desc { font-size: 0.95rem; }
+    .step-card { flex-direction: column; gap: 6px; }
+    .step-num { font-size: 0.85rem; }
+    .next-blog-card { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="top-nav" role="navigation" aria-label="Site navigation">
+  <a href="/" class="nav-brand">gunatools.dev</a>
+  <a href="/" class="nav-btn nav-btn-outline">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    Home
+  </a>
+  <a href="/blog/" class="nav-btn nav-btn-primary">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    Explore Blogs
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" aria-label="Article hero">
+  <div class="hero-inner">
+    <div class="hero-meta-row">
+      <span class="badge badge-series">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        GitHub Tricks Series
+      </span>
+      <span class="badge badge-day">Day 2 of 4</span>
+    </div>
+
+    <h1 class="hero-title">
+      GitHub Profile README:<br>
+      <span class="highlight">Portfolio Jaisi Profile</span> Banao
+    </h1>
+
+    <p class="hero-desc">
+      Ek simple README.md file se apna GitHub profile itna professional bana do ki recruiters, seniors, aur collaborators ruk ke dekhe. Koi portfolio website nahi chahiye — bas yeh ek trick kaafi hai.
+    </p>
+
+    <div class="hero-stats">
+      <span class="hero-stat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        5 min read
+      </span>
+      <span class="hero-stat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        19 Jun 2026
+      </span>
+      <span class="hero-stat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Beginners · Students · Job Seekers
+      </span>
+    </div>
+
+    <!-- hero code preview -->
+    <div class="hero-visual" aria-label="README preview code example">
+      <div class="code-bar">
+        <span class="dot dot-r"></span>
+        <span class="dot dot-y"></span>
+        <span class="dot dot-g"></span>
+        <span class="code-filename">README.md — your-username/your-username</span>
+      </div>
+      <pre><code><span class="code-line"><span class="c-purple"># Hi there 👋 I'm Aarif</span></span>
+<span class="code-line"><span class="c-gray">### Full-Stack Dev · AI Builder · Open Source Fan</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c-blue">![GitHub Stats](https://github-readme-stats.vercel.app/api?username=...</span><span class="c-gray">)</span></span>
+<span class="code-line"><span class="c-green">![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=...)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c-orange">## 🛠️ Tech Stack</span></span>
+<span class="code-line"><span class="c-gray">![JavaScript][js-badge] ![React][react-badge] ![Node][node-badge]</span></span></code></pre>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#step-by-step" class="cta-primary">
+        Shuru Karte Hain
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="/blog/" class="cta-secondary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        All Blogs
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="page-wrap">
+  <div class="content-grid">
+
+    <!-- TOC -->
+    <nav class="toc-card" aria-label="Table of contents">
+      <h3>Is Blog Mein</h3>
+      <ul class="toc-list">
+        <li><a href="#what-is-profile-readme"><span class="toc-num">1</span> GitHub Profile README kya hota hai?</a></li>
+        <li><a href="#why-it-matters"><span class="toc-num">2</span> Ye kyun important hai?</a></li>
+        <li><a href="#step-by-step"><span class="toc-num">3</span> Step-by-step setup guide</a></li>
+        <li><a href="#readme-content"><span class="toc-num">4</span> README mein kya kya likhein?</a></li>
+        <li><a href="#stats-badges"><span class="toc-num">5</span> Stats aur Badges — free tools</a></li>
+        <li><a href="#pro-tips"><span class="toc-num">6</span> Pro tips — sabse kaafi log miss karte hain</a></li>
+        <li><a href="#final-result"><span class="toc-num">7</span> Final result kaisa dikhega?</a></li>
+      </ul>
+    </nav>
+
+    <!-- SECTION 1 -->
+    <article>
+      <section class="article-section" id="what-is-profile-readme">
+        <div class="section-eyebrow">Introduction</div>
+        <h2 class="section-title">GitHub Profile README kya hota hai?</h2>
+        <p class="article-p">
+          GitHub ek hidden feature deta hai — agar tum apna ek special repo banao jiska naam tumhara username ho, toh uske andar wala <strong>README.md</strong> tumhari profile ke upar automatically dikhne lagta hai.
+        </p>
+        <p class="article-p">
+          Matlab, koi bhi tumhari GitHub profile kholo toh woh README seedha visible hoga — GitHub ki default info se pehle. Yeh bilkul ek mini-website jaisi hoti hai, lekin GitHub ke andar hi.
+        </p>
+
+        <div class="url-swap" aria-label="Repository name pattern">
+          <div class="url-row url-old">
+            <span class="url-label">Normal</span>
+            <span class="url-base">github.com/</span><span class="url-change">kisi-bhi-naam</span><span class="url-base">/some-project</span>
+          </div>
+          <div class="url-row url-new">
+            <span class="url-label">Magic</span>
+            <span class="url-base">github.com/</span><span class="url-change">your-username</span><span class="url-base">/</span><span class="url-change">your-username</span>
+          </div>
+        </div>
+
+        <div class="callout callout-tip">
+          <span class="callout-icon">💡</span>
+          <div class="callout-body">
+            <strong>Secret Repo!</strong>
+            Jab tum apne username ke barabar naam ka repo banate ho, GitHub ek special ✨ icon dikhata hai aur bolta hai "This is a special repository." Yeh confirmation hai ki tum sahi ja rahe ho.
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECTION 2 -->
+      <section class="article-section" id="why-it-matters">
+        <div class="section-eyebrow">Why it matters</div>
+        <h2 class="section-title">Ye kyun important hai?</h2>
+        <p class="article-p">
+          Zyada tar students aur devs ke GitHub profiles ek jaisi dikhti hain — bas kuch repos aur contribution graph. Recruiters ya open source maintainers profile open karte hain aur 10 second ke andar close kar dete hain.
+        </p>
+        <p class="article-p">
+          Ek achchi Profile README change kar deti hai yeh game completely. Yeh prove karta hai ki tum sirf code hi nahi likhte — tum <em>communicate</em> bhi kar sakte ho, jaan ke karte ho, aur seriously lete ho apne craft ko.
+        </p>
+
+        <div class="callout callout-fire">
+          <span class="callout-icon">🔥</span>
+          <div class="callout-body">
+            <strong>Real fact:</strong>
+            GitHub ke ek internal survey ke according, profiles with README get significantly more profile visits and follower requests compared to bare profiles. First impression = README.
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECTION 3 -->
+      <section class="article-section" id="step-by-step">
+        <div class="section-eyebrow">Setup Guide</div>
+        <h2 class="section-title">Step-by-step setup guide</h2>
+        <p class="article-p">Sirf 3 steps hain. 5 minute se kam ka kaam hai yeh.</p>
+
+        <div class="steps-list">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <div class="step-body">
+              <strong>Naya repo banao — same naam username jaisa</strong>
+              <p>GitHub pe jao → New Repository → Repository name mein apna <strong>exact username</strong> likho. Example: agar tumhara username <code>AarifAlam0105</code> hai toh repo ka naam bhi <code>AarifAlam0105</code> hoga. "Add a README file" checkbox zaroor tick karo.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <div class="step-body">
+              <strong>README.md edit karo</strong>
+              <p>Repo ke andar jaake <code>README.md</code> file open karo aur pencil ✏️ icon se edit karo. Yahan tum Markdown likhoge — basic formatting, images, badges sab yahan aata hai.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <div class="step-body">
+              <strong>Commit karo aur live dekho</strong>
+              <p>"Commit changes" button dabao. Ab apni GitHub profile pe jao — tumhari README live dikh rahi hogi profile ke upar. Koi deploy nahi, koi hosting nahi, seedha live!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout callout-success">
+          <span class="callout-icon">✅</span>
+          <div class="callout-body">
+            <strong>Bonus shortcut:</strong>
+            Agar tum directly repo URL pe jao <code>github.com/username/username</code> toh GitHub automatically README edit mode mein le jata hai naye users ke liye.
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECTION 4 -->
+      <section class="article-section" id="readme-content">
+        <div class="section-eyebrow">Content Guide</div>
+        <h2 class="section-title">README mein kya kya likhein?</h2>
+        <p class="article-p">
+          Yahan ek proven structure hai jo recruiters aur collaborators dono ke liye kaam karta hai:
+        </p>
+
+        <div class="code-block" aria-label="README structure template">
+          <span class="code-block-label">README.md — Proven Structure</span>
+          <pre><code><span class="ck"># Hi, I'm [Name] 👋</span>
+<span class="cc">### [One-line tagline about what you build]</span>
+
+<span class="ck">## 🧑‍💻 About Me</span>
+<span class="cv">- 🎓 [College/course info]</span>
+<span class="cv">- 🔨 Currently building: [project name]</span>
+<span class="cv">- 🌱 Learning: [tech/skill]</span>
+<span class="cv">- 💬 Ask me about: [your strengths]</span>
+<span class="cv">- 📫 Reach me: [email or social link]</span>
+
+<span class="ck">## 🛠️ Tech Stack</span>
+<span class="cc">[badges here - covered in next section]</span>
+
+<span class="ck">## 📊 GitHub Stats</span>
+<span class="cc">[stats cards here - covered in next section]</span>
+
+<span class="ck">## 🚀 Featured Projects</span>
+<span class="cv">- [Project 1](link) — one line description</span>
+<span class="cv">- [Project 2](link) — one line description</span>
+
+<span class="ck">## 🤝 Connect With Me</span>
+<span class="cv">[LinkedIn badge] [Twitter badge] [Instagram badge]</span></code></pre>
+        </div>
+
+        <div class="callout callout-tip">
+          <span class="callout-icon">💡</span>
+          <div class="callout-body">
+            <strong>Tip:</strong>
+            README mein sab kuch maat likho. 5-6 sections kaafi hain. Kam likha, focused likha — yahi professional dikhta hai. Zyada likha = spam lagta hai.
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECTION 5 -->
+      <section class="article-section" id="stats-badges">
+        <div class="section-eyebrow">Free Tools</div>
+        <h2 class="section-title">Stats aur Badges — free tools</h2>
+        <p class="article-p">
+          Yeh sab free tools hain jo tumhare README ko visually rich banate hain. Koi coding nahi chahiye — bas URL copy karo.
+        </p>
+
+        <h3 style="font-family:var(--font-display);font-weight:700;font-size:1rem;margin:1.5rem 0 0.6rem;color:var(--text-primary);">📊 GitHub Stats Card</h3>
+
+        <div class="code-block">
+          <span class="code-block-label">Copy and paste — apna username replace karo</span>
+          <pre><code><span class="cc">![GitHub Stats](</span>
+<span class="cv">  https://github-readme-stats.vercel.app/api</span>
+<span class="ck">  ?username=YOUR_USERNAME</span>
+<span class="cm">  &show_icons=true</span>
+<span class="cm">  &theme=default</span>
+<span class="cm">  &hide_border=true</span>
+<span class="cc">)</span></code></pre>
+        </div>
+
+        <h3 style="font-family:var(--font-display);font-weight:700;font-size:1rem;margin:1.5rem 0 0.6rem;color:var(--text-primary);">🌐 Top Languages Card</h3>
+
+        <div class="code-block">
+          <span class="code-block-label">Sabse zyada use ki gayi languages dikhata hai</span>
+          <pre><code><span class="cc">![Top Langs](</span>
+<span class="cv">  https://github-readme-stats.vercel.app/api/top-langs/</span>
+<span class="ck">  ?username=YOUR_USERNAME</span>
+<span class="cm">  &layout=compact</span>
+<span class="cm">  &hide_border=true</span>
+<span class="cc">)</span></code></pre>
+        </div>
+
+        <h3 style="font-family:var(--font-display);font-weight:700;font-size:1rem;margin:1.5rem 0 0.6rem;color:var(--text-primary);">🏷️ Tech Stack Badges</h3>
+
+        <p class="article-p">Tumhari skills ke badges — neat, colorful, aur professional dikhte hain.</p>
+
+        <div class="badge-showcase" aria-label="Tech stack badge examples">
+          <div class="badge-showcase-title">Badge Examples — yahi README mein dikhega</div>
+          <div class="badge-grid">
+            <span class="badge-item bi-js">⬡ JavaScript</span>
+            <span class="badge-item bi-py">🐍 Python</span>
+            <span class="badge-item bi-react">⚛️ React</span>
+            <span class="badge-item bi-git">🔀 Git</span>
+            <span class="badge-item bi-node">🟢 Node.js</span>
+            <span class="badge-item bi-ts">🔷 TypeScript</span>
+            <span class="badge-item bi-css">🎨 CSS3</span>
+            <span class="badge-item bi-html">🌐 HTML5</span>
+          </div>
+        </div>
+
+        <div class="code-block">
+          <span class="code-block-label">Badge Markdown — shields.io se generate karo</span>
+          <pre><code><span class="cc">![JavaScript](https://img.shields.io/badge/</span>
+<span class="ck">  JavaScript-F7DF1E?style=for-the-badge</span>
+<span class="cm">  &logo=javascript&logoColor=black</span>
+<span class="cc">)</span>
+
+<span class="cc">![React](https://img.shields.io/badge/</span>
+<span class="ck">  React-20232A?style=for-the-badge</span>
+<span class="cm">  &logo=react&logoColor=61DAFB</span>
+<span class="cc">)</span></code></pre>
+        </div>
+
+        <div class="callout callout-tip">
+          <span class="callout-icon">🛠️</span>
+          <div class="callout-body">
+            <strong>Quick tool:</strong>
+            <a href="https://ileriayo.github.io/markdown-badges/" target="_blank" rel="noopener" style="color:var(--brand);font-weight:600;">markdown-badges.netlify.app</a> pe jao — yahan 100+ ready-made badges milte hain sirf copy karne ke liye.
+          </div>
+        </div>
+
+        <h3 style="font-family:var(--font-display);font-weight:700;font-size:1rem;margin:1.5rem 0 0.6rem;color:var(--text-primary);">🔥 Streak Stats</h3>
+
+        <div class="code-block">
+          <span class="code-block-label">Continuous contribution streak dikhata hai</span>
+          <pre><code><span class="cc">[![GitHub Streak](</span>
+<span class="cv">  https://streak-stats.demolab.com</span>
+<span class="ck">  ?user=YOUR_USERNAME</span>
+<span class="cm">  &hide_border=true</span>
+<span class="cc">)]</span>
+<span class="cc">(https://git.io/streak-stats)</span></code></pre>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECTION 6 -->
+      <section class="article-section" id="pro-tips">
+        <div class="section-eyebrow">Advanced Tips</div>
+        <h2 class="section-title">Pro tips — sabse kaafi log miss karte hain</h2>
+
+        <div class="steps-list">
+          <div class="step-card">
+            <div class="step-num" style="color:var(--accent);">A</div>
+            <div class="step-body">
+              <strong>Visitor Counter lagao</strong>
+              <p>Profile pe kitne log aaye yeh dikhta hai — aur motivating bhi lagta hai visitors ko.<br>
+              <code>![visitors](https://komarev.com/ghpvc/?username=YOUR_USERNAME&color=blue)</code></p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num" style="color:var(--accent);">B</div>
+            <div class="step-body">
+              <strong>Typing animation wala intro</strong>
+              <p>Dynamic text jo type hota dikhta hai — "I build web apps", "I love open source" etc.<br>
+              <code>[![Typing SVG](https://readme-typing-svg.herokuapp.com?lines=Full+Stack+Dev;AI+Builder)](https://git.io/typing-svg)</code></p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num" style="color:var(--accent);">C</div>
+            <div class="step-body">
+              <strong>Pinned repos ko README mein feature karo</strong>
+              <p>Sirf GitHub ke pinned repos pe mat rely karo — README mein bhi apne best 2-3 projects ko manually link karo with one-liner descriptions. Yeh much more impactful hota hai.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num" style="color:var(--accent);">D</div>
+            <div class="step-body">
+              <strong>Contribution graph add karo</strong>
+              <p>Snake animation wala contribution graph — super satisfying dikhta hai.<br>
+              Visit: <code>github.com/Platane/snk</code> — yeh GitHub Actions se automatically generate hoti hai animation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout callout-fire">
+          <span class="callout-icon">⚡</span>
+          <div class="callout-body">
+            <strong>Ninja Move:</strong>
+            Apne README mein ek "Currently building" section rakho. Har mahine update karte raho. Yeh dikhata hai ki tum active ho aur grow kar rahe ho — recruiters love this.
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECTION 7 -->
+      <section class="article-section" id="final-result">
+        <div class="section-eyebrow">Final Result</div>
+        <h2 class="section-title">Final result kaisa dikhega?</h2>
+        <p class="article-p">
+          Yeh ek mock preview hai — exactly yahi tumhari profile pe dikhega jab tum yeh sab set kar loge:
+        </p>
+
+        <div class="profile-mock" aria-label="GitHub profile mock preview">
+          <div class="profile-mock-header">
+            <div class="profile-mock-avatar">A</div>
+            <div class="profile-mock-name">Aarif Alam</div>
+            <div class="profile-mock-handle">@AarifAlam0105</div>
+          </div>
+          <div class="profile-mock-body">
+            <div class="profile-mock-bio">
+              <strong style="display:block;font-family:var(--font-display);font-weight:700;font-size:0.85rem;margin-bottom:4px;">Hi there 👋 I build web tools &amp; AI projects</strong>
+              🎓 Final year CS student · 🔨 Building GunaTools &amp; gunatools.dev · 🌱 Learning LLM APIs · 📫 @gunatools.dev
+            </div>
+            <div class="profile-mock-stats">
+              <div class="profile-stat-item">
+                <span class="profile-stat-num">847</span>
+                <span class="profile-stat-label">Contributions</span>
+              </div>
+              <div class="profile-stat-item">
+                <span class="profile-stat-num">23</span>
+                <span class="profile-stat-label">Repos</span>
+              </div>
+              <div class="profile-stat-item">
+                <span class="profile-stat-num">142</span>
+                <span class="profile-stat-label">Followers</span>
+              </div>
+            </div>
+            <div style="font-family:var(--font-display);font-weight:700;font-size:0.72rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:6px;margin-bottom:4px;">Tech Stack</div>
+            <div class="profile-mock-tags">
+              <span class="ptag bi-js">JavaScript</span>
+              <span class="ptag bi-react">React</span>
+              <span class="ptag bi-node">Node.js</span>
+              <span class="ptag bi-py">Python</span>
+              <span class="ptag bi-ts">TypeScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-preview" aria-label="What you achieve">
+          <div class="result-preview-title">
+            ✅ Yeh sab mil jata hai ek README se
+          </div>
+          <ul class="result-list">
+            <li>Professional first impression — koi portfolio site ki zaroorat nahi</li>
+            <li>Tech stack clearly visible hoti hai recruiters ko</li>
+            <li>Active contributor dikhta hai — streaks aur stats se</li>
+            <li>Featured projects directly profile pe — no scrolling needed</li>
+            <li>Social links easily accessible — connect karna easy hota hai</li>
+            <li>GitHub search mein better visibility milti hai</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- NEXT BLOG -->
+      <a href="/blog/github-search-dorking/" class="next-blog-card" aria-label="Next blog: GitHub Search Dorking">
+        <span class="next-blog-icon">🔍</span>
+        <div>
+          <div class="next-blog-label">Next — Day 3</div>
+          <div class="next-blog-title">GitHub Search Dorking: Find Hidden Repos, Beginner Issues &amp; Secret Gold</div>
+        </div>
+        <span class="next-blog-arrow" aria-hidden="true">→</span>
+      </a>
+
+    </article>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>
+    <a href="/footer/privacy-policy">Privacy</a> |
+    <a href="/footer/terms">Terms</a> |
+    <a href="/footer/about">About</a> |
+    <a href="/footer/contact-us/contact">Contact</a>
+  </p>
+  <p>© 2026 gunatools.dev | All rights reserved.</p>
+</footer>
+
+</body>
+</html>
