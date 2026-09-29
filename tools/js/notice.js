@@ -22,10 +22,12 @@
     closeDate: "2026-10-01",     // site closes
     recheckDate: "2026-10-05",   // site opens again
     images: [                    // 0-4 small preview images (empty list = no strip)
-      "https://gunatools.dev/notice/1.webp",
-      "https://gunatools.dev/notice/2.webp",
-      "https://gunatools.dev/notice/3.webp",
-      "https://gunatools.dev/notice/4.webp"
+      "https://gunatools.dev/images/notice/1.jpg",
+      "https://gunatools.dev/images/notice/2.jpg",
+      "https://gunatools.dev/images/notice/3.jpg",
+      "https://gunatools.dev/images/notice/4.jpg",
+      "https://gunatools.dev/images/notice/5.jpg"
+
     ],
     showDelayMs: 0,              // cover appears immediately on EVERY page load / refresh
     closeDelaySec: 10,           // close (X) unlocks after 10 seconds (0 = instantly)
