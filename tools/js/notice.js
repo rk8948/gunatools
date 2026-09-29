@@ -1,5 +1,5 @@
 /*!
- * gunatools.dev full-screen WARNING notice: site closing + for sale + contact (v6)
+ * gunatools.dev full-screen WARNING notice: site closing + for sale + contact (v8)
  * Add before </body>:  <script src="/gunatools-notice.js" defer></script>
  * Edit only the CONFIG block below.
  */
@@ -15,8 +15,9 @@
     email: "",                   // optional, e.g. "you@example.com"             (empty = hidden)
     newSiteUrl: "https://imgtry.com",
     promptsUrl: "https://newlearn.in/ai-image-prompts/",
-    priceText: "$80 - $100",     // GunaTools.dev domain + complete website
-    devText: "$40 - $100",       // price to build a new website for someone
+    priceText: "$80",            // GunaTools.dev domain + complete website (fixed price)
+    devFrom: "$40",              // build-a-website price: from ...
+    devTo: "$100",               // ... to (shown as "$40 to $100", word translated per language)
     noticeDate: "2026-09-30",    // YYYY-MM-DD
     closeDate: "2026-10-01",     // site closes
     recheckDate: "2026-10-05",   // site opens again
@@ -37,7 +38,7 @@
 
   var LANGS = {
     en: { name: "English", code: "en-US", t: {
-      badge: "Notice", title: "GunaTools.dev is for sale",
+      to: "to", badge: "Notice", title: "GunaTools.dev is for sale",
       p2: "This site will close for server cleanup. Domain and complete website: {price}. Reason: financial issues. I am a student, sorry.",
       notice: "Notice", closes: "Site closes", recheck: "Reopens",
       ofr: "Available to buy",
@@ -49,7 +50,7 @@
       note: "Meanwhile, use our new website for image tools:", go: "ImgTry.com", prompts: "Free AI image prompts",
       listen: "Listen", stop: "Stop", close: "Close", pause: "Pause", play: "Play", wait: "You can close in {n}s" } },
     hi: { name: "हिन्दी", code: "hi-IN", t: {
-      badge: "सूचना", title: "GunaTools.dev बिक्री के लिए उपलब्ध है",
+      to: "से", badge: "सूचना", title: "GunaTools.dev बिक्री के लिए उपलब्ध है",
       p2: "सर्वर की सफ़ाई के लिए यह साइट बंद रहेगी। डोमेन और पूरी वेबसाइट की कीमत: {price}। कारण: आर्थिक समस्या। मैं एक छात्र हूँ, माफ़ कीजिए।",
       notice: "सूचना", closes: "साइट बंद", recheck: "फिर खुलेगी",
       ofr: "खरीदने के लिए उपलब्ध",
@@ -61,7 +62,7 @@
       note: "तब तक इमेज टूल्स के लिए हमारी नई वेबसाइट इस्तेमाल करें:", go: "ImgTry.com", prompts: "फ्री AI इमेज प्रॉम्प्ट",
       listen: "सुनें", stop: "रोकें", close: "बंद करें", pause: "रोकें", play: "चलाएँ", wait: "{n} सेकंड में बंद कर सकेंगे" } },
     es: { name: "Español", code: "es-ES", t: {
-      badge: "Aviso", title: "GunaTools.dev está en venta",
+      to: "a", badge: "Aviso", title: "GunaTools.dev está en venta",
       p2: "Este sitio se cerrará para limpiar el servidor. Dominio y sitio web completo: {price}. Motivo: problemas económicos. Soy estudiante, lo siento.",
       notice: "Aviso", closes: "Cierre", recheck: "Reapertura",
       ofr: "Disponible para comprar",
@@ -73,7 +74,7 @@
       note: "Mientras tanto, usa nuestro nuevo sitio para herramientas de imagen:", go: "ImgTry.com", prompts: "Prompts de imagen IA gratis",
       listen: "Escuchar", stop: "Detener", close: "Cerrar", pause: "Pausar", play: "Reproducir", wait: "Podrás cerrar en {n} s" } },
     zh: { name: "中文", code: "zh-CN", t: {
-      badge: "通知", title: "GunaTools.dev 正在出售",
+      to: "至", badge: "通知", title: "GunaTools.dev 正在出售",
       p2: "本站将因服务器清理而关闭。域名及完整网站价格：{price}。原因：经济困难。我是学生，抱歉。",
       notice: "通知日期", closes: "关站日期", recheck: "重新开放",
       ofr: "可购买",
@@ -85,7 +86,7 @@
       note: "在此期间，欢迎使用我们的新网站的图片工具：", go: "ImgTry.com", prompts: "免费 AI 图片提示词",
       listen: "朗读", stop: "停止", close: "关闭", pause: "暂停", play: "播放", wait: "{n} 秒后可关闭" } },
     ar: { name: "العربية", code: "ar-SA", t: {
-      badge: "إشعار", title: "موقع GunaTools.dev للبيع",
+      to: "إلى", badge: "إشعار", title: "موقع GunaTools.dev للبيع",
       p2: "سيتم إغلاق هذا الموقع لتنظيف الخادم. سعر النطاق والموقع الكامل: {price}. السبب: ظروف مالية. أنا طالب، أعتذر.",
       notice: "الإشعار", closes: "إغلاق الموقع", recheck: "إعادة الفتح",
       ofr: "متاح للشراء",
@@ -97,7 +98,7 @@
       note: "في هذه الأثناء، استخدم موقعنا الجديد لأدوات الصور:", go: "ImgTry.com", prompts: "أوامر صور ذكاء اصطناعي مجانية",
       listen: "استمع", stop: "إيقاف", close: "إغلاق", pause: "إيقاف مؤقت", play: "تشغيل", wait: "يمكنك الإغلاق بعد {n} ث" } },
     pt: { name: "Português", code: "pt-BR", t: {
-      badge: "Aviso", title: "GunaTools.dev está à venda",
+      to: "a", badge: "Aviso", title: "GunaTools.dev está à venda",
       p2: "Este site será fechado para limpeza do servidor. Domínio e site completo: {price}. Motivo: problemas financeiros. Sou estudante, desculpem.",
       notice: "Aviso", closes: "Site fecha", recheck: "Reabre",
       ofr: "Disponível para compra",
@@ -109,7 +110,7 @@
       note: "Enquanto isso, use nosso novo site para ferramentas de imagem:", go: "ImgTry.com", prompts: "Prompts de imagem IA grátis",
       listen: "Ouvir", stop: "Parar", close: "Fechar", pause: "Pausar", play: "Reproduzir", wait: "Você pode fechar em {n}s" } },
     bn: { name: "বাংলা", code: "bn-IN", t: {
-      badge: "বিজ্ঞপ্তি", title: "GunaTools.dev বিক্রির জন্য আছে",
+      to: "থেকে", badge: "বিজ্ঞপ্তি", title: "GunaTools.dev বিক্রির জন্য আছে",
       p2: "সার্ভার পরিষ্কারের জন্য এই সাইট বন্ধ থাকবে। ডোমেন ও পুরো ওয়েবসাইটের দাম: {price}। কারণ: আর্থিক সমস্যা। আমি একজন ছাত্র, দুঃখিত।",
       notice: "বিজ্ঞপ্তি", closes: "সাইট বন্ধ", recheck: "আবার খুলবে",
       ofr: "কেনার জন্য উপলব্ধ",
@@ -121,7 +122,7 @@
       note: "ততক্ষণ ইমেজ টুলসের জন্য আমাদের নতুন ওয়েবসাইট ব্যবহার করুন:", go: "ImgTry.com", prompts: "ফ্রি AI ইমেজ প্রম্পট",
       listen: "শুনুন", stop: "থামান", close: "বন্ধ করুন", pause: "থামান", play: "চালান", wait: "{n} সেকেন্ডে বন্ধ করতে পারবেন" } },
     ru: { name: "Русский", code: "ru-RU", t: {
-      badge: "Объявление", title: "GunaTools.dev продаётся",
+      to: "до", badge: "Объявление", title: "GunaTools.dev продаётся",
       p2: "Этот сайт будет закрыт для очистки сервера. Домен и готовый сайт: {price}. Причина: финансовые трудности. Я студент, извините.",
       notice: "Объявление", closes: "Закрытие сайта", recheck: "Откроется снова",
       ofr: "Доступно для покупки",
@@ -133,7 +134,7 @@
       note: "А пока пользуйтесь нашим новым сайтом для работы с изображениями:", go: "ImgTry.com", prompts: "Бесплатные промпты для ИИ-изображений",
       listen: "Слушать", stop: "Стоп", close: "Закрыть", pause: "Пауза", play: "Играть", wait: "Закрыть можно через {n} с" } },
     ja: { name: "日本語", code: "ja-JP", t: {
-      badge: "お知らせ", title: "GunaTools.devは売却します",
+      to: "から", badge: "お知らせ", title: "GunaTools.devは売却します",
       p2: "サーバー整理のため、このサイトは閉鎖されます。ドメインと完成済みサイトの価格：{price}。理由：経済的な事情。私は学生です、申し訳ありません。",
       notice: "通知日", closes: "閉鎖日", recheck: "再開日",
       ofr: "購入可能",
@@ -145,7 +146,7 @@
       note: "それまでは、新サイトの画像ツールをご利用ください：", go: "ImgTry.com", prompts: "無料AI画像プロンプト",
       listen: "音声で聞く", stop: "停止", close: "閉じる", pause: "一時停止", play: "再生", wait: "あと{n}秒で閉じられます" } },
     fr: { name: "Français", code: "fr-FR", t: {
-      badge: "Avis", title: "GunaTools.dev est à vendre",
+      to: "à", badge: "Avis", title: "GunaTools.dev est à vendre",
       p2: "Ce site fermera pour nettoyage du serveur. Domaine et site complet : {price}. Raison : difficultés financières. Je suis étudiant, désolé.",
       notice: "Avis", closes: "Fermeture", recheck: "Réouverture",
       ofr: "Disponible à l'achat",
@@ -178,6 +179,7 @@
       try { return new Intl.DateTimeFormat(LANGS[lang].code, { day: "numeric", month: "short", year: "numeric" }).format(new Date(iso + "T00:00:00")); }
       catch (e) { return iso; }
     }
+    function devPrice() { return CONFIG.devFrom + " " + LANGS[lang].t.to + " " + CONFIG.devTo; }
     function fill(s) { return s.replace(/\{price\}/g, CONFIG.priceText); }
 
     /* ---------- styles (professional warning: amber + deep orange, red only for the close date) ---------- */
@@ -192,7 +194,7 @@
 .gn-badge{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:#b45309;padding:7px 14px;border-radius:99px;margin-inline-end:auto;box-shadow:0 2px 6px rgba(180,83,9,.35)}\
 .gn-btn{cursor:pointer;background:#fff;color:#1f2937;border:1px solid #e5d3a3;border-radius:99px;height:36px;min-width:36px;padding:0 12px;font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:6px;box-shadow:0 1px 2px rgba(0,0,0,.06);transition:background .2s,border-color .2s,transform .1s}\
 .gn-btn:hover{background:#fff7e0;border-color:#f59e0b}.gn-btn:active{transform:scale(.96)}\
-.gn-btn:focus-visible,.gn-cta a:focus-visible,.gn-menu button:focus-visible,.gn-note a:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}\
+.gn-btn:focus-visible,.gn-cta a:focus-visible,.gn-menu button:focus-visible,.gn-links a:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}\
 .gn-x{width:36px;padding:0;justify-content:center;font-size:14px;font-variant-numeric:tabular-nums}\
 .gn-x:hover{background:#fee2e2;border-color:#fecaca;color:#b91c1c}.gn-x svg{display:block}\
 .gn-x[disabled]{cursor:not-allowed;opacity:.75;background:#f3f4f6;color:#6b7280;border-color:#e5e7eb}\
@@ -224,8 +226,13 @@
 .gn-pri{background:linear-gradient(135deg,#b45309,#92400e);color:#fff}\
 .gn-sec{background:#fff;color:#92400e;border:2px solid #92400e}\
 .gn-copy{margin-top:10px;font-size:13px;height:32px}\
-.gn-note{font-size:13.5px;line-height:1.6;color:#6b7280;margin:16px 0 0;text-align:center}\
-.gn-note a{color:#374151;font-weight:700}\
+.gn-note{margin:16px 0 0;padding:14px;text-align:center;background:#fffbeb;border:1px solid #fcd34d;border-radius:14px}\
+.gn-nt{display:block;font-size:14px;line-height:1.5;font-weight:600;color:#78350f;margin-bottom:10px}\
+.gn-links{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}\
+.gn-links a{flex:1 1 150px;text-align:center;text-decoration:none;font-size:15px;font-weight:800;padding:12px 14px;border-radius:11px;transition:transform .1s,filter .2s}\
+.gn-links a:hover{filter:brightness(1.12)}.gn-links a:active{transform:scale(.98)}\
+#gn-go{background:#111827;color:#fff;font-size:17px;letter-spacing:.02em;box-shadow:0 4px 12px rgba(17,24,39,.3)}\
+#gn-more{background:#fff;color:#92400e;border:2px solid #92400e}\
 .gn-car{position:relative;border-radius:12px;overflow:hidden;background:#f3f4f6;margin-top:12px}\
 .gn-track{display:flex;gap:8px;overflow-x:hidden;padding:8px}\
 .gn-th{position:relative;flex:0 0 auto;height:92px;min-width:60px;border-radius:8px;overflow:hidden;background:#e5e7eb}\
@@ -286,7 +293,7 @@
     <div class="gn-cta" id="gn-cta"></div>\
     <button class="gn-btn gn-copy" id="gn-cp"></button>\
    </div>\
-   <p class="gn-note"><span id="gn-note"></span> <a id="gn-go" target="_blank" rel="noopener"></a> · <a id="gn-more" target="_blank" rel="noopener"></a></p>\
+   <div class="gn-note"><span class="gn-nt" id="gn-note"></span><div class="gn-links"><a id="gn-go" target="_blank" rel="noopener"></a><a id="gn-more" target="_blank" rel="noopener"></a></div></div>\
    <div class="gn-car" id="gn-car"><div class="gn-track" id="gn-track"></div><button class="gn-btn gn-pp" id="gn-pp"></button></div>\
   </div>\
  </div>\
@@ -377,7 +384,7 @@
         t.title,
         t.notice + " " + fmtDate(CONFIG.noticeDate) + ". " + t.closes + " " + fmtDate(CONFIG.closeDate) + ". " + t.recheck + " " + fmtDate(CONFIG.recheckDate) + ".",
         fill(t.p2),
-        t.ofr + ". " + t.i1 + " " + CONFIG.priceText + ". " + t.i2 + ". " + t.i3 + " " + CONFIG.devText + ".",
+        t.ofr + ". " + t.i1 + " " + CONFIG.priceText + ". " + t.i2 + ". " + t.i3 + " " + devPrice() + ".",
         t.ct + ": Instagram " + CONFIG.instagramHandle
       ];
     }
@@ -401,14 +408,14 @@
       $("gn-ofr").textContent = t.ofr;
       $("gn-i1").textContent = t.i1; $("gn-pr1").textContent = CONFIG.priceText;
       $("gn-i2").textContent = t.i2;
-      $("gn-i3").textContent = t.i3; $("gn-pr3").textContent = CONFIG.devText;
+      $("gn-i3").textContent = t.i3; $("gn-pr3").textContent = devPrice();
       $("gn-ct").textContent = t.ct;
       $("gn-ig").textContent = "📷 " + t.ig + " " + CONFIG.instagramHandle;
       $("gn-pg2").textContent = "✉ " + t.pg;
       if (!copied) $("gn-cp").textContent = "📋 " + t.cp + " " + CONFIG.instagramHandle;
       $("gn-note").textContent = t.note;
-      $("gn-go").textContent = t.go; $("gn-go").href = CONFIG.newSiteUrl;
-      $("gn-more").textContent = t.prompts; $("gn-more").href = CONFIG.promptsUrl;
+      $("gn-go").textContent = "🚀 " + t.go + " ↗"; $("gn-go").href = CONFIG.newSiteUrl;
+      $("gn-more").textContent = "✨ " + t.prompts; $("gn-more").href = CONFIG.promptsUrl;
       $("gn-pp").textContent = paused ? "▶ " + t.play : "⏸ " + t.pause;
       $("gn-slab").textContent = reading ? t.stop : t.listen;
       updateCloseTitle();
