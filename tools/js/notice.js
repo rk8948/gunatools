@@ -1,5 +1,5 @@
 /*!
- * gunatools.dev full-screen WARNING notice: site closing + for sale + contact (v8)
+ * gunatools.dev full-screen WARNING notice: site closing + for sale + contact (v9)
  * Add before </body>:  <script src="/gunatools-notice.js" defer></script>
  * Edit only the CONFIG block below.
  */
@@ -11,7 +11,8 @@
     instagramUrl: "https://instagram.com/newlearn_in_code",
     instagramHandle: "@newlearn_in_code",
     contactUrl: "https://gunatools.dev/footer/contact-us/contact",
-    whatsappUrl: "",             // optional, e.g. "https://wa.me/91XXXXXXXXXX"  (empty = hidden)
+    whatsappNumber: "+91 73940 33753",
+    whatsappUrl: "https://wa.me/917394033753?text=Hi%2C%20I%20saw%20the%20GunaTools.dev%20notice",
     email: "",                   // optional, e.g. "you@example.com"             (empty = hidden)
     newSiteUrl: "https://imgtry.com",
     promptsUrl: "https://newlearn.in/ai-image-prompts/",
@@ -161,6 +162,9 @@
       listen: "Écouter", stop: "Arrêter", close: "Fermer", pause: "Pause", play: "Lecture", wait: "Fermeture possible dans {n} s" } }
   };
 
+  /* WhatsApp button label per language */
+  var WA = { en:"Chat on WhatsApp", hi:"WhatsApp पर मैसेज करें", es:"Escríbeme por WhatsApp", zh:"WhatsApp 联系我", ar:"تواصل عبر واتساب", pt:"Fale comigo no WhatsApp", bn:"WhatsApp-এ মেসেজ করুন", ru:"Написать в WhatsApp", ja:"WhatsAppで連絡", fr:"Écrire sur WhatsApp" };
+
   /* ---------- guards ---------- */
   if (window.__gunaNoticeLoaded) return;
   window.__gunaNoticeLoaded = true;
@@ -246,6 +250,16 @@
 #gn-lb .gn-nav{position:absolute;top:50%;margin-top:-18px}\
 #gn-lb .gn-prev{inset-inline-start:12px}#gn-lb .gn-next{inset-inline-end:12px}\
 #gn-lb .gn-cnt{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);color:#cbd5e1;font-size:13px}\
+.gn-wa{display:flex;align-items:center;gap:12px;text-decoration:none;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;border-radius:14px;padding:14px 16px;margin:0 0 12px;border:2px solid #fff;box-shadow:0 0 0 3px #25d366,0 8px 22px rgba(18,140,126,.5);animation:gn-pulse 1.8s ease-in-out infinite;transition:transform .1s,filter .2s}\
+.gn-wa:hover{filter:brightness(1.08)}.gn-wa:active{transform:scale(.98)}\
+.gn-wa:focus-visible{outline:3px solid #f59e0b;outline-offset:3px}\
+.gn-wa-ic{font-size:30px;line-height:1;flex:0 0 auto}\
+.gn-wa-tx{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:2px}\
+.gn-wa-tx small{font-size:12.5px;font-weight:700;opacity:.95;letter-spacing:.02em}\
+.gn-wa-tx b{font-size:clamp(20px,5.5vw,26px);font-weight:900;letter-spacing:.03em;direction:ltr;unicode-bidi:plaintext;white-space:nowrap}\
+.gn-wa-go{flex:0 0 auto;font-size:26px;font-weight:900}\
+@keyframes gn-pulse{0%,100%{box-shadow:0 0 0 3px #25d366,0 8px 22px rgba(18,140,126,.5)}50%{box-shadow:0 0 0 8px rgba(37,211,102,.35),0 8px 28px rgba(18,140,126,.7)}}\
+@media(prefers-reduced-motion:reduce){.gn-wa{animation:none}}\
 #gn-pill{position:fixed;inset-inline-end:14px;bottom:14px;z-index:2147482000;display:none;align-items:center;background:#111827;color:#fff;border-radius:99px;box-shadow:0 8px 24px rgba(0,0,0,.35);overflow:hidden;max-width:calc(100vw - 28px)}\
 #gn-pill button{border:0;background:none;color:#fff;cursor:pointer;font-size:13px;font-weight:600}\
 #gn-pb{display:flex;align-items:center;gap:8px;padding:11px 8px 11px 14px;min-width:0}\
@@ -292,6 +306,7 @@
    </ul>\
    <div class="gn-ct">\
     <h3 class="gn-cth" id="gn-ct"></h3>\
+   <a class="gn-wa" id="gn-wa" target="_blank" rel="noopener"><span class="gn-wa-ic">💬</span><span class="gn-wa-tx"><small id="gn-wal"></small><b id="gn-wan"></b></span><span class="gn-wa-go">→</span></a>\
     <div class="gn-cta" id="gn-cta"></div>\
     <button class="gn-btn gn-copy" id="gn-cp"></button>\
    </div>\
@@ -307,7 +322,7 @@
     function $(id) { return document.getElementById(id); }
     var ov = $("gn-ov"), card = $("gn-card"), track = $("gn-track"), lb = $("gn-lb"), pill = $("gn-pill"), xb = $("gn-x");
 
-    /* contact buttons (Instagram first, optional WhatsApp / email) */
+    /* contact buttons (Instagram, then optional email, then contact page; WhatsApp has its own big button above) */
     var cta = $("gn-cta");
     function mkLink(id, href, cls) {
       var a = document.createElement("a");
@@ -315,7 +330,6 @@
       cta.appendChild(a); return a;
     }
     mkLink("gn-ig", CONFIG.instagramUrl, "gn-pri");
-    if (CONFIG.whatsappUrl) mkLink("gn-wa", CONFIG.whatsappUrl, "gn-sec").textContent = "WhatsApp";
     if (CONFIG.email) mkLink("gn-em", "mailto:" + CONFIG.email, "gn-sec").textContent = "✉ " + CONFIG.email;
     var pg = mkLink("gn-pg2", CONFIG.contactUrl, "gn-sec"); pg.removeAttribute("target");
 
@@ -387,7 +401,7 @@
         t.notice + " " + fmtDate(CONFIG.noticeDate) + ". " + t.closes + " " + fmtDate(CONFIG.closeDate) + ". " + t.recheck + " " + fmtDate(CONFIG.recheckDate) + ".",
         fill(t.p2),
         t.ofr + ". " + t.i1 + " " + CONFIG.priceText + ". " + t.i2 + ". " + t.i3 + " " + devPrice() + ".",
-        t.ct + ": Instagram " + CONFIG.instagramHandle
+        t.ct + ": Instagram " + CONFIG.instagramHandle + ". WhatsApp " + CONFIG.whatsappNumber.replace(/\D/g, " ")
       ];
     }
     function updateCloseTitle() {
@@ -412,6 +426,9 @@
       $("gn-i2").textContent = t.i2;
       $("gn-i3").textContent = t.i3; $("gn-pr3").textContent = devPrice();
       $("gn-ct").textContent = t.ct;
+      $("gn-wal").textContent = WA[lang] || WA.en;
+      $("gn-wan").textContent = CONFIG.whatsappNumber;
+      $("gn-wa").href = CONFIG.whatsappUrl;
       $("gn-ig").textContent = "📷 " + t.ig + " " + CONFIG.instagramHandle;
       $("gn-pg2").textContent = "✉ " + t.pg;
       if (!copied) $("gn-cp").textContent = "📋 " + t.cp + " " + CONFIG.instagramHandle;
