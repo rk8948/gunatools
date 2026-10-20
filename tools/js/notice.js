@@ -12,7 +12,7 @@
     instagramHandle: "@newlearn_in_code",
     contactUrl: "https://gunatools.dev/footer/contact-us/contact",
     whatsappNumber: "+91 73940 33753",
-    whatsappUrl: "https://wa.me/917394033753?text=Hi%2C%20I%20saw%20the%20GunaTools.dev%20notice",
+    whatsappUrl: "https://wa.me/918009398878?text=Hi%2C%20I%20saw%20the%20GunaTools.dev%20notice",
     email: "",                   // optional, e.g. "you@example.com"             (empty = hidden)
     newSiteUrl: "https://imgtry.com",
     promptsUrl: "https://newlearn.in/ai-image-prompts/",
