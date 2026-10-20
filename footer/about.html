@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-  <meta name="description" content="About gunatools.dev– a privacy-first platform with 40+ free tools, original games, and educational resources. No login, no tracking, just learning & creativity." />
+  <meta name="description" content="About gunatools.dev – a privacy-focused platform with 30+ free tools, original games, and educational resources. No login required." />
   <title>About Us – gunatools.dev | GunaTools0105</title>
 
-  <link rel="canonical" href="https://gunatools.dev/footer/about" />
+  <link rel="canonical" href="https://gunatools.dev/footer/about.html" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph / Social -->
-  <meta property="og:title" content="About Us – gunatools.dev| आरिफ आलम" />
-  <meta property="og:description" content="Guna Tools builds joyful, private tools for everyone. 30+ tools, zero login, zero tracking. See our mission." />
-  <meta property="og:url" content="https://gunatools.dev/footer/about" />
+  <meta property="og:title" content="About Us – gunatools.dev | आरिफ आलम" />
+  <meta property="og:description" content="Guna Tools builds joyful, privacy-focused tools for everyone. 30+ free tools, no login required. See our mission." />
+  <meta property="og:url" content="https://gunatools.dev/footer/about.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://res.cloudinary.com/dooyfg1pa/image/upload/v1758826893/GunaToolslife_xisfwg.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="About Us – gunatools.dev" />
-  <meta name="twitter:description" content="No login, no spy tools. PDF, image, games – all browser-side." />
+  <meta name="twitter:description" content="No login required. PDF, image, games – mostly browser-side." />
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="../images/logo/apple-touch-icon.png" />
@@ -332,7 +332,8 @@
       margin-bottom: 1.5rem;
     }
 
-    button {
+    /* scoped so header buttons are not affected */
+    #lang-toggle button {
       background: white;
       color: #0a4b6e;
       border: 1.5px solid #b0d4f0;
@@ -348,7 +349,7 @@
       gap: 6px;
     }
 
-    button:hover {
+    #lang-toggle button:hover {
       background: #e6f2fc;
       border-color: #3b9bd6;
     }
@@ -372,7 +373,7 @@
 
         <div class="header-search">
           <input type="text" id="searchInput" placeholder="Search tools..." aria-label="Search">
-          <button type="submit" id="searchButton"><i class="fas fa-search"></i></button>
+          <button type="submit" id="searchButton" aria-label="Search"><i class="fas fa-search"></i></button>
           <div class="search-results" id="searchResults"></div>
         </div>
 
@@ -399,7 +400,7 @@
 
   <div class="about-wrapper">
     <div id="lang-toggle">
-      <button onclick="toggleLanguage()">
+      <button id="langBtn" type="button" onclick="toggleLanguage()">
         <span>🌐</span> हिंग्लिश में पढ़ें / Read in Hinglish
       </button>
     </div>
@@ -413,7 +414,7 @@
       <div class="mission-box">
         <h2 style="margin-top: 0; border-left-color: #0284c7;">🌍 Our Vision</h2>
         <p><span class="emoji">🕊️</span> To create a peaceful world built on justice, kindness and compassion — where no one is oppressed and everyone has equal rights.</p>
-        
+
         <div class="dream-banner">
           <p style="margin: 0; font-size: 1.1rem; font-weight: 500;">
             <span class="emoji">✨</span> <strong>DREAM →</strong> Truth first 🗣 | Justice always ⚖ | Mercy to all 🕊 | Help the helpless | Love all | Forgive often | Kindness daily | Learning forever
@@ -433,15 +434,15 @@
           <div class="profile-content">
             <h2 class="profile-name" style="border-left: none;">Aarif Alam</h2>
             <div class="profile-title">Founder & developer, GunaTools · @GunaTools0105 everywhere</div>
-            <p style="font-size: 1.1rem;">Educator, guide, and lifelong learner. GunaTools builds tools that make learning accessible, joyful, and 100% private. <strong style="color:#14709b;">No login, no spy, just free creativity.</strong></p>
-            
+            <p style="font-size: 1.1rem;">Educator, guide, and lifelong learner. GunaTools builds tools that make learning accessible, joyful, and privacy-focused. <strong style="color:#14709b;">No login required, just free creativity.</strong></p>
+
             <div class="profile-stats">
               <div class="stat-item">
                 <span class="stat-number">30+</span>
                 <span class="stat-label">free tools</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number">100%</span>
+                <span class="stat-number">Mostly</span>
                 <span class="stat-label">Browser-based</span>
               </div>
               <div class="stat-item">
@@ -453,12 +454,12 @@
             <div class="profile-highlight">
               “Technology should uplift humanity, not divide it.”
             </div>
-            
+
             <div style="margin-top: 1.5rem;">
-              <a href="https://www.instagram.com/GunaTools0105/" target="_blank" class="social-btn"><span>📸</span> Instagram</a>
-              <a href="https://x.com/GunaTools0105" target="_blank" class="social-btn"><span>🐦</span> X (Twitter)</a>
-              <a href="https://www.facebook.com/GunaTools0105" target="_blank" class="social-btn"><span>📘</span> Facebook</a>
-              <a href="https://www.linkedin.com/in/GunaTools0105/" target="_blank" class="social-btn"><span>🔗</span> LinkedIn</a>
+              <a href="https://www.instagram.com/GunaTools0105/" target="_blank" rel="noopener noreferrer" class="social-btn"><span>📸</span> Instagram</a>
+              <a href="https://x.com/GunaTools0105" target="_blank" rel="noopener noreferrer" class="social-btn"><span>🐦</span> X (Twitter)</a>
+              <a href="https://www.facebook.com/GunaTools0105" target="_blank" rel="noopener noreferrer" class="social-btn"><span>📘</span> Facebook</a>
+              <a href="https://www.linkedin.com/in/GunaTools0105/" target="_blank" rel="noopener noreferrer" class="social-btn"><span>🔗</span> LinkedIn</a>
               <span style="display: inline-block; background: #e8f0f5; padding: 0.5rem 1.2rem; border-radius: 40px; margin-left: 0.3rem;">📧 GunaTools0105@gmail.com</span>
             </div>
           </div>
@@ -468,13 +469,12 @@
       <h2>⚡ What Makes Us Different</h2>
       <div class="feature-grid">
         <div class="feature-card">
-          <h3><span class="emoji">🔒</span> Privacy First</h3>
-          <p><strong>No accounts, no tracking.</strong> Most tools run in your browser — zero server storage. We follow strict guidelines from our <a href="/footer/privacy-policy">Privacy Policy</a>.</p>
-          
+          <h3><span class="emoji">🔒</span> Privacy Focused</h3>
+          <p><strong>No accounts needed.</strong> Most tools run in your browser with minimal server storage. Please read our <a href="/footer/privacy-policy.html">Privacy Policy</a> to see exactly what data is collected (analytics and advertising cookies) and how it is used.</p>
         </div>
         <div class="feature-card">
           <h3><span class="emoji">🎯</span> Purpose-Driven</h3>
-          <p>Every tool has a clear educational or creative goal. We never trick you into sharing data. All terms are fair: <a href="/footer/terms">Terms of Service</a>.</p>
+          <p>Every tool has a clear educational or creative goal. We never trick you into sharing data. All terms are fair: <a href="/footer/terms.html">Terms of Service</a>.</p>
         </div>
         <div class="feature-card">
           <h3><span class="emoji">🌱</span> Community Shaped</h3>
@@ -489,19 +489,19 @@
           <ul>
             <li>Vocabulary & math challenges</li>
             <li>Browser-based, no install</li>
-            <li>No scores, no data collection</li>
+            <li>No accounts or sign-up</li>
           </ul>
-          <p><a href="https://gunatools.dev/Game/" target="_blank">→ Play now</a></p>
+          <p><a href="https://gunatools.dev/Game/" target="_blank" rel="noopener noreferrer">→ Play now</a></p>
         </div>
         <div class="feature-card">
           <h3><span class="emoji">🛠️</span> Creative Tools</h3>
           <ul>
             <li>Image to URL (Cloudinary, 4 months max)</li>
-            <li>PDF tools — 100% client-side</li>
+            <li>PDF tools — client-side in your browser</li>
             <li>Background remover (API-based)</li>
             <li>Image cropper, rename, converter</li>
           </ul>
-          <p>Full details in <a href="/footer/privacy-policy">Privacy Policy</a>.</p>
+          <p>Full details in <a href="/footer/privacy-policy.html">Privacy Policy</a>.</p>
         </div>
         <div class="feature-card">
           <h3><span class="emoji">📚</span> Learning Resources</h3>
@@ -510,7 +510,7 @@
             <li>Digital wellness guides</li>
             <li>Tech simplified tutorials</li>
           </ul>
-          <p>For learners age 13 to 95+.</p>
+          <p>For learners of all ages.</p>
         </div>
       </div>
 
@@ -519,11 +519,11 @@
         <ul style="list-style-type: none; padding-left: 0;">
           <li><span class="emoji">⚡</span> <strong>Lightweight static pages</strong> – HTML/CSS/JS, no heavy frameworks.</li>
           <li><span class="emoji">🔐</span> <strong>HTTPS / TLS encryption</strong> – every connection secure.</li>
-          <li><span class="emoji">🤝</span> <strong>Trusted third-parties:</strong> only Cloudinary, remove.bg, EmailJS, Google Analytics (anonymized) and AdSense (cookie notice).</li>
-          <li><span class="emoji">📊</span> <strong>Transparent analytics</strong> – we use Google Analytics with anonymized IP; you can opt out via <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">browser add-on</a>.</li>
+          <li><span class="emoji">🤝</span> <strong>Third-party services:</strong> Cloudinary, remove.bg, EmailJS, Google Analytics (anonymized IP) and Google AdSense (uses cookies).</li>
+          <li><span class="emoji">📊</span> <strong>Transparent analytics</strong> – we use Google Analytics with anonymized IP; you can opt out via <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">browser add-on</a>.</li>
           <li><span class="emoji">🗑️</span> <strong>Auto-deletion:</strong> uploaded images are stored max 4 months, feedback emails deleted after reply.</li>
         </ul>
-        <p style="margin-top: 0.6rem;">See our full <a href="/footer/privacy-policy">Privacy Policy</a> for how cookies and ads are handled, and use <a href="https://adssettings.google.com/" target="_blank">Ad Settings</a> to control ad personalization.</p>
+        <p style="margin-top: 0.6rem;">See our full <a href="/footer/privacy-policy.html">Privacy Policy</a> for how cookies and ads are handled, and use <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Ad Settings</a> to control ad personalization.</p>
       </div>
 
       <h2>📸 A Glimpse of Our Universe</h2>
@@ -535,11 +535,11 @@
         <div class="gallery-item"><span class="gallery-emoji">🎉</span><br>Greeting cards</div>
         <div class="gallery-item"><span class="gallery-emoji">📊</span><br>Analytics (anon)</div>
       </div>
-      <p style="text-align: center; color: #526e7a;">— all tools are free, no login —</p>
+      <p style="text-align: center; color: #526e7a;">— all tools are free, no login required —</p>
 
       <div class="mission-box" style="background: #eafaf5; border-left-color: #0f7b5a;">
         <h2 style="margin-top: 0; border-left-color: #0f7b5a;">🤝 Join Our Movement</h2>
-        <p style="font-size: 1.15rem;">Every month, people use gunatools.dev— <strong>completely free, completely private.</strong> Together, we're building a kinder, more accessible internet.</p>
+        <p style="font-size: 1.15rem;">Every month, people use gunatools.dev — <strong>completely free, no login required.</strong> Together, we're building a kinder, more accessible internet.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1.5rem;">
           <div style="flex: 1; min-width: 200px;">
             <span class="emoji">💌</span> <strong>Feedback?</strong> <a href="https://gunatools.dev/footer/contact-us/feedback">Use our form</a> — we reply personally.
@@ -568,7 +568,7 @@
       <div class="mission-box">
         <h2 style="margin-top: 0; border-left-color: #0284c7;">🌍 Hamara Sapna</h2>
         <p><span class="emoji">🕊️</span> Hum ek aisi duniya banana chahte hain jo insaaf, dayalu aur compassion par base ho — jahan kisi par zulm na ho, sabko samaan adhikaar mile.</p>
-        
+
         <div class="dream-banner">
           <p style="margin: 0; font-size: 1.1rem; font-weight: 500;">
             <span class="emoji">✨</span> <strong>SAPNA →</strong> Sach pehle 🗣 | Insaaf hamesha ⚖ | Sab par raham 🕊 | Laachar ki madad | Sabse pyaar | Maafi roj | Meharbaani roz | Seekhte raho
@@ -583,24 +583,25 @@
       <div class="profile-section">
         <div class="profile-card">
           <div class="profile-image">
-            <img src="/blog/images/GunaTools0105.jpg" alt="Guna Tools" class="profile-pic">
+            <img src="/blog/images/GunaTools0105.jpg" alt="Guna Tools" class="profile-pic" loading="lazy">
           </div>
           <div class="profile-content">
             <h2 class="profile-name" style="border-left: none;">Aarif Alam</h2>
             <div class="profile-title">Founder & developer, GunaTools · har jagah @GunaTools0105</div>
-            <p style="font-size: 1.1rem;">Teacher, guide aur lifelong learner. GunaTools aise tools banate hain jo seekhna aasaan, mazedaar aur 100% private banaye. <strong style="color:#14709b;">Na login, na tracking, bas free creativity.</strong></p>
-            
+            <p style="font-size: 1.1rem;">Teacher, guide aur lifelong learner. GunaTools aise tools banate hain jo seekhna aasaan, mazedaar aur privacy-focused banaye. <strong style="color:#14709b;">Login ki zaroorat nahi, bas free creativity.</strong></p>
+
             <div class="profile-stats">
               <div class="stat-item"><span class="stat-number">30+</span><span class="stat-label">free tools</span></div>
-              <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">Browser-based</span></div>
+              <div class="stat-item"><span class="stat-number">Mostly</span><span class="stat-label">Browser-based</span></div>
               <div class="stat-item"><span class="stat-number">0</span><span class="stat-label">data becha</span></div>
             </div>
             <div class="profile-highlight">“Technology insaan ko baantne nahi, uthaane ke liye hai.”</div>
-            
+
             <div style="margin-top: 1.5rem;">
-              <a href="https://www.instagram.com/GunaTools0105/" target="_blank" class="social-btn"><span>📸</span> Instagram</a>
-              <a href="https://x.com/GunaTools0105" target="_blank" class="social-btn"><span>🐦</span> X (Twitter)</a>
-              <a href="https://www.facebook.com/GunaTools0105" target="_blank" class="social-btn"><span>📘</span> Facebook</a>
+              <a href="https://www.instagram.com/GunaTools0105/" target="_blank" rel="noopener noreferrer" class="social-btn"><span>📸</span> Instagram</a>
+              <a href="https://x.com/GunaTools0105" target="_blank" rel="noopener noreferrer" class="social-btn"><span>🐦</span> X (Twitter)</a>
+              <a href="https://www.facebook.com/GunaTools0105" target="_blank" rel="noopener noreferrer" class="social-btn"><span>📘</span> Facebook</a>
+              <a href="https://www.linkedin.com/in/GunaTools0105/" target="_blank" rel="noopener noreferrer" class="social-btn"><span>🔗</span> LinkedIn</a>
               <span style="display: inline-block; background: #e8f0f5; padding: 0.5rem 1.2rem; border-radius: 40px;">📧 GunaTools0105@gmail.com</span>
             </div>
           </div>
@@ -609,15 +610,15 @@
 
       <h2>⚡ Kya Cheez Humein Alag Banati Hai</h2>
       <div class="feature-grid">
-        <div class="feature-card"><h3><span class="emoji">🔒</span> Privacy First</h3><p><strong>Na login, na tracking.</strong> Zyadatar tool browser mein chalte hain — koi server storage nahi. Poori jaankari <a href="/footer/privacy-policy">Privacy Policy</a> mein.</p></div>
-        <div class="feature-card"><h3><span class="emoji">🎯</span> Purpose-Driven</h3><p>Har tool ke peechhe ek maksad: ya seekhna, ya creative expression. Hum data nahi chopte. <a href="/footer/terms">Terms of Service</a> padhein.</p></div>
+        <div class="feature-card"><h3><span class="emoji">🔒</span> Privacy Focused</h3><p><strong>Account ki zaroorat nahi.</strong> Zyadatar tool browser mein chalte hain aur server storage kam se kam hota hai. Kaunsa data collect hota hai (analytics aur ad cookies) yeh <a href="/footer/privacy-policy.html">Privacy Policy</a> mein padhein.</p></div>
+        <div class="feature-card"><h3><span class="emoji">🎯</span> Purpose-Driven</h3><p>Har tool ke peechhe ek maksad: ya seekhna, ya creative expression. Hum aapko data share karne ke liye bahlate nahi. <a href="/footer/terms.html">Terms of Service</a> padhein.</p></div>
         <div class="feature-card"><h3><span class="emoji">🌱</span> Community Se Bana</h3><p>Kai tools users ke suggestion se bane hain. Tum bhejo, hum banaye — sach mein!</p></div>
       </div>
 
       <h2>🧰 Hamare Free Offerings</h2>
       <div class="feature-grid">
-        <div class="feature-card"><h3><span class="emoji">🎮</span> Educational Games</h3><ul><li>Vocabulary, math challenges</li><li>Browser mein khelo</li><li>Na score, na data collect</li></ul><p><a href="https://gunatools.dev/Game/">→ Abhi khelo</a></p></div>
-        <div class="feature-card"><h3><span class="emoji">🛠️</span> Creative Tools</h3><ul><li>Image to URL (Cloudinary, 4 mahine tak)</li><li>PDF tools — 100% browser-side</li><li>Bg hataye, image crop kare</li></ul></div>
+        <div class="feature-card"><h3><span class="emoji">🎮</span> Educational Games</h3><ul><li>Vocabulary, math challenges</li><li>Browser mein khelo</li><li>Account ya sign-up nahi</li></ul><p><a href="https://gunatools.dev/Game/" target="_blank" rel="noopener noreferrer">→ Abhi khelo</a></p></div>
+        <div class="feature-card"><h3><span class="emoji">🛠️</span> Creative Tools</h3><ul><li>Image to URL (Cloudinary, 4 mahine tak)</li><li>PDF tools — browser-side</li><li>Bg hataye, image crop kare</li></ul></div>
         <div class="feature-card"><h3><span class="emoji">📚</span> Learning Resources</h3><ul><li>Educational blog</li><li>Digital wellness tips</li><li>Tech asaan bhasha mein</li></ul></div>
       </div>
 
@@ -626,8 +627,8 @@
         <ul style="list-style-type: none; padding-left: 0;">
           <li><span class="emoji">⚡</span> <strong>Halka static page</strong> – bas HTML/CSS/JS.</li>
           <li><span class="emoji">🔐</span> <strong>HTTPS / TLS</strong> – har connection secure.</li>
-          <li><span class="emoji">🤝</span> <strong>Sirf bharose wali third-party:</strong> Cloudinary, remove.bg, EmailJS, Google Analytics (anonymous).</li>
-          <li><span class="emoji">📊</span> <strong>Analytics transparent:</strong> aap <a href="https://tools.google.com/dlpage/gaoptout">opt-out</a> kar sakte ho.</li>
+          <li><span class="emoji">🤝</span> <strong>Third-party services:</strong> Cloudinary, remove.bg, EmailJS, Google Analytics (anonymous) aur Google AdSense (cookies use karta hai).</li>
+          <li><span class="emoji">📊</span> <strong>Analytics transparent:</strong> aap <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">opt-out</a> kar sakte ho.</li>
         </ul>
       </div>
 
@@ -642,7 +643,7 @@
 
       <div class="mission-box" style="background: #eafaf5; border-left-color: #0f7b5a;">
         <h2 style="margin-top: 0;">🤝 Humse Judo</h2>
-        <p>Har mahine log gunatools.dev use karte hain — <strong>bilkul free, bilkul private.</strong> Aap bhi feedback do, naye tools suggest karo.</p>
+        <p>Har mahine log gunatools.dev use karte hain — <strong>bilkul free, login ki zaroorat nahi.</strong> Aap bhi feedback do, naye tools suggest karo.</p>
         <p><span class="emoji">📬</span> <a href="mailto:GunaTools0105@gmail.com">GunaTools0105@gmail.com</a> ya <a href="https://gunatools.dev/footer/contact-us/feedback">Feedback form</a></p>
       </div>
       <hr />
@@ -653,7 +654,7 @@
       function toggleLanguage() {
         const eng = document.getElementById('about-english');
         const hin = document.getElementById('about-hinglish');
-        const btn = document.querySelector('button');
+        const btn = document.getElementById('langBtn');
 
         if (hin.style.display === "none") {
           eng.style.display = "none";
