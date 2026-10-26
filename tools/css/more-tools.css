@@ -3,7 +3,6 @@
     --ar-ink: #0f172a;
     --ar-muted: #64748b;
     --ar-border: #e2e8f0;
-    --ar-surface: #f8fafc;
     --ar-accent: #3b82f6;
     --ar-accent-strong: #2563eb;
     --ar-accent-2: #8b5cf6;
@@ -46,21 +45,27 @@
     text-wrap: balance;
 }
 
-/* Tools Grid */
+/* Grid: cards are equal width, equal height, never stretched into strips */
 .ar-tools-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-    gap: clamp(1rem, 2.5vw, 1.75rem);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    align-items: stretch;
+    gap: clamp(1rem, 2.5vw, 1.5rem);
     margin-bottom: clamp(2.5rem, 6vw, 4rem);
 }
 
+/* Card: always vertical (icon on top, text below) */
 .ar-tool-card {
-    position: relative;
     display: flex;
-    gap: clamp(1rem, 2vw, 1.25rem);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
     box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
     height: 100%;
-    padding: clamp(1.25rem, 2.5vw, 1.75rem);
+    padding: clamp(1.25rem, 2.5vw, 1.6rem);
+    position: relative;
     overflow: hidden;
     background: #ffffff;
     border: 1px solid var(--ar-border);
@@ -88,11 +93,10 @@
     outline-offset: 3px;
 }
 
-/* Hover effects only on devices with a real pointer */
 @media (hover: hover) and (pointer: fine) {
     .ar-tool-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 14px 32px rgba(15, 23, 42, 0.1);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.09);
         border-color: #cbd5e1;
     }
 
@@ -100,30 +104,26 @@
         opacity: 1;
     }
 
-    .ar-tool-card:hover .ar-tool-icon {
-        transform: scale(1.08);
-    }
-
     .ar-tool-card:hover .ar-tool-link {
         gap: 0.75rem;
         color: var(--ar-accent-strong);
     }
 
-    .ar-tool-card:hover .ar-tool-arrow {
-        transform: translateX(3px);
+    .ar-tool-card:hover .ar-tool-icon {
+        transform: scale(1.06);
     }
 }
 
-/* Tool Icons */
+/* Icon */
 .ar-tool-icon {
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: clamp(48px, 5vw, 56px);
-    aspect-ratio: 1 / 1;
+    width: 56px;
+    height: 56px;
     border-radius: 14px;
-    font-size: clamp(1.35rem, 1.2rem + 0.5vw, 1.6rem);
+    font-size: 1.5rem;
     transition: transform 0.3s ease;
 }
 
@@ -134,16 +134,17 @@
 .ar-tool-icon-purple { background: linear-gradient(135deg, #f3e8ff, #e9d5ff); color: #7c3aed; }
 .ar-tool-icon-amber  { background: linear-gradient(135deg, #fef3c7, #fde68a); color: #92400e; }
 
-/* Tool Content */
+/* Text block fills the rest of the card */
 .ar-tool-content {
-    flex: 1;
-    min-width: 0; /* prevents long words from overflowing on small screens */
     display: flex;
     flex-direction: column;
+    flex: 1;
+    width: 100%;
+    min-width: 0;
 }
 
 .ar-tool-heading {
-    margin: 0 0 0.6rem;
+    margin: 0 0 0.5rem;
     font-family: 'Poppins', system-ui, sans-serif;
     font-size: clamp(1.1rem, 1rem + 0.4vw, 1.25rem);
     font-weight: 600;
@@ -154,18 +155,20 @@
 
 .ar-tool-desc {
     flex: 1;
-    margin-bottom: 1.25rem;
+    margin: 0 0 1rem;
     font-size: 0.95rem;
-    line-height: 1.65;
+    line-height: 1.6;
     color: var(--ar-muted);
 }
 
+/* Link stays at the bottom of every card */
 .ar-tool-link {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     align-self: flex-start;
-    min-height: 44px; /* comfortable touch target */
+    margin-top: auto;
+    min-height: 44px;
     padding: 0.5rem 0;
     font-size: 0.95rem;
     font-weight: 600;
@@ -178,10 +181,14 @@
     transition: transform 0.25s ease;
 }
 
+.ar-tool-card:hover .ar-tool-arrow {
+    transform: translateX(3px);
+}
+
 /* Workflow Tips */
 .ar-workflow-tips {
     padding: clamp(1.5rem, 4vw, 2.5rem);
-    background: var(--ar-surface);
+    background: #f8fafc;
     border: 1px solid var(--ar-border);
     border-radius: 16px;
 }
@@ -275,31 +282,20 @@
 .ar-step-detail {
     margin: 0;
     font-size: 0.95rem;
-    line-height: 1.65;
+    line-height: 1.6;
     color: var(--ar-muted);
 }
 
-/* Tablet */
-@media (max-width: 768px) {
-    .ar-tool-card {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .ar-workflow-step {
-        flex-direction: column;
-    }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
+/* Mobile: workflow steps stack vertically, cards stay vertical */
+@media (max-width: 600px) {
     .ar-tools-section {
         width: calc(100% - 1rem);
         border-radius: 14px;
     }
 
-    .ar-tools-grid {
-        grid-template-columns: 1fr;
+    .ar-workflow-step {
+        flex-direction: column;
+        gap: 0.9rem;
     }
 
     .ar-step-number {
@@ -309,7 +305,6 @@
     }
 }
 
-/* Respect users who prefer less motion */
 @media (prefers-reduced-motion: reduce) {
     .ar-tools-section *,
     .ar-tools-section *::before {
