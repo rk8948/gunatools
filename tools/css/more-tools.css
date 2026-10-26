@@ -1,4 +1,4 @@
-/* TOOLS SECTION - More Free Tools */
+/* ===== TOOLS SECTION - More Free Tools ===== */
 .ar-tools-section {
     --ar-ink: #0f172a;
     --ar-muted: #64748b;
@@ -45,26 +45,25 @@
     text-wrap: balance;
 }
 
-/* Grid: cards are equal width, equal height, never stretched into strips */
+/* Grid: ek ke neeche ek, ~75ch ki width */
 .ar-tools-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-    align-items: stretch;
-    gap: clamp(1rem, 2.5vw, 1.5rem);
-    margin-bottom: clamp(2.5rem, 6vw, 4rem);
-}
-
-/* Card: always vertical (icon on top, text below) */
-.ar-tool-card {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 75ch;
+    margin: 0 auto clamp(2.5rem, 6vw, 4rem);
+}
+
+/* Card: icon left, text right */
+.ar-tool-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(1rem, 2.5vw, 1.5rem);
     box-sizing: border-box;
     width: 100%;
-    min-width: 0;
-    height: 100%;
-    padding: clamp(1.25rem, 2.5vw, 1.6rem);
+    padding: clamp(1.1rem, 2.5vw, 1.5rem);
     position: relative;
     overflow: hidden;
     background: #ffffff;
@@ -95,7 +94,7 @@
 
 @media (hover: hover) and (pointer: fine) {
     .ar-tool-card:hover {
-        transform: translateY(-4px);
+        transform: translateY(-3px);
         box-shadow: 0 12px 28px rgba(15, 23, 42, 0.09);
         border-color: #cbd5e1;
     }
@@ -104,13 +103,17 @@
         opacity: 1;
     }
 
+    .ar-tool-card:hover .ar-tool-icon {
+        transform: scale(1.06);
+    }
+
     .ar-tool-card:hover .ar-tool-link {
         gap: 0.75rem;
         color: var(--ar-accent-strong);
     }
 
-    .ar-tool-card:hover .ar-tool-icon {
-        transform: scale(1.06);
+    .ar-tool-card:hover .ar-tool-arrow {
+        transform: translateX(3px);
     }
 }
 
@@ -134,17 +137,16 @@
 .ar-tool-icon-purple { background: linear-gradient(135deg, #f3e8ff, #e9d5ff); color: #7c3aed; }
 .ar-tool-icon-amber  { background: linear-gradient(135deg, #fef3c7, #fde68a); color: #92400e; }
 
-/* Text block fills the rest of the card */
+/* Text: baaki poori width */
 .ar-tool-content {
     display: flex;
     flex-direction: column;
     flex: 1;
-    width: 100%;
     min-width: 0;
 }
 
 .ar-tool-heading {
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.4rem;
     font-family: 'Poppins', system-ui, sans-serif;
     font-size: clamp(1.1rem, 1rem + 0.4vw, 1.25rem);
     font-weight: 600;
@@ -154,22 +156,18 @@
 }
 
 .ar-tool-desc {
-    flex: 1;
-    margin: 0 0 1rem;
+    margin: 0 0 0.75rem;
     font-size: 0.95rem;
     line-height: 1.6;
     color: var(--ar-muted);
 }
 
-/* Link stays at the bottom of every card */
 .ar-tool-link {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     align-self: flex-start;
-    margin-top: auto;
-    min-height: 44px;
-    padding: 0.5rem 0;
+    min-height: 40px;
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--ar-accent);
@@ -179,10 +177,6 @@
 .ar-tool-arrow {
     font-size: 0.85rem;
     transition: transform 0.25s ease;
-}
-
-.ar-tool-card:hover .ar-tool-arrow {
-    transform: translateX(3px);
 }
 
 /* Workflow Tips */
@@ -286,11 +280,16 @@
     color: var(--ar-muted);
 }
 
-/* Mobile: workflow steps stack vertically, cards stay vertical */
+/* Mobile */
 @media (max-width: 600px) {
     .ar-tools-section {
         width: calc(100% - 1rem);
         border-radius: 14px;
+    }
+
+    .ar-tool-card {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .ar-workflow-step {
@@ -305,6 +304,7 @@
     }
 }
 
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     .ar-tools-section *,
     .ar-tools-section *::before {
