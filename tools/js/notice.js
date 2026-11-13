@@ -181,6 +181,20 @@
     fr:{ b:"Visiter le site officiel : ImgTry.com", m:"GunaTools.dev est fermé. Image to URL et tous les autres outils d'image sont maintenant sur ImgTry.com.", r:"Redirection vers ImgTry.com dans {n} s" }
   };
 
+  /* Redirect controls: p = pause, c = continue, s = stop redirect, x = stopped message, z = paused message */
+  var RC = {
+    en:{ p:"Pause", c:"Continue", s:"Stop redirect", x:"Redirect stopped", z:"Paused: {n}s left" },
+    hi:{ p:"रुकें", c:"जारी रखें", s:"रीडायरेक्ट बंद करें", x:"रीडायरेक्ट बंद कर दिया गया", z:"रुका हुआ: {n} सेकंड बाकी" },
+    es:{ p:"Pausar", c:"Continuar", s:"Detener redirección", x:"Redirección detenida", z:"En pausa: quedan {n} s" },
+    zh:{ p:"暂停", c:"继续", s:"停止跳转", x:"已停止跳转", z:"已暂停：剩余 {n} 秒" },
+    ar:{ p:"إيقاف مؤقت", c:"متابعة", s:"إيقاف التحويل", x:"تم إيقاف التحويل", z:"متوقف مؤقتًا: متبقي {n} ث" },
+    pt:{ p:"Pausar", c:"Continuar", s:"Parar redirecionamento", x:"Redirecionamento parado", z:"Pausado: faltam {n}s" },
+    bn:{ p:"থামান", c:"চালিয়ে যান", s:"রিডাইরেক্ট বন্ধ করুন", x:"রিডাইরেক্ট বন্ধ করা হয়েছে", z:"থামানো আছে: {n} সেকেন্ড বাকি" },
+    ru:{ p:"Пауза", c:"Продолжить", s:"Остановить переход", x:"Переход остановлен", z:"Пауза: осталось {n} с" },
+    ja:{ p:"一時停止", c:"再開", s:"移動を停止", x:"移動を停止しました", z:"一時停止中：残り{n}秒" },
+    fr:{ p:"Pause", c:"Continuer", s:"Arrêter la redirection", x:"Redirection arrêtée", z:"En pause : {n} s restantes" }
+  };
+
   /* ---------- guards ---------- */
   if (window.__gunaNoticeLoaded) return;
   window.__gunaNoticeLoaded = true;
@@ -282,6 +296,10 @@
 .gn-hb:hover{filter:brightness(1.1)}.gn-hb:active{transform:scale(.98)}\
 .gn-hb:focus-visible{outline:3px solid #f59e0b;outline-offset:3px}\
 .gn-hr{margin:10px 0 0;font-size:13px;font-weight:700;color:#065f46}\
+.gn-rd{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 14px;padding:10px 12px;background:#ecfdf5;border:1px solid #10b981;border-radius:12px}\
+.gn-rd .gn-hr{margin:0;flex:1 1 170px;font-size:14px}\
+.gn-rb{height:34px;font-size:13px;font-weight:700}\
+#gn-rs{color:#b91c1c;border-color:#fecaca}#gn-rs:hover{background:#fee2e2;border-color:#f87171}\
 @keyframes gn-pulse2{0%,100%{box-shadow:0 0 0 3px #3b82f6,0 8px 22px rgba(37,99,235,.45)}50%{box-shadow:0 0 0 8px rgba(59,130,246,.35),0 8px 28px rgba(37,99,235,.7)}}\
 @media(prefers-reduced-motion:reduce){.gn-hb{animation:none}}\
 #gn-pill{position:fixed;inset-inline-end:14px;bottom:14px;z-index:2147482000;display:none;align-items:center;background:#111827;color:#fff;border-radius:99px;box-shadow:0 8px 24px rgba(0,0,0,.35);overflow:hidden;max-width:calc(100vw - 28px)}\
@@ -315,8 +333,9 @@
    <button class="gn-btn gn-x" id="gn-x"></button>\
   </div>\
   <div class="gn-body">\
+   <div class="gn-rd" id="gn-rd"><span class="gn-hr" id="gn-hr"></span><button class="gn-btn gn-rb" id="gn-rp"></button><button class="gn-btn gn-rb" id="gn-rs"></button></div>\
    <h2 class="gn-title" id="gn-title"></h2>\
-   <div class="gn-hero"><p class="gn-hm" id="gn-hm"></p><a class="gn-hb" id="gn-hb" rel="noopener"></a><p class="gn-hr" id="gn-hr"></p></div>\
+   <div class="gn-hero"><p class="gn-hm" id="gn-hm"></p><a class="gn-hb" id="gn-hb" rel="noopener"></a></div>\
    <div class="gn-dates">\
     <div class="gn-d"><small id="gn-l1"></small><b id="gn-v1"></b></div>\
     <div class="gn-d gn-warn"><small id="gn-l2"></small><b id="gn-v2"></b></div>\
@@ -347,6 +366,7 @@
     function $(id) { return document.getElementById(id); }
     var ov = $("gn-ov"), card = $("gn-card"), track = $("gn-track"), lb = $("gn-lb"), pill = $("gn-pill"), xb = $("gn-x");
     if (CONFIG.blockSite) xb.style.display = "none";
+    if (!(CONFIG.redirectAfterSec > 0)) $("gn-rd").style.display = "none";
 
     /* contact buttons (Instagram, then optional email, then contact page; WhatsApp has its own big button above) */
     var cta = $("gn-cta");
@@ -435,10 +455,13 @@
       if (locked) xb.title = t.wait.replace("{n}", xb.getAttribute("data-n") || CONFIG.closeDelaySec);
       else { xb.title = t.close; xb.setAttribute("aria-label", t.close); }
     }
-    var rsec = 0;
+    var rsec = 0, rpaused = false, rstopped = false;
     function updR() {
-      var g = GO[lang] || GO.en;
-      $("gn-hr").textContent = rsec > 0 ? g.r.replace("{n}", rsec) : "";
+      var g = GO[lang] || GO.en, c = RC[lang] || RC.en;
+      $("gn-hr").textContent = (rstopped ? c.x : (rpaused ? c.z : g.r)).replace("{n}", rsec);
+      $("gn-rp").textContent = rpaused ? "▶ " + c.c : "⏸ " + c.p;
+      $("gn-rs").textContent = "✕ " + c.s;
+      $("gn-rp").style.display = $("gn-rs").style.display = rstopped ? "none" : "";
     }
     function render() {
       var L = LANGS[lang], t = L.t, g = GO[lang] || GO.en;
@@ -626,10 +649,14 @@
     if (CONFIG.redirectAfterSec > 0) {
       rsec = CONFIG.redirectAfterSec; updR();
       var rt = setInterval(function () {
+        if (rstopped) { clearInterval(rt); return; }
+        if (rpaused) return;
         rsec--;
         if (rsec <= 0) { clearInterval(rt); location.href = CONFIG.newSiteUrl; }
         else updR();
       }, 1000);
+      $("gn-rp").addEventListener("click", function () { rpaused = !rpaused; updR(); });
+      $("gn-rs").addEventListener("click", function () { rstopped = true; rpaused = false; updR(); });
     }
   }
 
