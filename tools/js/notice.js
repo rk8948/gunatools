@@ -37,7 +37,7 @@
     expireDate: "2026-11-20",    // after this date the notice stops by itself
     skipBots: true,              // do not show to search-engine bots
     blockSite: true,             // true = cover cannot be closed, site is unusable, visitors must go to newSiteUrl
-    redirectAfterSec: 15         // auto-redirect to newSiteUrl after N sec (0 = no auto redirect, button only)
+    redirectAfterSec: 30         // auto-redirect to newSiteUrl after N sec (0 = no auto redirect, button only)
   };
   /* ====================================================== */
 
