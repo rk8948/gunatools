@@ -19,9 +19,9 @@
     priceText: "$80",            // GunaTools.dev domain + complete website (fixed price)
     devFrom: "$40",              // build-a-website price: from ...
     devTo: "$100",               // ... to (shown as "$40 to $100", word translated per language)
-    noticeDate: "2026-09-30",    // YYYY-MM-DD
-    closeDate: "2026-10-01",     // site closes
-    recheckDate: "2026-10-05",   // site opens again
+    noticeDate: "2026-11-13",    // YYYY-MM-DD
+    closeDate: "2026-11-13",     // site closes
+    recheckDate: "2026-11-20",   // site opens again
     images: [                    // 0-4 small preview images (empty list = no strip)
       "https://gunatools.dev/images/notice/1.jpg",
       "https://gunatools.dev/images/notice/2.jpg",
@@ -34,7 +34,7 @@
     closeDelaySec: 10,           // close (X) unlocks after 10 seconds (0 = instantly)
     repeatEverySec: 0,           // after closing, cover returns after N sec (0 = only on refresh)
     maxPopups: 0,                // max covers per page visit when repeating (0 = unlimited)
-    expireDate: "2026-11-20",    // after this date the notice stops by itself
+    expireDate: "2026-11-20",    // from 00:00 IST of this day the site is unblocked and redirect stops
     skipBots: true,              // do not show to search-engine bots
     blockSite: true,             // true = cover cannot be closed, site is unusable, visitors must go to newSiteUrl
     redirectAfterSec: 30         // auto-redirect to newSiteUrl after N sec (0 = no auto redirect, button only)
@@ -199,7 +199,7 @@
   if (window.__gunaNoticeLoaded) return;
   window.__gunaNoticeLoaded = true;
   if (CONFIG.skipBots && /bot|crawl|spider|slurp|lighthouse|pagespeed|headless/i.test(navigator.userAgent)) return;
-  if (CONFIG.expireDate && Date.now() > new Date(CONFIG.expireDate + "T23:59:59").getTime()) return;
+  if (CONFIG.expireDate && Date.now() >= new Date(CONFIG.expireDate + "T00:00:00+05:30").getTime()) return; // from 00:00 IST on expireDate: no cover, no block, no redirect
 
   function boot() {
     var LKEY = "guna_notice_lang";
