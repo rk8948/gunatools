@@ -12,7 +12,7 @@
     instagramHandle: "@newlearn_in_code",
     contactUrl: "https://gunatools.dev/footer/contact-us/contact",
     whatsappNumber: "+91 73940 33753",
-    whatsappUrl: "https://wa.me/918009398878?text=Hi%2C%20I%20saw%20the%20GunaTools.dev%20notice",
+    whatsappUrl: "https://wa.me/917394033753?text=Hi%2C%20I%20saw%20the%20GunaTools.dev%20notice",
     email: "",                   // optional, e.g. "you@example.com"             (empty = hidden)
     newSiteUrl: "https://imgtry.com",
     promptsUrl: "https://newlearn.in/ai-image-prompts/",
@@ -34,8 +34,10 @@
     closeDelaySec: 10,           // close (X) unlocks after 10 seconds (0 = instantly)
     repeatEverySec: 0,           // after closing, cover returns after N sec (0 = only on refresh)
     maxPopups: 0,                // max covers per page visit when repeating (0 = unlimited)
-    expireDate: "2026-10-05",    // after this date the notice stops by itself
-    skipBots: true               // do not show to search-engine bots
+    expireDate: "2026-11-20",    // after this date the notice stops by itself
+    skipBots: true,              // do not show to search-engine bots
+    blockSite: true,             // true = cover cannot be closed, site is unusable, visitors must go to newSiteUrl
+    redirectAfterSec: 15         // auto-redirect to newSiteUrl after N sec (0 = no auto redirect, button only)
   };
   /* ====================================================== */
 
@@ -165,6 +167,20 @@
   /* WhatsApp button label per language */
   var WA = { en:"Chat on WhatsApp", hi:"WhatsApp पर मैसेज करें", es:"Escríbeme por WhatsApp", zh:"WhatsApp 联系我", ar:"تواصل عبر واتساب", pt:"Fale comigo no WhatsApp", bn:"WhatsApp-এ মেসেজ করুন", ru:"Написать в WhatsApp", ja:"WhatsAppで連絡", fr:"Écrire sur WhatsApp" };
 
+  /* Official website button: b = button, m = message, r = redirect countdown */
+  var GO = {
+    en:{ b:"Visit official website: ImgTry.com", m:"GunaTools.dev is closed. Image to URL and all other image tools are now available on ImgTry.com.", r:"Redirecting to ImgTry.com in {n}s" },
+    hi:{ b:"आधिकारिक वेबसाइट खोलें: ImgTry.com", m:"GunaTools.dev बंद है। Image to URL और बाकी सभी इमेज टूल्स अब ImgTry.com पर उपलब्ध हैं।", r:"{n} सेकंड में ImgTry.com पर भेजा जाएगा" },
+    es:{ b:"Visitar el sitio oficial: ImgTry.com", m:"GunaTools.dev está cerrado. Image to URL y todas las demás herramientas de imagen ya están en ImgTry.com.", r:"Redirigiendo a ImgTry.com en {n} s" },
+    zh:{ b:"访问官方网站：ImgTry.com", m:"GunaTools.dev 已关闭。图片转链接（Image to URL）及所有图片工具现已在 ImgTry.com 提供。", r:"{n} 秒后跳转到 ImgTry.com" },
+    ar:{ b:"زيارة الموقع الرسمي: ImgTry.com", m:"موقع GunaTools.dev مغلق. أداة تحويل الصورة إلى رابط وجميع أدوات الصور متاحة الآن على ImgTry.com.", r:"سيتم التحويل إلى ImgTry.com خلال {n} ث" },
+    pt:{ b:"Visitar o site oficial: ImgTry.com", m:"O GunaTools.dev está fechado. Image to URL e todas as outras ferramentas de imagem agora estão no ImgTry.com.", r:"Redirecionando para o ImgTry.com em {n}s" },
+    bn:{ b:"অফিসিয়াল ওয়েবসাইটে যান: ImgTry.com", m:"GunaTools.dev বন্ধ আছে। Image to URL ও অন্য সব ইমেজ টুল এখন ImgTry.com-এ পাওয়া যাচ্ছে।", r:"{n} সেকেন্ডে ImgTry.com-এ নিয়ে যাওয়া হবে" },
+    ru:{ b:"Перейти на официальный сайт: ImgTry.com", m:"GunaTools.dev закрыт. Image to URL и все остальные инструменты для изображений теперь на ImgTry.com.", r:"Переход на ImgTry.com через {n} с" },
+    ja:{ b:"公式サイトへ：ImgTry.com", m:"GunaTools.devは閉鎖中です。画像→URL変換などの画像ツールはImgTry.comでご利用いただけます。", r:"{n}秒後にImgTry.comへ移動します" },
+    fr:{ b:"Visiter le site officiel : ImgTry.com", m:"GunaTools.dev est fermé. Image to URL et tous les autres outils d'image sont maintenant sur ImgTry.com.", r:"Redirection vers ImgTry.com dans {n} s" }
+  };
+
   /* ---------- guards ---------- */
   if (window.__gunaNoticeLoaded) return;
   window.__gunaNoticeLoaded = true;
@@ -260,6 +276,14 @@
 .gn-wa-go{flex:0 0 auto;font-size:26px;font-weight:900}\
 @keyframes gn-pulse{0%,100%{box-shadow:0 0 0 3px #25d366,0 8px 22px rgba(18,140,126,.5)}50%{box-shadow:0 0 0 8px rgba(37,211,102,.35),0 8px 28px rgba(18,140,126,.7)}}\
 @media(prefers-reduced-motion:reduce){.gn-wa{animation:none}}\
+.gn-hero{margin:0 0 16px;padding:14px;border-radius:14px;background:#ecfdf5;border:2px solid #10b981;text-align:center}\
+.gn-hm{font-size:15px;line-height:1.5;font-weight:700;color:#065f46;margin:0 0 12px}\
+.gn-hb{display:block;text-decoration:none;font-size:clamp(16px,4.6vw,20px);font-weight:900;line-height:1.3;color:#fff;background:linear-gradient(135deg,#2563eb,#1d4ed8);padding:16px 14px;border-radius:12px;border:2px solid #fff;box-shadow:0 0 0 3px #3b82f6,0 8px 22px rgba(37,99,235,.45);animation:gn-pulse2 1.8s ease-in-out infinite;transition:transform .1s,filter .2s}\
+.gn-hb:hover{filter:brightness(1.1)}.gn-hb:active{transform:scale(.98)}\
+.gn-hb:focus-visible{outline:3px solid #f59e0b;outline-offset:3px}\
+.gn-hr{margin:10px 0 0;font-size:13px;font-weight:700;color:#065f46}\
+@keyframes gn-pulse2{0%,100%{box-shadow:0 0 0 3px #3b82f6,0 8px 22px rgba(37,99,235,.45)}50%{box-shadow:0 0 0 8px rgba(59,130,246,.35),0 8px 28px rgba(37,99,235,.7)}}\
+@media(prefers-reduced-motion:reduce){.gn-hb{animation:none}}\
 #gn-pill{position:fixed;inset-inline-end:14px;bottom:14px;z-index:2147482000;display:none;align-items:center;background:#111827;color:#fff;border-radius:99px;box-shadow:0 8px 24px rgba(0,0,0,.35);overflow:hidden;max-width:calc(100vw - 28px)}\
 #gn-pill button{border:0;background:none;color:#fff;cursor:pointer;font-size:13px;font-weight:600}\
 #gn-pb{display:flex;align-items:center;gap:8px;padding:11px 8px 11px 14px;min-width:0}\
@@ -292,6 +316,7 @@
   </div>\
   <div class="gn-body">\
    <h2 class="gn-title" id="gn-title"></h2>\
+   <div class="gn-hero"><p class="gn-hm" id="gn-hm"></p><a class="gn-hb" id="gn-hb" rel="noopener"></a><p class="gn-hr" id="gn-hr"></p></div>\
    <div class="gn-dates">\
     <div class="gn-d"><small id="gn-l1"></small><b id="gn-v1"></b></div>\
     <div class="gn-d gn-warn"><small id="gn-l2"></small><b id="gn-v2"></b></div>\
@@ -321,6 +346,7 @@
 
     function $(id) { return document.getElementById(id); }
     var ov = $("gn-ov"), card = $("gn-card"), track = $("gn-track"), lb = $("gn-lb"), pill = $("gn-pill"), xb = $("gn-x");
+    if (CONFIG.blockSite) xb.style.display = "none";
 
     /* contact buttons (Instagram, then optional email, then contact page; WhatsApp has its own big button above) */
     var cta = $("gn-cta");
@@ -409,8 +435,17 @@
       if (locked) xb.title = t.wait.replace("{n}", xb.getAttribute("data-n") || CONFIG.closeDelaySec);
       else { xb.title = t.close; xb.setAttribute("aria-label", t.close); }
     }
+    var rsec = 0;
+    function updR() {
+      var g = GO[lang] || GO.en;
+      $("gn-hr").textContent = rsec > 0 ? g.r.replace("{n}", rsec) : "";
+    }
     function render() {
-      var L = LANGS[lang], t = L.t;
+      var L = LANGS[lang], t = L.t, g = GO[lang] || GO.en;
+      $("gn-hm").textContent = g.m;
+      $("gn-hb").textContent = "🚀 " + g.b + " ↗";
+      $("gn-hb").href = CONFIG.newSiteUrl;
+      updR();
       card.dir = (lang === "ar") ? "rtl" : "ltr";
       lb.dir = card.dir;
       $("gn-badge").textContent = "⚠ " + t.badge;
@@ -521,7 +556,7 @@
     }
     function startLock() {
       var n = CONFIG.closeDelaySec;
-      if (n <= 0) { unlock(); return; }
+      if (n <= 0 || CONFIG.blockSite) { unlock(); return; }
       clearInterval(timer);
       locked = true; xb.disabled = true; xb.textContent = n; xb.setAttribute("data-n", n);
       $("gn-pg").style.display = "";
@@ -556,7 +591,7 @@
       if (auto === true) startLock(); else unlock(); // re-opened from pill: close is instant
     }
     function close() {
-      if (locked) return;
+      if (locked || CONFIG.blockSite) return;
       stopSpeak();
       closeLb();
       ov.classList.remove("gn-in");
@@ -588,6 +623,14 @@
     // EVERY load / refresh shows the full-screen cover again
     if (CONFIG.showDelayMs > 0) setTimeout(function () { openModal(true); }, CONFIG.showDelayMs);
     else openModal(true);
+    if (CONFIG.redirectAfterSec > 0) {
+      rsec = CONFIG.redirectAfterSec; updR();
+      var rt = setInterval(function () {
+        rsec--;
+        if (rsec <= 0) { clearInterval(rt); location.href = CONFIG.newSiteUrl; }
+        else updR();
+      }, 1000);
+    }
   }
 
   if (document.body) boot();
