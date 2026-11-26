@@ -167,7 +167,28 @@
 }
 </script>
 
-<script src="https://quge5.com/88/tag.min.js" data-zone="315467" async data-cfasync="false"></script>
+<script>
+(function () {
+  const button = document.getElementById("load-monetag-ad");
+
+  if (!button) return;
+
+  button.addEventListener("click", function () {
+    if (button.dataset.loaded === "true") return;
+
+    button.dataset.loaded = "true";
+    button.textContent = "Advertisement loading...";
+
+    const script = document.createElement("script");
+    script.src = "https://quge5.com/88/tag.min.js";
+    script.setAttribute("data-zone", "315467");
+    script.setAttribute("data-cfasync", "false");
+    script.async = true;
+
+    document.body.appendChild(script);
+  });
+})();
+</script>
   
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV220VSL5G"></script>
 <script>
@@ -1128,6 +1149,19 @@ h2.colorful::after {
     </div>
   </div>
 </div>
+
+  <!-- Monetag: Click-to-load ad -->
+<div id="monetag-ad-area" style="text-align:center; margin:20px 0;">
+  <button
+    id="load-monetag-ad"
+    type="button"
+    style="padding:12px 22px; border:0; border-radius:8px;
+           background:#4f46e5; color:#fff; cursor:pointer;">
+    Show Advertisement
+  </button>
+</div>
+
+  
 <footer class="main-footer">
   <div class="container">
     <div class="footer-content">
